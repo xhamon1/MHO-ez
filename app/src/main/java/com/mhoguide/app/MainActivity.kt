@@ -67,17 +67,18 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         val builds = loadBuilds(this)
+        val weapons = loadWeapons(this)
         val prefs = getSharedPreferences("mho", MODE_PRIVATE)
         setContent {
             MaterialTheme(colorScheme = darkColorScheme(primary = Gold, background = Bg, surface = Card)) {
-                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { App(builds, prefs) }
+                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, prefs) }
             }
         }
     }
 }
 
 @Composable
-fun App(builds: List<Build>, prefs: SharedPreferences) {
+fun BuildsScreen(builds: List<Build>, prefs: SharedPreferences) {
     var weapon by remember { mutableStateOf<String?>(null) }
     var element by remember { mutableStateOf<String?>(null) }
     var query by remember { mutableStateOf("") }
@@ -197,6 +198,90 @@ fun BuildCard(b: Build, fav: Boolean, onFav: () -> Unit) {
             Text(if (open) "Hide tips ▲" else "Show tips & weapon ▼", color = Gold, fontWeight = FontWeight.Bold,
                 modifier = Modifier.clickable { open = !open })
             if (open) Text(b.note, color = Color(0xFFB8B8C0), fontSize = 13.sp, lineHeight = 19.sp)
+        }
+    }
+}
+
+data class Weapon(val name: String, val type: String, val rarity: String, val attack: Int,
+                  val affinity: String, val element: String, val elementValue: Int, val sharpness: String)
+
+fun loadWeapons(ctx: Context): List<Weapon> {
+    val arr = JSONArray(ctx.assets.open("weapons.json").bufferedReader().readText())
+    return (0 until arr.length()).map {
+        val o = arr.getJSONObject(it)
+        Weapon(o.getString("name"), o.getString("type"), o.getString("rarity"), o.getInt("attack"),
+            o.getString("affinity"), o.getString("element"), o.getInt("elementValue"), o.getString("sharpness"))
+    }
+}
+
+private val EXTRA_COLOR = mapOf("Poison" to Color(0xFF9BCB3C), "Paralyzed" to Color(0xFFE8C13C),
+    "Sleep" to Color(0xFF8EA0E8), "Blast" to Color(0xFFE88A3C), "None" to Color(0xFF8E8E98))
+private val ALL_ELEM = ELEMENTS + listOf("Poison", "Paralyzed", "Sleep", "Blast")
+private fun statIcon(e: String): String? {
+    val i = ALL_ELEM.indexOf(e); return if (i < 0) null else CDN + "article_tools/mhoutlanders/gacha/attr" + (i + 1) + ".png"
+}
+private fun sharpColor(s: String) = when (s) {
+    "Blue" -> Color(0xFF4A90E8); "Green" -> Color(0xFF5CC85C); else -> Color(0xFF8E8E98)
+}
+
+@Composable
+fun Root(builds: List<Build>, weapons: List<Weapon>, prefs: SharedPreferences) {
+    var tab by remember { mutableStateOf(0) }
+    Column(Modifier.fillMaxSize()) {
+        Box(Modifier.weight(1f)) { if (tab == 0) BuildsScreen(builds, prefs) else WeaponsScreen(weapons) }
+        NavigationBar(containerColor = Card) {
+            NavigationBarItem(tab == 0, { tab = 0 }, { Text("★") }, label = { Text("Builds") })
+            NavigationBarItem(tab == 1, { tab = 1 }, { Text("⚔") }, label = { Text("Weapons") })
+        }
+    }
+}
+
+@Composable
+fun WeaponsScreen(all: List<Weapon>) {
+    var type by remember { mutableStateOf<String?>(null) }
+    var elem by remember { mutableStateOf<String?>(null) }
+    var query by remember { mutableStateOf("") }
+    val types = remember { all.map { it.type }.distinct() }
+    val elems = remember { all.map { it.element }.filter { it != "None" }.distinct() }
+    val shown = all.filter { (type == null || it.type == type) && (elem == null || it.element == elem) &&
+        (query.isBlank() || it.name.contains(query, true)) }.sortedByDescending { it.attack }
+    LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        item { Text("Weapons", fontSize = 28.sp, fontWeight = FontWeight.Black, color = Gold) }
+        item { Text("Max-upgrade stats. Top weapons per type; more coming.", color = Color(0xFF8E8E98), fontSize = 12.sp) }
+        item { OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
+            placeholder = { Text("Search weapon name…") }, shape = RoundedCornerShape(14.dp)) }
+        item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            items(types) { t -> Pill(t, Gold, type == t, WEAPON_ICONS[t]) { type = if (type == t) null else t } } } }
+        item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            items(elems) { e -> val c = ELEMENT_COLOR[e] ?: EXTRA_COLOR[e] ?: Gold
+                Pill(e, c, elem == e, statIcon(e)) { elem = if (elem == e) null else e } } } }
+        item { Text("${shown.size} weapon(s)", color = Color(0xFF8E8E98), fontSize = 13.sp) }
+        items(shown, key = { it.name + it.type }) { w -> WeaponCard(w) }
+    }
+}
+
+@Composable
+fun WeaponCard(w: Weapon) {
+    val c = ELEMENT_COLOR[w.element] ?: EXTRA_COLOR[w.element] ?: Color(0xFF8E8E98)
+    Row(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(16.dp)).padding(12.dp),
+        verticalAlignment = Alignment.CenterVertically) {
+        Box(Modifier.size(52.dp).background(Color(0xFF0D0D10), RoundedCornerShape(12.dp)), Alignment.Center) {
+            AsyncImage(WEAPON_ICONS[w.type], w.type, Modifier.size(42.dp))
+        }
+        Spacer(Modifier.width(12.dp))
+        Column(Modifier.weight(1f)) {
+            Text(w.name, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 15.sp)
+            Text("${w.type} · Rarity ${w.rarity}", color = Color(0xFF8E8E98), fontSize = 12.sp)
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text("ATK ${w.attack}", color = Gold, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                Text("  Aff ${w.affinity}", color = Color(0xFFD8D8E0), fontSize = 13.sp)
+                if (w.sharpness.isNotBlank()) Text("  ● ${w.sharpness}", color = sharpColor(w.sharpness), fontSize = 13.sp)
+            }
+        }
+        Column(horizontalAlignment = Alignment.End) {
+            statIcon(w.element)?.let { AsyncImage(it, w.element, Modifier.size(20.dp)) }
+            Text(if (w.element == "None") "—" else "${w.element} ${w.elementValue}", color = c, fontSize = 12.sp)
         }
     }
 }

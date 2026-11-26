@@ -1,0 +1,722 @@
+[
+ {
+  "name": "Dark Stinger",
+  "type": "Lance",
+  "rarity": "8–14",
+  "attack": 1452,
+  "affinity": "0%",
+  "element": "Blast",
+  "elementValue": 726,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Archer's Dance",
+  "type": "Bow",
+  "rarity": "7–14",
+  "attack": 1421,
+  "affinity": "+3%",
+  "element": "Blast",
+  "elementValue": 711,
+  "sharpness": ""
+ },
+ {
+  "name": "Iron Archdemon",
+  "type": "Hammer",
+  "rarity": "7–14",
+  "attack": 1408,
+  "affinity": "0%",
+  "element": "Blast",
+  "elementValue": 704,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Datura String",
+  "type": "Bow",
+  "rarity": "7–14",
+  "attack": 1408,
+  "affinity": "0%",
+  "element": "Blast",
+  "elementValue": 704,
+  "sharpness": ""
+ },
+ {
+  "name": "Strong Hatchets",
+  "type": "Dual Blades",
+  "rarity": "8–14",
+  "attack": 1408,
+  "affinity": "0%",
+  "element": "Blast",
+  "elementValue": 704,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Hard Bone Strongarm",
+  "type": "Charge Blade",
+  "rarity": "8–14",
+  "attack": 1408,
+  "affinity": "0%",
+  "element": "Blast",
+  "elementValue": 704,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Guild Crimson Crest Great Sword",
+  "type": "Great Sword",
+  "rarity": "1–14",
+  "attack": 1404,
+  "affinity": "0%",
+  "element": "None",
+  "elementValue": 0,
+  "sharpness": "Green"
+ },
+ {
+  "name": "Guild Crimson Crest Long Sword",
+  "type": "Long Sword",
+  "rarity": "1–14",
+  "attack": 1404,
+  "affinity": "0%",
+  "element": "None",
+  "elementValue": 0,
+  "sharpness": "Green"
+ },
+ {
+  "name": "Guild Crimson Crest Dual Blades",
+  "type": "Dual Blades",
+  "rarity": "1–14",
+  "attack": 1404,
+  "affinity": "0%",
+  "element": "None",
+  "elementValue": 0,
+  "sharpness": "Green"
+ },
+ {
+  "name": "Guild Crimson Crest Lance",
+  "type": "Lance",
+  "rarity": "1–14",
+  "attack": 1404,
+  "affinity": "0%",
+  "element": "None",
+  "elementValue": 0,
+  "sharpness": "Green"
+ },
+ {
+  "name": "Guild Crimson Crest Hammer",
+  "type": "Hammer",
+  "rarity": "1–14",
+  "attack": 1404,
+  "affinity": "0%",
+  "element": "None",
+  "elementValue": 0,
+  "sharpness": "Green"
+ },
+ {
+  "name": "Guild Crimson Crest Charge Blade",
+  "type": "Charge Blade",
+  "rarity": "1–14",
+  "attack": 1404,
+  "affinity": "0%",
+  "element": "None",
+  "elementValue": 0,
+  "sharpness": "Green"
+ },
+ {
+  "name": "Guild Crimson Crest Heavy Bowgun",
+  "type": "Heavy Bowgun",
+  "rarity": "1–14",
+  "attack": 1404,
+  "affinity": "0%",
+  "element": "None",
+  "elementValue": 0,
+  "sharpness": ""
+ },
+ {
+  "name": "Guild Crimson Crest Bow",
+  "type": "Bow",
+  "rarity": "1–14",
+  "attack": 1404,
+  "affinity": "0%",
+  "element": "None",
+  "elementValue": 0,
+  "sharpness": ""
+ },
+ {
+  "name": "Radiant Datura Blaster",
+  "type": "Heavy Bowgun",
+  "rarity": "7–14",
+  "attack": 1378,
+  "affinity": "0%",
+  "element": "Blast",
+  "elementValue": 689,
+  "sharpness": ""
+ },
+ {
+  "name": "Radiant Datura Blaze",
+  "type": "Great Sword",
+  "rarity": "7–14",
+  "attack": 1376,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 688,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Datura Pike",
+  "type": "Lance",
+  "rarity": "7–14",
+  "attack": 1376,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 688,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Datura String",
+  "type": "Bow",
+  "rarity": "7–14",
+  "attack": 1376,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 688,
+  "sharpness": ""
+ },
+ {
+  "name": "Radiant Buon Fiore",
+  "type": "Hammer",
+  "rarity": "14",
+  "attack": 1376,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 688,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Barroth Stinger",
+  "type": "Lance",
+  "rarity": "8–14",
+  "attack": 1375,
+  "affinity": "-8%",
+  "element": "Paralyzed",
+  "elementValue": 688,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Dear Hecatel",
+  "type": "Charge Blade",
+  "rarity": "12–14",
+  "attack": 1346,
+  "affinity": "+3%",
+  "element": "Poison",
+  "elementValue": 673,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Twin Flames",
+  "type": "Dual Blades",
+  "rarity": "14",
+  "attack": 1346,
+  "affinity": "+3%",
+  "element": "Poison",
+  "elementValue": 673,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Datura Blaze",
+  "type": "Great Sword",
+  "rarity": "7–14",
+  "attack": 1334,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 667,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Datura Pike",
+  "type": "Lance",
+  "rarity": "7–14",
+  "attack": 1334,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 667,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Buon Fiore",
+  "type": "Hammer",
+  "rarity": "7–14",
+  "attack": 1334,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 667,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Barroth Breaker",
+  "type": "Hammer",
+  "rarity": "8–14",
+  "attack": 1316,
+  "affinity": "-6%",
+  "element": "Paralyzed",
+  "elementValue": 658,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Barroth Shredder",
+  "type": "Great Sword",
+  "rarity": "8–14",
+  "attack": 1316,
+  "affinity": "-6%",
+  "element": "Paralyzed",
+  "elementValue": 658,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Barroth Stinger",
+  "type": "Lance",
+  "rarity": "7–14",
+  "attack": 1316,
+  "affinity": "-6%",
+  "element": "Paralyzed",
+  "elementValue": 658,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Dear Lutemia",
+  "type": "Charge Blade",
+  "rarity": "8–14",
+  "attack": 1306,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 653,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Dear Lutemia",
+  "type": "Charge Blade",
+  "rarity": "8–14",
+  "attack": 1306,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 653,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Chrome Razor",
+  "type": "Great Sword",
+  "rarity": "7–14",
+  "attack": 1306,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 653,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Chrome Slicers",
+  "type": "Dual Blades",
+  "rarity": "7–14",
+  "attack": 1306,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 653,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Datura Blaster",
+  "type": "Heavy Bowgun",
+  "rarity": "7–14",
+  "attack": 1306,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 653,
+  "sharpness": ""
+ },
+ {
+  "name": "Heavy Bone Lance",
+  "type": "Lance",
+  "rarity": "8–14",
+  "attack": 1306,
+  "affinity": "0%",
+  "element": "Poison",
+  "elementValue": 653,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Jagras Escudo",
+  "type": "Charge Blade",
+  "rarity": "7–14",
+  "attack": 1299,
+  "affinity": "0%",
+  "element": "Sleep",
+  "elementValue": 650,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Dark Scimitar",
+  "type": "Long Sword",
+  "rarity": "8–14",
+  "attack": 1299,
+  "affinity": "0%",
+  "element": "Paralyzed",
+  "elementValue": 650,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Dark Ripper",
+  "type": "Dual Blades",
+  "rarity": "8–14",
+  "attack": 1299,
+  "affinity": "0%",
+  "element": "Paralyzed",
+  "elementValue": 650,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Baan Strike",
+  "type": "Hammer",
+  "rarity": "7–14",
+  "attack": 1299,
+  "affinity": "0%",
+  "element": "Sleep",
+  "elementValue": 650,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Dear Hecatel",
+  "type": "Charge Blade",
+  "rarity": "9–14",
+  "attack": 1274,
+  "affinity": "+6%",
+  "element": "Poison",
+  "elementValue": 637,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Malady's Kiss",
+  "type": "Great Sword",
+  "rarity": "7–14",
+  "attack": 1271,
+  "affinity": "+3%",
+  "element": "Paralyzed",
+  "elementValue": 636,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Archer's Dance",
+  "type": "Bow",
+  "rarity": "7–14",
+  "attack": 1271,
+  "affinity": "+3%",
+  "element": "Sleep",
+  "elementValue": 636,
+  "sharpness": ""
+ },
+ {
+  "name": "Radiant Last Dance",
+  "type": "Long Sword",
+  "rarity": "7–14",
+  "attack": 1271,
+  "affinity": "+3%",
+  "element": "Sleep",
+  "elementValue": 636,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Arcanaria",
+  "type": "Dual Blades",
+  "rarity": "7–14",
+  "attack": 1271,
+  "affinity": "+3%",
+  "element": "Sleep",
+  "elementValue": 636,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Kulu Hasta",
+  "type": "Lance",
+  "rarity": "7–14",
+  "attack": 1271,
+  "affinity": "+3%",
+  "element": "Sleep",
+  "elementValue": 636,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Malady's Fist",
+  "type": "Hammer",
+  "rarity": "7–14",
+  "attack": 1271,
+  "affinity": "+3%",
+  "element": "Paralyzed",
+  "elementValue": 636,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Girros Nadja",
+  "type": "Charge Blade",
+  "rarity": "7–14",
+  "attack": 1271,
+  "affinity": "+3%",
+  "element": "Paralyzed",
+  "elementValue": 636,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Barroth Shredder",
+  "type": "Great Sword",
+  "rarity": "7–14",
+  "attack": 1262,
+  "affinity": "-3%",
+  "element": "Paralyzed",
+  "elementValue": 631,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Barroth Breaker",
+  "type": "Hammer",
+  "rarity": "7–14",
+  "attack": 1262,
+  "affinity": "-3%",
+  "element": "Paralyzed",
+  "elementValue": 631,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Jagras Escudo",
+  "type": "Charge Blade",
+  "rarity": "7–14",
+  "attack": 1260,
+  "affinity": "0%",
+  "element": "Sleep",
+  "elementValue": 630,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Bone Reaper",
+  "type": "Long Sword",
+  "rarity": "8–14",
+  "attack": 1260,
+  "affinity": "0%",
+  "element": "Sleep",
+  "elementValue": 630,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Baan Roar",
+  "type": "Heavy Bowgun",
+  "rarity": "7–14",
+  "attack": 1260,
+  "affinity": "0%",
+  "element": "Sleep",
+  "elementValue": 630,
+  "sharpness": ""
+ },
+ {
+  "name": "Chrome Lance",
+  "type": "Lance",
+  "rarity": "7–14",
+  "attack": 1233,
+  "affinity": "0%",
+  "element": "Paralyzed",
+  "elementValue": 617,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Chrome Assault",
+  "type": "Heavy Bowgun",
+  "rarity": "7–14",
+  "attack": 1233,
+  "affinity": "0%",
+  "element": "Paralyzed",
+  "elementValue": 617,
+  "sharpness": ""
+ },
+ {
+  "name": "Radiant Wyvern Blade \"Verde\"",
+  "type": "Long Sword",
+  "rarity": "8–14",
+  "attack": 1226,
+  "affinity": "+8%",
+  "element": "Poison",
+  "elementValue": 613,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Wyvern Blade \"Verde\"",
+  "type": "Long Sword",
+  "rarity": "9–14",
+  "attack": 1226,
+  "affinity": "+8%",
+  "element": "Poison",
+  "elementValue": 613,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Kulu Hasta",
+  "type": "Lance",
+  "rarity": "9–14",
+  "attack": 1203,
+  "affinity": "+6%",
+  "element": "Sleep",
+  "elementValue": 602,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Arcanaria",
+  "type": "Dual Blades",
+  "rarity": "7–14",
+  "attack": 1203,
+  "affinity": "+6%",
+  "element": "Sleep",
+  "elementValue": 602,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Girros Nadja",
+  "type": "Charge Blade",
+  "rarity": "7–14",
+  "attack": 1203,
+  "affinity": "+6%",
+  "element": "Paralyzed",
+  "elementValue": 602,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Crushing Beak",
+  "type": "Hammer",
+  "rarity": "7–14",
+  "attack": 1203,
+  "affinity": "+6%",
+  "element": "Sleep",
+  "elementValue": 602,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Crushing Beak",
+  "type": "Hammer",
+  "rarity": "7–14",
+  "attack": 1158,
+  "affinity": "+8%",
+  "element": "Sleep",
+  "elementValue": 579,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Last Dance",
+  "type": "Long Sword",
+  "rarity": "7–14",
+  "attack": 1158,
+  "affinity": "+8%",
+  "element": "Sleep",
+  "elementValue": 579,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Malady's Kiss",
+  "type": "Great Sword",
+  "rarity": "7–14",
+  "attack": 1158,
+  "affinity": "+8%",
+  "element": "Paralyzed",
+  "elementValue": 579,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Malady's Fist",
+  "type": "Hammer",
+  "rarity": "7–14",
+  "attack": 1158,
+  "affinity": "+8%",
+  "element": "Paralyzed",
+  "elementValue": 579,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Diablos Coilbender",
+  "type": "Bow",
+  "rarity": "11–14",
+  "attack": 1078,
+  "affinity": "-8%",
+  "element": "Water",
+  "elementValue": 539,
+  "sharpness": ""
+ },
+ {
+  "name": "Radiant Dual Threat",
+  "type": "Heavy Bowgun",
+  "rarity": "11–14",
+  "attack": 1078,
+  "affinity": "-8%",
+  "element": "Water",
+  "elementValue": 539,
+  "sharpness": ""
+ },
+ {
+  "name": "Radiant Diablos Wall",
+  "type": "Charge Blade",
+  "rarity": "11–14",
+  "attack": 1078,
+  "affinity": "-8%",
+  "element": "Water",
+  "elementValue": 539,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Diablos Sledge",
+  "type": "Hammer",
+  "rarity": "11–14",
+  "attack": 1078,
+  "affinity": "-8%",
+  "element": "Water",
+  "elementValue": 539,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Radiant Diablos Hatchets",
+  "type": "Dual Blades",
+  "rarity": "11–14",
+  "attack": 1078,
+  "affinity": "-8%",
+  "element": "Water",
+  "elementValue": 539,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Diablos Tyrannis",
+  "type": "Charge Blade",
+  "rarity": "14",
+  "attack": 1078,
+  "affinity": "-8%",
+  "element": "Ice",
+  "elementValue": 539,
+  "sharpness": "Blue"
+ },
+ {
+  "name": "Griffon Blazooka",
+  "type": "Heavy Bowgun",
+  "rarity": "14",
+  "attack": 1078,
+  "affinity": "-8%",
+  "element": "Ice",
+  "elementValue": 539,
+  "sharpness": ""
+ },
+ {
+  "name": "Cera Coilbender",
+  "type": "Bow",
+  "rarity": "14",
+  "attack": 1078,
+  "affinity": "-8%",
+  "element": "Ice",
+  "elementValue": 539,
+  "sharpness": ""
+ },
+ {
+  "name": "Diablos Sledge",
+  "type": "Hammer",
+  "rarity": "7–14",
+  "attack": 1032,
+  "affinity": "-6%",
+  "element": "Ice",
+  "elementValue": 516,
+  "sharpness": ""
+ }
+]
