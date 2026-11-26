@@ -1,0 +1,1353 @@
+[
+{
+"name": "Ruger Aidal Oath",
+"part": "Head",
+"set": "Ruger Aidal Set",
+"setSkill": "Ruger Aidal's Intimidation",
+"rarity": "9–14",
+"defense": 196,
+"skills": [
+"Grace Under Pressure Lv1",
+"Suppression Recovery Lv2"
+],
+"image": "armor_196"
+},
+{
+"name": "Ruger Aidal Guard",
+"part": "Chest",
+"set": "Ruger Aidal Set",
+"setSkill": "Ruger Aidal's Intimidation",
+"rarity": "9–14",
+"defense": 196,
+"skills": [
+"Counter Boost Lv3",
+"Rejuvenation Lv1"
+],
+"image": "armor_197"
+},
+{
+"name": "Ruger Aidal Verdict",
+"part": "Arms",
+"set": "Ruger Aidal Set",
+"setSkill": "Ruger Aidal's Intimidation",
+"rarity": "9–14",
+"defense": 196,
+"skills": [
+"Stamina Conversion Lv2",
+"Rejuvenation Lv1",
+"Weakspot Follow-Up Lv1"
+],
+"image": "armor_198"
+},
+{
+"name": "Ruger Aidal Devotion",
+"part": "Waist",
+"set": "Ruger Aidal Set",
+"setSkill": "Ruger Aidal's Intimidation",
+"rarity": "9–14",
+"defense": 196,
+"skills": [
+"Stamina Conversion Lv2",
+"Weakspot Follow-Up Lv1",
+"Suppression Recovery Lv1"
+],
+"image": "armor_199"
+},
+{
+"name": "Ruger Aidal Resolve",
+"part": "Legs",
+"set": "Ruger Aidal Set",
+"setSkill": "Ruger Aidal's Intimidation",
+"rarity": "9–14",
+"defense": 196,
+"skills": [
+"Relentless Pursuit Lv1",
+"Morph Boost Lv2",
+"Adversity Lv1"
+],
+"image": "armor_200"
+},
+{
+"name": "Diablos Nero Helm",
+"part": "Head",
+"set": "Black Diablos Set",
+"setSkill": "Black Diablos's Rampart",
+"rarity": "13–14",
+"defense": 196,
+"skills": [
+"Dragon Damage Up Lv2",
+"Fearless Lv1",
+"Guard Technique Lv1"
+],
+"image": "armor_icon1"
+},
+{
+"name": "Diablos Nero Mail",
+"part": "Chest",
+"set": "Black Diablos Set",
+"setSkill": "Black Diablos's Rampart",
+"rarity": "13–14",
+"defense": 196,
+"skills": [
+"Morph Boost Lv2",
+"Fearless Lv1",
+"Guard Technique Lv1"
+],
+"image": "armor_icon2"
+},
+{
+"name": "Diablos Nero Vambraces",
+"part": "Arms",
+"set": "Black Diablos Set",
+"setSkill": "Black Diablos's Rampart",
+"rarity": "13–14",
+"defense": 196,
+"skills": [
+"Stun Resistance Lv2",
+"Tremor Resistance Lv1"
+],
+"image": "armor_239"
+},
+{
+"name": "Diablos Nero Coil",
+"part": "Waist",
+"set": "Black Diablos Set",
+"setSkill": "Black Diablos's Rampart",
+"rarity": "13–14",
+"defense": 196,
+"skills": [
+"Dragon Damage Up Lv3",
+"Stun Resistance Lv1"
+],
+"image": "armor_240"
+},
+{
+"name": "Diablos Nero Greaves",
+"part": "Legs",
+"set": "Black Diablos Set",
+"setSkill": "Black Diablos's Rampart",
+"rarity": "13–14",
+"defense": 196,
+"skills": [
+"Stamina Conversion Lv3",
+"Guard Technique Lv1"
+],
+"image": "armor_241"
+},
+{
+"name": "Radiant Rath Heart Helm",
+"part": "Head",
+"set": "Radiant Pink Rathian Set",
+"setSkill": "Pink Rathian's Rampage",
+"rarity": "12–14",
+"defense": 196,
+"skills": [
+"Unshaken Resolve Lv1",
+"Critical Element Lv2",
+"Grace Under Pressure Lv1"
+],
+"image": "armor_232"
+},
+{
+"name": "Radiant Rath Heart Mail",
+"part": "Chest",
+"set": "Radiant Pink Rathian Set",
+"setSkill": "Pink Rathian's Rampage",
+"rarity": "12–14",
+"defense": 196,
+"skills": [
+"Unshaken Resolve Lv2",
+"Grace Under Pressure Lv1",
+"Critical Element Lv1"
+],
+"image": "armor_233"
+},
+{
+"name": "Radiant Rath Heart Braces",
+"part": "Arms",
+"set": "Radiant Pink Rathian Set",
+"setSkill": "Pink Rathian's Rampage",
+"rarity": "12–14",
+"defense": 196,
+"skills": [
+"Insight Lv2",
+"Unshaken Resolve Lv1",
+"Grace Under Pressure Lv1"
+],
+"image": "armor_234"
+},
+{
+"name": "Radiant Rath Heart Coil",
+"part": "Waist",
+"set": "Radiant Pink Rathian Set",
+"setSkill": "Pink Rathian's Rampage",
+"rarity": "12–14",
+"defense": 196,
+"skills": [
+"Recovery Booster Lv1",
+"Poison Resistance Lv2"
+],
+"image": "armor_235"
+},
+{
+"name": "Radiant Rath Heart Greaves",
+"part": "Legs",
+"set": "Radiant Pink Rathian Set",
+"setSkill": "Pink Rathian's Rampage",
+"rarity": "12–14",
+"defense": 196,
+"skills": [
+"Recovery Booster Lv1",
+"Capacity Boost Lv3"
+],
+"image": "armor_236"
+},
+{
+"name": "Radiant Odogaron Helm",
+"part": "Head",
+"set": "Radiant Odogaron Set",
+"setSkill": "Odogaron's Surge",
+"rarity": "10–14",
+"defense": 194,
+"skills": [
+"Charge Up Lv3",
+"Rejuvenation Lv1"
+],
+"image": "armor_206"
+},
+{
+"name": "Radiant Odogaron Mail",
+"part": "Chest",
+"set": "Radiant Odogaron Set",
+"setSkill": "Odogaron's Surge",
+"rarity": "10–14",
+"defense": 194,
+"skills": [
+"Combo Enhancement Lv3",
+"Rejuvenation Lv1"
+],
+"image": "armor_207"
+},
+{
+"name": "Radiant Odogaron Vambraces",
+"part": "Arms",
+"set": "Radiant Odogaron Set",
+"setSkill": "Odogaron's Surge",
+"rarity": "10–14",
+"defense": 194,
+"skills": [
+"Demonic Strength Lv2",
+"Health Cycle Lv1",
+"Instinct Lv1"
+],
+"image": "armor_208"
+},
+{
+"name": "Radiant Odogaron Coil",
+"part": "Waist",
+"set": "Radiant Odogaron Set",
+"setSkill": "Odogaron's Surge",
+"rarity": "10–14",
+"defense": 194,
+"skills": [
+"Demonic Strength Lv2",
+"Health Cycle Lv1",
+"Relentless Pursuit Lv1"
+],
+"image": "armor_209"
+},
+{
+"name": "Radiant Odogaron Greaves",
+"part": "Legs",
+"set": "Radiant Odogaron Set",
+"setSkill": "Odogaron's Surge",
+"rarity": "10–14",
+"defense": 194,
+"skills": [
+"Rejuvenation Lv1",
+"Health Boost Lv2"
+],
+"image": "armor_210"
+},
+{
+"name": "Radiant Diablos Helm",
+"part": "Head",
+"set": "Radiant Diablos Set",
+"setSkill": "Diablos's Barrier",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Tremor Resistance Lv1",
+"Pierce Lv2",
+"Battle Spirit Lv1"
+],
+"image": "armor_222"
+},
+{
+"name": "Radiant Diablos Mail",
+"part": "Chest",
+"set": "Radiant Diablos Set",
+"setSkill": "Diablos's Barrier",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Defense Up Lv1",
+"Bento Lover Lv3"
+],
+"image": "armor_223"
+},
+{
+"name": "Radiant Diablos Vambraces",
+"part": "Arms",
+"set": "Radiant Diablos Set",
+"setSkill": "Diablos's Barrier",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Pierce Lv2",
+"Battle Spirit Lv1",
+"Defense Up Lv1"
+],
+"image": "armor_224"
+},
+{
+"name": "Radiant Diablos Coil",
+"part": "Waist",
+"set": "Radiant Diablos Set",
+"setSkill": "Diablos's Barrier",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Flash Draw Lv3",
+"Tremor Resistance Lv1"
+],
+"image": "armor_225"
+},
+{
+"name": "Radiant Diablos Greaves",
+"part": "Legs",
+"set": "Radiant Diablos Set",
+"setSkill": "Diablos's Barrier",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Tremor Resistance Lv1",
+"Defense Up Lv2"
+],
+"image": "armor_226"
+},
+{
+"name": "Radiant Rathalos Helm",
+"part": "Head",
+"set": "Radiant Rathalos Set",
+"setSkill": "Rathalos's Fervor",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Deterrence Lv2",
+"Suppression Recovery Lv1"
+],
+"image": "armor_216"
+},
+{
+"name": "Radiant Rathalos Mail",
+"part": "Chest",
+"set": "Radiant Rathalos Set",
+"setSkill": "Rathalos's Fervor",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Wrecker Lv2",
+"Critical Element Lv1",
+"Suppression Recovery Lv1"
+],
+"image": "armor_217"
+},
+{
+"name": "Radiant Rathalos Vambraces",
+"part": "Arms",
+"set": "Radiant Rathalos Set",
+"setSkill": "Rathalos's Fervor",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Fire Damage Up Lv3",
+"Suppression Recovery Lv1"
+],
+"image": "armor_218"
+},
+{
+"name": "Radiant Rathalos Coil",
+"part": "Waist",
+"set": "Radiant Rathalos Set",
+"setSkill": "Rathalos's Fervor",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Charge Enhancement Lv3",
+"Deterrence Lv1"
+],
+"image": "armor_219"
+},
+{
+"name": "Radiant Rathalos Greaves",
+"part": "Legs",
+"set": "Radiant Rathalos Set",
+"setSkill": "Rathalos's Fervor",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Adversity Lv1",
+"Fire Damage Up Lv2",
+"Critical Element Lv1"
+],
+"image": "armor_220"
+},
+{
+"name": "Radiant Legiana Helm",
+"part": "Head",
+"set": "Radiant Legiana Set",
+"setSkill": "Legiana Blessing",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Ice Damage Up Lv3",
+"Blessing Lv1"
+],
+"image": "armor_211"
+},
+{
+"name": "Radiant Legiana Mail",
+"part": "Chest",
+"set": "Radiant Legiana Set",
+"setSkill": "Legiana Blessing",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Charged Power Shot Lv3",
+"Ice Resistance Lv1"
+],
+"image": "armor_212"
+},
+{
+"name": "Radiant Legiana Vambraces",
+"part": "Arms",
+"set": "Radiant Legiana Set",
+"setSkill": "Legiana Blessing",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Ice Damage Up Lv1",
+"Ice Resistance Lv1",
+"Windproof Lv1"
+],
+"image": "armor_213"
+},
+{
+"name": "Radiant Legiana Coil",
+"part": "Waist",
+"set": "Radiant Legiana Set",
+"setSkill": "Legiana Blessing",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Blessing Lv2",
+"Ice Resistance Lv1"
+],
+"image": "armor_214"
+},
+{
+"name": "Radiant Legiana Greaves",
+"part": "Legs",
+"set": "Radiant Legiana Set",
+"setSkill": "Legiana Blessing",
+"rarity": "11–14",
+"defense": 194,
+"skills": [
+"Blessing Lv1",
+"Charged Power Shot Lv2",
+"Insight Lv1"
+],
+"image": "armor_215"
+},
+{
+"name": "Radiant Baan Helm",
+"part": "Head",
+"set": "Radiant Baan Set",
+"setSkill": "Radobaan's Fearlessness",
+"rarity": "12–14",
+"defense": 194,
+"skills": [
+"Tremor Resistance Lv1",
+"Grace Under Pressure Lv2"
+],
+"image": "armor_227"
+},
+{
+"name": "Radiant Baan Mail",
+"part": "Chest",
+"set": "Radiant Baan Set",
+"setSkill": "Radobaan's Fearlessness",
+"rarity": "12–14",
+"defense": 194,
+"skills": [
+"Immovable Stance Lv3",
+"Tremor Resistance Lv1"
+],
+"image": "armor_228"
+},
+{
+"name": "Radiant Baan Vambraces",
+"part": "Arms",
+"set": "Radiant Baan Set",
+"setSkill": "Radobaan's Fearlessness",
+"rarity": "12–14",
+"defense": 194,
+"skills": [
+"Intimidation Lv2",
+"Tremor Resistance Lv1",
+"Fearless Lv1"
+],
+"image": "armor_229"
+},
+{
+"name": "Radiant Baan Coil",
+"part": "Waist",
+"set": "Radiant Baan Set",
+"setSkill": "Radobaan's Fearlessness",
+"rarity": "12–14",
+"defense": 194,
+"skills": [
+"Intimidation Lv2",
+"Breaker Lv1",
+"Sleep Resistance Lv1"
+],
+"image": "armor_230"
+},
+{
+"name": "Radiant Baan Greaves",
+"part": "Legs",
+"set": "Radiant Baan Set",
+"setSkill": "Radobaan's Fearlessness",
+"rarity": "12–14",
+"defense": 194,
+"skills": [
+"Immovable Stance Lv2",
+"Fearless Lv1",
+"Sleep Resistance Lv1"
+],
+"image": "armor_231"
+},
+{
+"name": "Baan Helm",
+"part": "Head",
+"set": "Baan Set",
+"setSkill": "Radobaan's Bulwark",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Charge Enhancement Lv2",
+"Fearless Lv1",
+"Bleeding Resistance Lv1"
+],
+"image": "armor_161"
+},
+{
+"name": "Baan Mail",
+"part": "Chest",
+"set": "Baan Set",
+"setSkill": "Radobaan's Bulwark",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Intimidation Lv2",
+"Fearless Lv1",
+"Bleeding Resistance Lv1"
+],
+"image": "armor_162"
+},
+{
+"name": "Baan Vambraces",
+"part": "Arms",
+"set": "Baan Set",
+"setSkill": "Radobaan's Bulwark",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Charge Enhancement Lv3",
+"Sleep Resistance Lv1"
+],
+"image": "armor_163"
+},
+{
+"name": "Baan Coil",
+"part": "Waist",
+"set": "Baan Set",
+"setSkill": "Radobaan's Bulwark",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Sleep Resistance Lv1",
+"Immovable Stance Lv3"
+],
+"image": "armor_164"
+},
+{
+"name": "Baan Greaves",
+"part": "Legs",
+"set": "Baan Set",
+"setSkill": "Radobaan's Bulwark",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Iron Skin Lv2",
+"Bleeding Resistance Lv1"
+],
+"image": "armor_165"
+},
+{
+"name": "Radiant Girros Mask",
+"part": "Head",
+"set": "Radiant Great Girros Set",
+"setSkill": "Great Girros's Command",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Combo Enhancement Lv2",
+"Radiant Sense Lv1",
+"Paralysis Resistance Lv1"
+],
+"image": "armor_146"
+},
+{
+"name": "Radiant Girros Mail",
+"part": "Chest",
+"set": "Radiant Great Girros Set",
+"setSkill": "Great Girros's Command",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Thunder Damage Up Lv3",
+"Paralysis Resistance Lv1"
+],
+"image": "armor_147"
+},
+{
+"name": "Radiant Girros Vambraces",
+"part": "Arms",
+"set": "Radiant Great Girros Set",
+"setSkill": "Great Girros's Command",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Combo Enhancement Lv3",
+"Flinching-Free Lv1"
+],
+"image": "armor_148"
+},
+{
+"name": "Radiant Girros Coil",
+"part": "Waist",
+"set": "Radiant Great Girros Set",
+"setSkill": "Great Girros's Command",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Thunder Damage Up Lv2",
+"Fearless Lv1",
+"Health Recovery Lv1"
+],
+"image": "armor_149"
+},
+{
+"name": "Radiant Girros Greaves",
+"part": "Legs",
+"set": "Radiant Great Girros Set",
+"setSkill": "Great Girros's Command",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Health Recovery Lv2",
+"Flinching-Free Lv1"
+],
+"image": "armor_150"
+},
+{
+"name": "Radiant Kadachi Helm",
+"part": "Head",
+"set": "Radiant Kadachi Set",
+"setSkill": "Tobi-Kadachi Surge",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Counter Boost Lv2",
+"Battle Spirit Lv1",
+"Thunder Resistance Lv1"
+],
+"image": "armor_151"
+},
+{
+"name": "Radiant Kadachi Mail",
+"part": "Chest",
+"set": "Radiant Kadachi Set",
+"setSkill": "Tobi-Kadachi Surge",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Deterrence Lv2",
+"Adversity Lv1"
+],
+"image": "armor_152"
+},
+{
+"name": "Radiant Kadachi Vambraces",
+"part": "Arms",
+"set": "Radiant Kadachi Set",
+"setSkill": "Tobi-Kadachi Surge",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Bow Skill Boost Lv2",
+"Thunder Resistance Lv1",
+"Unleashed Lv1"
+],
+"image": "armor_153"
+},
+{
+"name": "Radiant Kadachi Coil",
+"part": "Waist",
+"set": "Radiant Kadachi Set",
+"setSkill": "Tobi-Kadachi Surge",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Thunder Resistance Lv1",
+"Bow Skill Boost Lv2",
+"Unleashed Lv1"
+],
+"image": "armor_154"
+},
+{
+"name": "Radiant Kadachi Greaves",
+"part": "Legs",
+"set": "Radiant Kadachi Set",
+"setSkill": "Tobi-Kadachi Surge",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Counter Boost Lv3",
+"Deterrence Lv1"
+],
+"image": "armor_155"
+},
+{
+"name": "Diablos Helm",
+"part": "Head",
+"set": "Diablos Set",
+"setSkill": "Diablos's Footing",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Tremor Resistance Lv2",
+"Defense Up Lv1"
+],
+"image": "armor_156"
+},
+{
+"name": "Diablos Mail",
+"part": "Chest",
+"set": "Diablos Set",
+"setSkill": "Diablos's Footing",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Dragon Damage Up Lv3",
+"Defense Up Lv1"
+],
+"image": "armor_157"
+},
+{
+"name": "Diablos Vambraces",
+"part": "Arms",
+"set": "Diablos Set",
+"setSkill": "Diablos's Footing",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Bento Lover Lv2",
+"Weakspot Follow-Up Lv1",
+"Guard Technique Lv1"
+],
+"image": "armor_158"
+},
+{
+"name": "Diablos Coil",
+"part": "Waist",
+"set": "Diablos Set",
+"setSkill": "Diablos's Footing",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Pierce Lv2",
+"Guard Technique Lv1",
+"Weakspot Follow-Up Lv1"
+],
+"image": "armor_159"
+},
+{
+"name": "Diablos Greaves",
+"part": "Legs",
+"set": "Diablos Set",
+"setSkill": "Diablos's Footing",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Bento Lover Lv3",
+"Defense Up Lv1"
+],
+"image": "armor_160"
+},
+{
+"name": "Odogaron Helm",
+"part": "Head",
+"set": "Odogaron Set",
+"setSkill": "Odogaron's Tenacity",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Stamina Conversion Lv2",
+"Hunting Instinct Lv1",
+"Recovery Booster Lv1"
+],
+"image": "armor_166"
+},
+{
+"name": "Odogaron Mail",
+"part": "Chest",
+"set": "Odogaron Set",
+"setSkill": "Odogaron's Tenacity",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Recovery Booster Lv1",
+"Demonic Strength Lv2",
+"Hunting Instinct Lv1"
+],
+"image": "armor_167"
+},
+{
+"name": "Odogaron Vambraces",
+"part": "Arms",
+"set": "Odogaron Set",
+"setSkill": "Odogaron's Tenacity",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Bleeding Resistance Lv2",
+"Rejuvenation Lv1"
+],
+"image": "armor_168"
+},
+{
+"name": "Odogaron Coil",
+"part": "Waist",
+"set": "Odogaron Set",
+"setSkill": "Odogaron's Tenacity",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Charge Up Lv3",
+"Rejuvenation Lv1"
+],
+"image": "armor_169"
+},
+{
+"name": "Odogaron Greaves",
+"part": "Legs",
+"set": "Odogaron Set",
+"setSkill": "Odogaron's Tenacity",
+"rarity": "7–14",
+"defense": 192,
+"skills": [
+"Charge Up Lv2",
+"Weakspot Exploit Lv1",
+"Recovery Booster Lv1"
+],
+"image": "armor_170"
+},
+{
+"name": "Tzitzi Headgear",
+"part": "Head",
+"set": "Tzitzi-Ya-Ku Set",
+"setSkill": "Tzitzi-Ya-Ku's Pursuit",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Piercing Strike Lv2",
+"Relentless Pursuit Lv1",
+"Blessing Lv1"
+],
+"image": "armor_171"
+},
+{
+"name": "Tzitzi Mail",
+"part": "Chest",
+"set": "Tzitzi-Ya-Ku Set",
+"setSkill": "Tzitzi-Ya-Ku's Pursuit",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Water Damage Up Lv3",
+"Blessing Lv1"
+],
+"image": "armor_172"
+},
+{
+"name": "Tzitzi Vambraces",
+"part": "Arms",
+"set": "Tzitzi-Ya-Ku Set",
+"setSkill": "Tzitzi-Ya-Ku's Pursuit",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Piercing Strike Lv3",
+"Sleep Resistance Lv1"
+],
+"image": "armor_173"
+},
+{
+"name": "Tzitzi Coil",
+"part": "Waist",
+"set": "Tzitzi-Ya-Ku Set",
+"setSkill": "Tzitzi-Ya-Ku's Pursuit",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Water Damage Up Lv2",
+"Relentless Pursuit Lv1",
+"Stun Resistance Lv1"
+],
+"image": "armor_174"
+},
+{
+"name": "Tzitzi Greaves",
+"part": "Legs",
+"set": "Tzitzi-Ya-Ku Set",
+"setSkill": "Tzitzi-Ya-Ku's Pursuit",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Capturing Expert Lv1",
+"Stun Resistance Lv1",
+"Blessing Lv1"
+],
+"image": "armor_175"
+},
+{
+"name": "Lumu Hat",
+"part": "Head",
+"set": "Paolumu Set",
+"setSkill": "Paolumu's Presence",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Ammo Enhancement Lv2",
+"Windproof Lv1",
+"Flawless Lv1"
+],
+"image": "armor_176"
+},
+{
+"name": "Lumu Mail",
+"part": "Chest",
+"set": "Paolumu Set",
+"setSkill": "Paolumu's Presence",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Offensive Defense Lv3",
+"Blessing Lv1"
+],
+"image": "armor_177"
+},
+{
+"name": "Lumu Vambraces",
+"part": "Arms",
+"set": "Paolumu Set",
+"setSkill": "Paolumu's Presence",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Airborne Lv3",
+"Windproof Lv1"
+],
+"image": "armor_178"
+},
+{
+"name": "Lumu Coil",
+"part": "Waist",
+"set": "Paolumu Set",
+"setSkill": "Paolumu's Presence",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Health Recovery Lv2",
+"Blessing Lv1"
+],
+"image": "armor_179"
+},
+{
+"name": "Lumu Greaves",
+"part": "Legs",
+"set": "Paolumu Set",
+"setSkill": "Paolumu's Presence",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Offensive Defense Lv2",
+"Flawless Lv1",
+"Windproof Lv1"
+],
+"image": "armor_180"
+},
+{
+"name": "Legiana Helm",
+"part": "Head",
+"set": "Legiana Set",
+"setSkill": "Legiana Dance",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Ice Resistance Lv2",
+"Blessing Lv1"
+],
+"image": "armor_181"
+},
+{
+"name": "Legiana Mail",
+"part": "Chest",
+"set": "Legiana Set",
+"setSkill": "Legiana Dance",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Flash Draw Lv2",
+"Weakspot Exploit Lv1",
+"Windproof Lv1"
+],
+"image": "armor_182"
+},
+{
+"name": "Legiana Vambraces",
+"part": "Arms",
+"set": "Legiana Set",
+"setSkill": "Legiana Dance",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Ice Damage Up Lv2",
+"Weakspot Exploit Lv1",
+"Blessing Lv1"
+],
+"image": "armor_183"
+},
+{
+"name": "Legiana Coil",
+"part": "Waist",
+"set": "Legiana Set",
+"setSkill": "Legiana Dance",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Blessing Lv2",
+"Ice Damage Up Lv1"
+],
+"image": "armor_184"
+},
+{
+"name": "Legiana Greaves",
+"part": "Legs",
+"set": "Legiana Set",
+"setSkill": "Legiana Dance",
+"rarity": "8–14",
+"defense": 192,
+"skills": [
+"Ammo Enhancement Lv2",
+"Suppression Recovery Lv1",
+"Critical Element Lv1"
+],
+"image": "armor_185"
+},
+{
+"name": "Rath Heart Helm",
+"part": "Head",
+"set": "Pink Rathian Set",
+"setSkill": "Pink Rathian's Acuity",
+"rarity": "9–14",
+"defense": 192,
+"skills": [
+"Fire Damage Up Lv2",
+"Hunting Instinct Lv1",
+"Health Boost Lv1"
+],
+"image": "armor_186"
+},
+{
+"name": "Rath Heart Mail",
+"part": "Chest",
+"set": "Pink Rathian Set",
+"setSkill": "Pink Rathian's Acuity",
+"rarity": "9–14",
+"defense": 192,
+"skills": [
+"Poison Resistance Lv2",
+"Recovery Booster Lv1"
+],
+"image": "armor_187"
+},
+{
+"name": "Rath Heart Braces",
+"part": "Arms",
+"set": "Pink Rathian Set",
+"setSkill": "Pink Rathian's Acuity",
+"rarity": "9–14",
+"defense": 192,
+"skills": [
+"Capacity Boost Lv2",
+"Hunting Instinct Lv1",
+"Recovery Booster Lv1"
+],
+"image": "armor_188"
+},
+{
+"name": "Rath Heart Coil",
+"part": "Waist",
+"set": "Pink Rathian Set",
+"setSkill": "Pink Rathian's Acuity",
+"rarity": "9–14",
+"defense": 192,
+"skills": [
+"Capacity Boost Lv2",
+"Insight Lv1",
+"Health Boost Lv1"
+],
+"image": "armor_189"
+},
+{
+"name": "Rath Heart Greaves",
+"part": "Legs",
+"set": "Pink Rathian Set",
+"setSkill": "Pink Rathian's Acuity",
+"rarity": "9–14",
+"defense": 192,
+"skills": [
+"Instinct Lv1",
+"Spirit Bind Blade Lv2",
+"Recovery Booster Lv1"
+],
+"image": "armor_190"
+},
+{
+"name": "Radiant Lumu Hat",
+"part": "Head",
+"set": "Radiant Paolumu Set",
+"setSkill": "Paolumu's Airflow",
+"rarity": "9–14",
+"defense": 192,
+"skills": [
+"Charged Power Shot Lv1",
+"Item Master Lv1",
+"Blessing Lv1"
+],
+"image": "armor_191"
+},
+{
+"name": "Radiant Lumu Mail",
+"part": "Chest",
+"set": "Radiant Paolumu Set",
+"setSkill": "Paolumu's Airflow",
+"rarity": "9–14",
+"defense": 192,
+"skills": [
+"Grace Under Pressure Lv2",
+"Item Master Lv1"
+],
+"image": "armor_192"
+},
+{
+"name": "Radiant Lumu Vambraces",
+"part": "Arms",
+"set": "Radiant Paolumu Set",
+"setSkill": "Paolumu's Airflow",
+"rarity": "9–14",
+"defense": 192,
+"skills": [
+"Charged Power Shot Lv2",
+"Ballistics Lv1",
+"Gathering Master Lv1"
+],
+"image": "armor_193"
+},
+{
+"name": "Radiant Lumu Coil",
+"part": "Waist",
+"set": "Radiant Paolumu Set",
+"setSkill": "Paolumu's Airflow",
+"rarity": "9–14",
+"defense": 192,
+"skills": [
+"Airborne Lv3",
+"Item Master Lv1"
+],
+"image": "armor_194"
+},
+{
+"name": "Radiant Lumu Greaves",
+"part": "Legs",
+"set": "Radiant Paolumu Set",
+"setSkill": "Paolumu's Airflow",
+"rarity": "9–14",
+"defense": 192,
+"skills": [
+"Airborne Lv2",
+"Radiant Sense Lv1",
+"Blessing Lv1"
+],
+"image": "armor_195"
+},
+{
+"name": "Radiant Tzitzi Headgear",
+"part": "Head",
+"set": "Radiant Tzitzi-Ya-Ku Set",
+"setSkill": "Tzitzi-Ya-Ku's Precision",
+"rarity": "10–14",
+"defense": 192,
+"skills": [
+"Water Damage Up Lv1",
+"Health Recovery Lv1",
+"Item Master Lv1"
+],
+"image": "armor_201"
+},
+{
+"name": "Radiant Tzitzi Mail",
+"part": "Chest",
+"set": "Radiant Tzitzi-Ya-Ku Set",
+"setSkill": "Tzitzi-Ya-Ku's Precision",
+"rarity": "10–14",
+"defense": 192,
+"skills": [
+"Item Master Lv2",
+"Piercing Strike Lv1"
+],
+"image": "armor_202"
+},
+{
+"name": "Radiant Tzitzi Vambraces",
+"part": "Arms",
+"set": "Radiant Tzitzi-Ya-Ku Set",
+"setSkill": "Tzitzi-Ya-Ku's Precision",
+"rarity": "10–14",
+"defense": 192,
+"skills": [
+"Health Recovery Lv1",
+"Sleep Resistance Lv2"
+],
+"image": "armor_203"
+},
+{
+"name": "Radiant Tzitzi Coil",
+"part": "Waist",
+"set": "Radiant Tzitzi-Ya-Ku Set",
+"setSkill": "Tzitzi-Ya-Ku's Precision",
+"rarity": "10–14",
+"defense": 192,
+"skills": [
+"Health Recovery Lv1",
+"Piercing Strike Lv3"
+],
+"image": "armor_204"
+},
+{
+"name": "Radiant Tzitzi Greaves",
+"part": "Legs",
+"set": "Radiant Tzitzi-Ya-Ku Set",
+"setSkill": "Tzitzi-Ya-Ku's Precision",
+"rarity": "10–14",
+"defense": 192,
+"skills": [
+"Sleep Resistance Lv1",
+"Water Damage Up Lv3"
+],
+"image": "armor_205"
+},
+{
+"name": "Alloy Helm",
+"part": "Head",
+"set": "Alloy Set",
+"setSkill": "Alloy Barrier",
+"rarity": "3–14",
+"defense": 190,
+"skills": [
+"Water Resistance Lv1",
+"Offensive Defense Lv2",
+"Breaker Lv1"
+],
+"image": "armor_61"
+},
+{
+"name": "Alloy Mail",
+"part": "Chest",
+"set": "Alloy Set",
+"setSkill": "Alloy Barrier",
+"rarity": "3–14",
+"defense": 190,
+"skills": [
+"Immovable Stance Lv1",
+"Breaker Lv1",
+"Poison Resistance Lv1"
+],
+"image": "armor_62"
+},
+{
+"name": "Alloy Vambraces",
+"part": "Arms",
+"set": "Alloy Set",
+"setSkill": "Alloy Barrier",
+"rarity": "3–14",
+"defense": 190,
+"skills": [
+"Windproof Lv1",
+"Defense Up Lv1"
+],
+"image": "armor_63"
+},
+{
+"name": "Alloy Coil",
+"part": "Waist",
+"set": "Alloy Set",
+"setSkill": "Alloy Barrier",
+"rarity": "3–14",
+"defense": 190,
+"skills": [
+"Windproof Lv1",
+"Immovable Stance Lv1",
+"Water Resistance Lv1"
+],
+"image": "armor_64"
+},
+{
+"name": "Alloy Greaves",
+"part": "Legs",
+"set": "Alloy Set",
+"setSkill": "Alloy Barrier",
+"rarity": "3–14",
+"defense": 190,
+"skills": [
+"Offensive Defense Lv1",
+"Defense Up Lv1",
+"Poison Resistance Lv1"
+],
+"image": "armor_65"
+}
+]

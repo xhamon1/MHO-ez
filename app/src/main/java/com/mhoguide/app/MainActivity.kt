@@ -68,10 +68,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         val builds = loadBuilds(this)
         val weapons = loadWeapons(this)
+        val armors = loadArmors(this)
         val prefs = getSharedPreferences("mho", MODE_PRIVATE)
         setContent {
             MaterialTheme(colorScheme = darkColorScheme(primary = Gold, background = Bg, surface = Card)) {
-                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, prefs) }
+                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, prefs) }
             }
         }
     }
@@ -225,13 +226,14 @@ private fun sharpColor(s: String) = when (s) {
 }
 
 @Composable
-fun Root(builds: List<Build>, weapons: List<Weapon>, prefs: SharedPreferences) {
+fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, prefs: SharedPreferences) {
     var tab by remember { mutableStateOf(0) }
     Column(Modifier.fillMaxSize()) {
-        Box(Modifier.weight(1f)) { if (tab == 0) BuildsScreen(builds, prefs) else WeaponsScreen(weapons) }
+        Box(Modifier.weight(1f)) { when (tab) { 0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); else -> ArmorScreen(armors) } }
         NavigationBar(containerColor = Card) {
             NavigationBarItem(tab == 0, { tab = 0 }, { Text("★") }, label = { Text("Builds") })
             NavigationBarItem(tab == 1, { tab = 1 }, { Text("⚔") }, label = { Text("Weapons") })
+            NavigationBarItem(tab == 2, { tab = 2 }, { Text("🛡") }, label = { Text("Armor") })
         }
     }
 }
@@ -285,6 +287,55 @@ fun WeaponCard(w: Weapon) {
         Column(horizontalAlignment = Alignment.End) {
             statIcon(w.element)?.let { AsyncImage(it, w.element, Modifier.size(20.dp)) }
             Text(if (w.element == "None") "—" else "${w.element} ${w.elementValue}", color = c, fontSize = 12.sp)
+        }
+    }
+}
+
+data class Armor(val name: String, val part: String, val set: String, val setSkill: String,
+                 val rarity: String, val defense: Int, val skills: List<String>, val image: String)
+
+fun loadArmors(ctx: Context): List<Armor> {
+    val arr = JSONArray(ctx.assets.open("armors.json").bufferedReader().readText())
+    return (0 until arr.length()).map {
+        val o = arr.getJSONObject(it)
+        Armor(o.getString("name"), o.getString("part"), o.getString("set"), o.getString("setSkill"),
+            o.getString("rarity"), o.getInt("defense"), o.getJSONArray("skills").strs(), o.getString("image"))
+    }
+}
+
+@Composable
+fun ArmorScreen(all: List<Armor>) {
+    var part by remember { mutableStateOf<String?>(null) }
+    var query by remember { mutableStateOf("") }
+    val parts = listOf("Head", "Chest", "Arms", "Waist", "Legs")
+    val shown = all.filter { a -> (part == null || a.part == part) &&
+        (query.isBlank() || listOf(a.name, a.set, a.setSkill, a.skills.joinToString()).any { it.contains(query, true) }) }
+        .sortedByDescending { it.defense }
+    LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        item { Text("Armor", fontSize = 28.sp, fontWeight = FontWeight.Black, color = Gold) }
+        item { Text("Top-defense sets · max-upgrade stats", color = Color(0xFF8E8E98), fontSize = 12.sp) }
+        item { OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
+            placeholder = { Text("Search a skill, set or piece…") }, shape = RoundedCornerShape(14.dp)) }
+        item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            items(parts) { p -> Pill(p, Gold, part == p, null) { part = if (part == p) null else p } } } }
+        item { Text("${shown.size} piece(s)", color = Color(0xFF8E8E98), fontSize = 13.sp) }
+        items(shown, key = { it.name }) { a -> ArmorCard(a) }
+    }
+}
+
+@Composable
+fun ArmorCard(a: Armor) {
+    Row(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(16.dp)).padding(12.dp)) {
+        Box(Modifier.size(56.dp).background(Color(0xFF0D0D10), RoundedCornerShape(12.dp)), Alignment.Center) {
+            AsyncImage(CDN + "article_tools/mhoutlanders/gacha/" + a.image + ".png", a.name, Modifier.size(52.dp))
+        }
+        Spacer(Modifier.width(12.dp))
+        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text(a.name, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 15.sp)
+            Text("${a.part} · ${a.set} · Rarity ${a.rarity} · DEF ${a.defense}", color = Color(0xFF8E8E98), fontSize = 12.sp)
+            a.skills.forEach { Text("• $it", color = Color(0xFFD8D8E0), fontSize = 13.sp) }
+            Text("Set: ${a.setSkill}", color = Gold, fontSize = 12.sp, fontWeight = FontWeight.Bold)
         }
     }
 }
