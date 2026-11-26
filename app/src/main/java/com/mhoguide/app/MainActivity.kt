@@ -1,17 +1,30 @@
 package com.mhoguide.app
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import org.json.JSONArray
 
 data class Build(val name: String, val weapons: List<String>, val element: String,
@@ -28,58 +41,162 @@ fun loadBuilds(ctx: Context): List<Build> {
     }
 }
 
-val WEAPONS = listOf("Great Sword", "Long Sword", "Sword & Shield", "Dual Blades", "Hammer",
-    "Hunting Horn", "Lance", "Gunlance", "Switch Axe", "Charge Blade", "Insect Glaive",
-    "Bow", "Light Bowgun", "Heavy Bowgun")
-val ELEMENTS = listOf("Fire", "Water", "Thunder", "Ice", "Dragon", "None")
+private const val CDN = "https://img.gamewith.jp/"
+val WEAPON_ICONS = mapOf(
+    "Great Sword" to CDN + "img/5c7a4f0eba34d8ad5f96a2f0c08026fe.png",
+    "Long Sword" to CDN + "img/5598294dbb9229c7344b5bb5fdf9b1c2.png",
+    "Dual Blades" to CDN + "img/15ab1008996818b3232ef8fb42976094.png",
+    "Hammer" to CDN + "article_tools/mhoutlanders/gacha/weapon_icon5.png",
+    "Charge Blade" to CDN + "article_tools/mhoutlanders/gacha/weapon_icon10.png",
+    "Lance" to CDN + "img/2d24e1a482ada690b7a236cfd412436e.png",
+    "Heavy Bowgun" to CDN + "img/d19af964d28ad4dbe8d82de6f455e210.png",
+    "Bow" to CDN + "img/704ac3ac33e262c8ca53c64570dfe888.png")
+val ELEMENTS = listOf("Fire", "Water", "Thunder", "Ice", "Dragon")
+val ELEMENT_COLOR = mapOf("Fire" to Color(0xFFE8623C), "Water" to Color(0xFF3F8EF0),
+    "Thunder" to Color(0xFFE8C13C), "Ice" to Color(0xFF55D0E8), "Dragon" to Color(0xFF9C5CE0))
+private fun elementIcon(e: String) = CDN + "article_tools/mhoutlanders/gacha/attr" +
+    (ELEMENTS.indexOf(e) + 1) + ".png"
+
+private val Gold = Color(0xFFE0B04A)
+private val Bg = Color(0xFF111114)
+private val Card = Color(0xFF1B1B20)
+private val Card2 = Color(0xFF26262D)
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         val builds = loadBuilds(this)
-        setContent { MaterialTheme { Surface { GuideScreen(builds) } } }
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun GuideScreen(builds: List<Build>) {
-    var weapon by remember { mutableStateOf<String?>(null) }
-    var element by remember { mutableStateOf<String?>(null) }
-    val result = builds.filter {
-        (weapon == null || "Any" in it.weapons || weapon in it.weapons) &&
-        (element == null || it.element == element)
-    }
-    Column(Modifier.fillMaxSize().statusBarsPadding().padding(16.dp)) {
-        Text("MHO-ez", style = MaterialTheme.typography.headlineMedium)
-        Text("MHO guides for noobs", style = MaterialTheme.typography.bodyMedium)
-        Spacer(Modifier.height(12.dp))
-        Text("Weapon"); Chips(WEAPONS, weapon) { weapon = it }
-        Spacer(Modifier.height(8.dp))
-        Text("Element"); Chips(ELEMENTS, element) { element = it }
-        Spacer(Modifier.height(12.dp))
-        if (result.isEmpty()) Text("No builds for this selection yet. Add them in assets/builds.json.")
-        LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            items(result) { b ->
-                Card(Modifier.fillMaxWidth()) {
-                    Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                        Text(b.name, style = MaterialTheme.typography.titleMedium)
-                        Text("Armor: ${b.armor}")
-                        b.skills.forEach { Text("• $it") }
-                        Text(b.note, style = MaterialTheme.typography.bodySmall)
-                    }
-                }
+        val prefs = getSharedPreferences("mho", MODE_PRIVATE)
+        setContent {
+            MaterialTheme(colorScheme = darkColorScheme(primary = Gold, background = Bg, surface = Card)) {
+                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { App(builds, prefs) }
             }
         }
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Chips(options: List<String>, selected: String?, onSelect: (String?) -> Unit) {
-    LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        items(options) { o ->
-            FilterChip(selected == o, { onSelect(if (selected == o) null else o) }, { Text(o) })
+fun App(builds: List<Build>, prefs: SharedPreferences) {
+    var weapon by remember { mutableStateOf<String?>(null) }
+    var element by remember { mutableStateOf<String?>(null) }
+    var query by remember { mutableStateOf("") }
+    var onlyFav by remember { mutableStateOf(false) }
+    val favs = remember { mutableStateListOf<String>().apply { addAll(prefs.getStringSet("favs", emptySet())!!) } }
+    val weapons = remember { builds.flatMap { it.weapons }.filter { it != "Any" }.distinct() }
+    val shown = builds.filter { b ->
+        (weapon == null || "Any" in b.weapons || weapon in b.weapons) &&
+        (element == null || b.element == element) &&
+        (!onlyFav || b.name in favs) &&
+        (query.isBlank() || listOf(b.name, b.armor, b.note, b.skills.joinToString()).any { it.contains(query, true) })
+    }
+    LazyColumn(
+        Modifier.fillMaxSize().statusBarsPadding(),
+        contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 32.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp)
+    ) {
+        item {
+            Column(Modifier.fillMaxWidth().background(
+                Brush.horizontalGradient(listOf(Color(0xFF3A2A0E), Card)), RoundedCornerShape(20.dp)).padding(20.dp)) {
+                Text("MHO-ez", fontSize = 32.sp, fontWeight = FontWeight.Black, color = Gold)
+                Text("MHO guides for noobs", color = Color(0xFFB8B8C0))
+            }
+        }
+        item {
+            OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
+                placeholder = { Text("Search skills, armor, tips…") }, shape = RoundedCornerShape(14.dp))
+        }
+        item { Label("WEAPON") }
+        item {
+            LazyRow(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                items(weapons) { w -> WeaponTile(w, weapon == w) { weapon = if (weapon == w) null else w } }
+            }
+        }
+        item { Label("ELEMENT") }
+        item {
+            LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                items(ELEMENTS) { e ->
+                    Pill(e, ELEMENT_COLOR[e]!!, element == e, elementIcon(e)) { element = if (element == e) null else e }
+                }
+                item { Pill("★ Favorites", Gold, onlyFav, null) { onlyFav = !onlyFav } }
+            }
+        }
+        item { Text("${shown.size} build(s)", color = Color(0xFF8E8E98), fontSize = 13.sp) }
+        if (shown.isEmpty()) item {
+            Text("No builds match. Try clearing a filter.", color = Color(0xFFB8B8C0))
+        }
+        items(shown, key = { it.name }) { b ->
+            BuildCard(b, b.name in favs) {
+                if (b.name in favs) favs.remove(b.name) else favs.add(b.name)
+                prefs.edit().putStringSet("favs", favs.toSet()).apply()
+            }
+        }
+    }
+}
+
+@Composable
+fun Label(t: String) = Text(t, color = Gold, fontSize = 12.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.5.sp)
+
+@Composable
+fun WeaponTile(name: String, selected: Boolean, onClick: () -> Unit) {
+    Column(
+        Modifier.width(86.dp).background(if (selected) Card2 else Card, RoundedCornerShape(16.dp))
+            .let { if (selected) it.then(Modifier) else it }
+            .clickable(onClick = onClick).padding(10.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Box(Modifier.size(52.dp).background(Color(0xFF0D0D10), RoundedCornerShape(12.dp)), Alignment.Center) {
+            AsyncImage(WEAPON_ICONS[name], name, Modifier.size(44.dp), contentScale = ContentScale.Fit)
+        }
+        Spacer(Modifier.height(6.dp))
+        Text(name, fontSize = 11.sp, color = if (selected) Gold else Color.White,
+            fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal, maxLines = 2,
+            lineHeight = 13.sp)
+    }
+}
+
+@Composable
+fun Pill(text: String, color: Color, selected: Boolean, icon: String?, onClick: () -> Unit) {
+    Surface(
+        onClick = onClick, shape = RoundedCornerShape(50),
+        color = if (selected) color.copy(alpha = 0.25f) else Card,
+        border = BorderStroke(1.dp, if (selected) color else Color(0xFF33333A))
+    ) {
+        Row(Modifier.padding(horizontal = 14.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+            if (icon != null) { AsyncImage(icon, null, Modifier.size(18.dp)); Spacer(Modifier.width(6.dp)) }
+            Text(text, color = if (selected) color else Color.White, fontWeight = FontWeight.Medium)
+        }
+    }
+}
+
+@Composable
+fun BuildCard(b: Build, fav: Boolean, onFav: () -> Unit) {
+    var open by remember { mutableStateOf(false) }
+    val accent = ELEMENT_COLOR[b.element] ?: Color(0xFF8E8E98)
+    Row(Modifier.fillMaxWidth().height(IntrinsicSize.Min).background(Card, RoundedCornerShape(18.dp))) {
+        Box(Modifier.width(5.dp).fillMaxHeight().background(accent, RoundedCornerShape(topStart = 18.dp, bottomStart = 18.dp)))
+        Column(Modifier.padding(16.dp).weight(1f), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Column(Modifier.weight(1f)) {
+                    Text(b.name, fontSize = 17.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        if (b.element in ELEMENTS) { AsyncImage(elementIcon(b.element), null, Modifier.size(16.dp)); Spacer(Modifier.width(4.dp)) }
+                        Text("${b.element} · " + b.weapons.joinToString().replace("Any", "All weapons"),
+                            color = accent, fontSize = 13.sp)
+                    }
+                }
+                Text(if (fav) "★" else "☆", fontSize = 26.sp, color = Gold, modifier = Modifier.clickable(onClick = onFav).padding(6.dp))
+            }
+            Label("ARMOR")
+            b.armor.split(", ").forEach { Text("▸ $it", color = Color(0xFFD8D8E0), fontSize = 14.sp) }
+            Label("SKILLS")
+            b.skills.forEach {
+                Text(it, color = Color.White, fontSize = 13.sp,
+                    modifier = Modifier.fillMaxWidth().background(Card2, RoundedCornerShape(10.dp)).padding(10.dp, 8.dp))
+            }
+            Text(if (open) "Hide tips ▲" else "Show tips & weapon ▼", color = Gold, fontWeight = FontWeight.Bold,
+                modifier = Modifier.clickable { open = !open })
+            if (open) Text(b.note, color = Color(0xFFB8B8C0), fontSize = 13.sp, lineHeight = 19.sp)
         }
     }
 }

@@ -1,10 +1,1171 @@
 [
- {"name":"Fire Starter (Anjanath)","weapons":["Any"],"element":"Fire",
-  "armor":"Anjanath Set (Rarity 3)",
-  "skills":["Fire Damage Up +1 (3-piece): fire damage +3%, +8% vs Radiant monsters","Fire Resistance Lv.1"],
-  "note":"A cheap early-game build for fire weapons. Works well until you can afford higher-rarity sets."},
- {"name":"Rathalos Crit Fire","weapons":["Great Sword"],"element":"Fire",
-  "armor":"Radiant Rathalos Set V (Rarity 11)",
-  "skills":["Critical Element +1 (3-piece Rathalos's Fervor): +5% elemental damage on critical hits","Wrecker Lv.2: staggering a monster or breaking a part with a great sword raises damage for a duration"],
-  "note":"Suited to fire Great Sword: Wrecker grants a damage buff after a stagger or part break, and Critical Element boosts elemental damage on crits."}
+ {
+  "name": "Fire Starter (Anjanath)",
+  "weapons": [
+   "Any"
+  ],
+  "element": "Fire",
+  "armor": "Anjanath Set (Rarity 3)",
+  "skills": [
+   "Fire Damage Up +1 (3-piece Anjanath Ember): fire damage +3%, +8% vs Radiant monsters",
+   "Fire Resistance Lv.1"
+  ],
+  "note": "A cheap early-game build for fire weapons. Works well until you can afford higher-rarity sets."
+ },
+ {
+  "name": "GS Charge + Immovable (Non-Radiant)",
+  "weapons": [
+   "Great Sword"
+  ],
+  "element": "Fire",
+  "armor": "Baan Helm V, Radiant Baan Mail V, Baan Vambraces V, Baan Coil V, Radiant Anja Greaves V",
+  "skills": [
+   "Charge Enhancement Lv7",
+   "Immovable Stance Lv6",
+   "Radobaan's Bulwark (set)",
+   "Fearless Lv1",
+   "Fire Resistance Lv1",
+   "Hunting Instinct Lv1"
+  ],
+  "note": "Weapon: Radiant Red Wing V (fire). Maxes Charge Enhancement for charged attacks; Immovable Stance is triggered by the Skill 2 Tackle, so play around it. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Set effect: Ink of Might (4-piece), +12% physical damage for 60s after a crit."
+ },
+ {
+  "name": "GS Fire vs Radiant",
+  "weapons": [
+   "Great Sword"
+  ],
+  "element": "Fire",
+  "armor": "Rath Heart Helm V, Radiant Rathalos Mail V, Radiant Rathalos Vambraces V, Rathalos Coil V, Radiant Rathalos Greaves V",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Wrecker Lv4",
+   "Rathalos's Fervor (set): Critical Element +1",
+   "Critical Element Lv2",
+   "Suppression Recovery Lv2",
+   "Weakspot Exploit Lv1"
+  ],
+  "note": "Weapon: Radiant Red Wing V (fire). Maxes Fire Damage Up and Wrecker; the Rathalos set raises Critical Element, so build affinity to keep crits coming. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Flames (4-piece): fire +24% for 20s after hitting a good/decent hitzone."
+ },
+ {
+  "name": "GS Thunder vs Radiant",
+  "weapons": [
+   "Great Sword"
+  ],
+  "element": "Thunder",
+  "armor": "Kadachi Helm V, Radiant Girros Mail V, Baan Vambraces V, Radiant Rathalos Coil V, Ingot Greaves V",
+  "skills": [
+   "Thunder Damage Up Lv7",
+   "Charge Enhancement Lv6",
+   "Deterrence Lv2",
+   "Fearless Lv1",
+   "Sleep Resistance Lv1",
+   "Defense Up Lv1"
+  ],
+  "note": "Weapon: Radiant Lightning Punisher V (thunder). Maxes Thunder Damage Up and stacks Charge Enhancement, which triggers on almost every Great Sword attack. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Thunder (4-piece): thunder +5% per stack, up to 5."
+ },
+ {
+  "name": "GS Water vs Radiant",
+  "weapons": [
+   "Great Sword"
+  ],
+  "element": "Water",
+  "armor": "Radiant Tzitzi Headgear V, Tzitzi Mail V, Baan Vambraces V, Radiant Rathalos Coil V, Radiant Tzitzi Greaves V",
+  "skills": [
+   "Water Damage Up Lv7",
+   "Charge Enhancement Lv6",
+   "Tzitzi-Ya-Ku's Precision (set)",
+   "Sleep Resistance Lv2",
+   "Item Master Lv1",
+   "Blessing Lv1"
+  ],
+  "note": "Weapon: Radiant Water Golem V (water). Maxes Water Damage Up plus Charge Enhancement Lv6. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Water (4-piece): water +6% per squadmate ultimate, up to 4 stacks."
+ },
+ {
+  "name": "GS Ice vs Radiant",
+  "weapons": [
+   "Great Sword"
+  ],
+  "element": "Ice",
+  "armor": "Radiant Legiana Helm V, High Metal Mail V, Baan Vambraces V, Radiant Rathalos Coil V, High Metal Greaves V",
+  "skills": [
+   "Ice Damage Up Lv7",
+   "Charge Enhancement Lv6",
+   "Silence of the Veins (set)",
+   "Blessing Lv1",
+   "Roar Resistance Lv1",
+   "Relentless Pursuit Lv1"
+  ],
+  "note": "Weapon: Radiant Frost Blaze V (ice). Maxes Ice Damage Up plus Charge Enhancement Lv6. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Frost (4-piece): ice +24% for 8s after hitting a monster."
+ },
+ {
+  "name": "GS Dragon vs Radiant",
+  "weapons": [
+   "Great Sword"
+  ],
+  "element": "Dragon",
+  "armor": "Baan Helm V, Diablos Mail V, Hornetaur Vambraces V, Radiant Rathalos Coil V, Bone Greaves V",
+  "skills": [
+   "Dragon Damage Up Lv7",
+   "Charge Enhancement Lv5",
+   "Critical Element Lv1",
+   "Fearless Lv1",
+   "Breaker Lv1",
+   "Stun Resistance Lv1"
+  ],
+  "note": "Weapon: Radiant Radobaan Slab V (dragon). Maxes Dragon Damage Up plus Charge Enhancement Lv5. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Dragon (4-piece): dragon +24% for 60s after using an ultimate."
+ },
+ {
+  "name": "LS Flash Draw + Counter Boost (Non-Radiant)",
+  "weapons": [
+   "Long Sword"
+  ],
+  "element": "Ice",
+  "armor": "Radiant Rathian Helm V, Ruger Aidal Guard V, Rathian Vambraces V, Radiant Diablos Coil V, Radiant Kadachi Greaves V",
+  "skills": [
+   "Flash Draw Lv7",
+   "Counter Boost Lv6",
+   "Rejuvenation Lv1",
+   "Deterrence Lv1",
+   "Recovery Booster Lv1",
+   "Relentless Pursuit Lv1"
+  ],
+  "note": "Weapon: Radiant Stealer V (ice). Stacks Flash Draw and Counter Boost, which the protagonist triggers easily with Skill 2. Pairing with the Insight that speeds up sheathing makes it easier. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Might: +12% physical damage for 60s after a crit."
+ },
+ {
+  "name": "LS Fire vs Radiant",
+  "weapons": [
+   "Long Sword"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Rathian Helm V, Rathalos Mail V, Radiant Rathalos Vambraces V, Radiant Diablos Coil V, Radiant Rathalos Greaves V",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Flash Draw Lv6",
+   "Critical Element Lv1",
+   "Health Cycle Lv1",
+   "Suppression Recovery Lv1",
+   "Adversity Lv1"
+  ],
+  "note": "Weapon: Radiant Wyvern Blade \"Blood\" V (fire). Maxes Fire Damage Up and stacks Flash Draw to Lv6. Built around the protagonist's Iai Slash. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Flames: fire +24% for 20s after hitting a good/decent hitzone."
+ },
+ {
+  "name": "LS Thunder vs Radiant",
+  "weapons": [
+   "Long Sword"
+  ],
+  "element": "Thunder",
+  "armor": "Radiant Rathian Helm V, Radiant Girros Mail V, Girros Vambraces V, Radiant Diablos Coil V, Ingot Greaves V",
+  "skills": [
+   "Thunder Damage Up Lv7",
+   "Flash Draw Lv6",
+   "Unleashed Lv1",
+   "Deterrence Lv1",
+   "Fearless Lv1",
+   "Paralysis Resistance Lv1"
+  ],
+  "note": "Weapon: Radiant Dazzling Flash V (thunder). Maxes Thunder Damage Up and stacks Flash Draw to Lv6. Built around the protagonist's Iai Slash. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Thunder: thunder +5% per stack, up to 5."
+ },
+ {
+  "name": "LS Water vs Radiant",
+  "weapons": [
+   "Long Sword"
+  ],
+  "element": "Water",
+  "armor": "Radiant Rathian Helm V, Tzitzi Mail V, Radiant Jyura Vambraces V, Radiant Diablos Coil V, Radiant Tzitzi Greaves V",
+  "skills": [
+   "Water Damage Up Lv7",
+   "Flash Draw Lv6",
+   "Health Recovery Lv1",
+   "Blessing Lv1",
+   "Hunting Instinct Lv1",
+   "Sleep Resistance Lv1"
+  ],
+  "note": "Weapon: Radiant Dipterus V (water). Maxes Water Damage Up and stacks Flash Draw to Lv6. Built around the protagonist's Iai Slash. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Water: water +6% per squadmate ultimate, up to 4 stacks."
+ },
+ {
+  "name": "LS Ice vs Radiant",
+  "weapons": [
+   "Long Sword"
+  ],
+  "element": "Ice",
+  "armor": "Radiant Rathian Helm V, High Metal Mail V, Legiana Vambraces V, Radiant Diablos Coil V, High Metal Greaves V",
+  "skills": [
+   "Ice Damage Up Lv7",
+   "Flash Draw Lv6",
+   "Silence of the Veins (set)",
+   "Blessing Lv1",
+   "Roar Resistance Lv1",
+   "Weakspot Exploit Lv1"
+  ],
+  "note": "Weapon: Radiant Stealer V (ice). Maxes Ice Damage Up and stacks Flash Draw to Lv6. Built around the protagonist's Iai Slash. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Frost: ice +24% for 8s after hitting a monster."
+ },
+ {
+  "name": "LS Dragon vs Radiant",
+  "weapons": [
+   "Long Sword"
+  ],
+  "element": "Dragon",
+  "armor": "Radiant Rathian Helm V, Diablos Mail V, Hornetaur Vambraces V, Radiant Diablos Coil V, Bone Greaves V",
+  "skills": [
+   "Dragon Damage Up Lv7",
+   "Flash Draw Lv6",
+   "Critical Element Lv1",
+   "Health Boost Lv1",
+   "Stun Resistance Lv1",
+   "Breaker Lv1"
+  ],
+  "note": "Weapon: Blacksteel Long Sword V (dragon). Maxes Dragon Damage Up and stacks Flash Draw to Lv6. Built around the protagonist's Iai Slash. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Dragon: dragon +24% for 60s after an ultimate."
+ },
+ {
+  "name": "LS Midori: Counter Boost + Spirit Bind (Non-Radiant)",
+  "weapons": [
+   "Long Sword"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Kadachi Helm IV, Radiant Rathian Mail IV, Jagras Vambraces IV, Radiant Kulu Coil IV, Radiant Kadachi Greaves IV",
+  "skills": [
+   "Counter Boost Lv7",
+   "Spirit Bind Blade Lv4",
+   "Deterrence Lv2",
+   "Insight Lv1",
+   "Radiant Sense Lv1",
+   "Battle Spirit Lv1"
+  ],
+  "note": "Weapon: Wyvern Blade \"Blood\" IV (fire, 4.8% affinity). For Midori: maxes Counter Boost and Spirit Bind Blade, which also raises elemental attack."
+ },
+ {
+  "name": "LS Midori: Fire vs Radiant",
+  "weapons": [
+   "Long Sword"
+  ],
+  "element": "Fire",
+  "armor": "Rath Heart Helm IV, Rathalos Mail IV, Jagras Vambraces IV, Anja Coil IV, Rath Heart Greaves IV",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Spirit Bind Blade Lv4",
+   "Health Cycle Lv2",
+   "Instinct Lv1",
+   "Hunting Instinct Lv1",
+   "Quick-Bite Lv1"
+  ],
+  "note": "Weapon: Wyvern Blade \"Blood\" IV (fire). For Midori: maxes Fire Damage Up and Spirit Bind Blade; Instinct stops attacks from bouncing."
+ },
+ {
+  "name": "LS Ryunosuke: Bento Lover + Spirit Bind (Non-Radiant)",
+  "weapons": [
+   "Long Sword"
+  ],
+  "element": "Fire",
+  "armor": "Rathian Helm IV, Radiant Rathian Mail IV, Diablos Vambraces IV, Radiant Jagras Coil IV, Diablos Greaves IV",
+  "skills": [
+   "Bento Lover Lv7",
+   "Spirit Bind Blade Lv4",
+   "Diablos's Footing (set)",
+   "Guard Technique Lv1",
+   "Unleashed Lv1",
+   "Radiant Sense Lv1"
+  ],
+  "note": "Weapon: Wyvern Blade \"Blood\" IV (fire). For Ryunosuke: Skill 1 triggers Bento Lover, so both Bento Lover and Spirit Bind Blade stay active."
+ },
+ {
+  "name": "LS Ryunosuke: Fire vs Radiant",
+  "weapons": [
+   "Long Sword"
+  ],
+  "element": "Fire",
+  "armor": "Rath Heart Helm IV, Rathalos Mail IV, Jagras Vambraces IV, Anja Coil IV, Rath Heart Greaves IV",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Spirit Bind Blade Lv4",
+   "Health Cycle Lv2",
+   "Instinct Lv1",
+   "Hunting Instinct Lv1",
+   "Quick-Bite Lv1"
+  ],
+  "note": "Weapon: Wyvern Blade \"Blood\" IV (fire). For Ryunosuke: maxes Fire Damage Up and Spirit Bind Blade so you deal damage while supporting allies."
+ },
+ {
+  "name": "DB Combo Enhancement + Counter Boost (Non-Radiant)",
+  "weapons": [
+   "Dual Blades"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Girros Mask V, Ruger Aidal Guard V, Radiant Girros Vambraces V, Kulu Coil V, Radiant Kadachi Greaves V",
+  "skills": [
+   "Combo Enhancement Lv7",
+   "Counter Boost Lv6",
+   "Great Girros's Command (set)",
+   "Flinching-Free Lv1",
+   "Rejuvenation Lv1",
+   "Weakspot Exploit Lv1"
+  ],
+  "note": "Weapon: Anja Cyclone V (fire). Stacks Combo Enhancement and Counter Boost, both easy to trigger with Dual Blades. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Might: +12% physical damage for 60s after a crit."
+ },
+ {
+  "name": "DB Fire vs Radiant",
+  "weapons": [
+   "Dual Blades"
+  ],
+  "element": "Fire",
+  "armor": "Rath Heart Helm V, Rathalos Mail V, Radiant Odogaron Vambraces V, Radiant Odogaron Coil V, Radiant Rathalos Greaves V",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Demonic Strength Lv4",
+   "Odogaron's Surge (set)",
+   "Health Cycle Lv3",
+   "Critical Element Lv1",
+   "Instinct Lv1"
+  ],
+  "note": "Weapon: Anja Cyclone V (fire). Maxes Fire Damage Up and Demonic Strength; Instinct stops attacks bouncing off hard parts. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Flames: fire +24% for 20s after hitting a good/decent hitzone."
+ },
+ {
+  "name": "DB Thunder vs Radiant",
+  "weapons": [
+   "Dual Blades"
+  ],
+  "element": "Thunder",
+  "armor": "Kadachi Helm V, Radiant Odogaron Mail V, Radiant Girros Vambraces V, Radiant Girros Coil V, Ingot Greaves V",
+  "skills": [
+   "Thunder Damage Up Lv7",
+   "Combo Enhancement Lv6",
+   "Great Girros's Command (set)",
+   "Fearless Lv2",
+   "Flinching-Free Lv1",
+   "Deterrence Lv1"
+  ],
+  "note": "Weapon: Radiant Dual Destroyers V (thunder). Maxes Thunder Damage Up and stacks Combo Enhancement to Lv6. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Thunder: thunder +5% per stack, up to 5."
+ },
+ {
+  "name": "DB Water vs Radiant",
+  "weapons": [
+   "Dual Blades"
+  ],
+  "element": "Water",
+  "armor": "Radiant Jyura Helm V, Radiant Odogaron Mail V, Radiant Girros Vambraces V, Tzitzi Coil V, Radiant Tzitzi Greaves V",
+  "skills": [
+   "Water Damage Up Lv5",
+   "Combo Enhancement Lv6",
+   "Flinching-Free Lv3",
+   "Rejuvenation Lv1",
+   "Stun Resistance Lv1",
+   "Sleep Resistance Lv1"
+  ],
+  "note": "Weapon: Radiant Jyura Hatchets V (water). Built around Water Damage Up with Combo Enhancement Lv6. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Water: water +6% per squadmate ultimate, up to 4 stacks."
+ },
+ {
+  "name": "DB Ice vs Radiant",
+  "weapons": [
+   "Dual Blades"
+  ],
+  "element": "Ice",
+  "armor": "Radiant Legiana Helm V, Radiant Odogaron Mail V, Radiant Girros Vambraces V, Chainmail Belt V, High Metal Greaves V",
+  "skills": [
+   "Ice Damage Up Lv7",
+   "Combo Enhancement Lv6",
+   "Flinching-Free Lv1",
+   "Unleashed Lv1",
+   "Blessing Lv1",
+   "Roar Resistance Lv1"
+  ],
+  "note": "Weapon: Radiant Freeze Chain V (ice). Maxes Ice Damage Up and stacks Combo Enhancement to Lv6. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Frost: ice +24% for 8s after hitting a monster."
+ },
+ {
+  "name": "DB Dragon vs Radiant",
+  "weapons": [
+   "Dual Blades"
+  ],
+  "element": "Dragon",
+  "armor": "Radiant Kulu Headpiece V, Radiant Diablos Mail V, Hornetaur Vambraces V, Radiant Odogaron Coil V, Bone Greaves V",
+  "skills": [
+   "Demonic Strength Lv4",
+   "Dragon Damage Up Lv4",
+   "Bento Lover Lv3",
+   "Critical Element Lv1",
+   "Weakspot Exploit Lv1",
+   "Breaker Lv1"
+  ],
+  "note": "Weapon: Blacksteel Twins V (dragon). Maxes Demonic Strength and stacks Dragon Damage Up. Damage drops when you are not in Demon Mode. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Dragon: dragon +24% for 60s after an ultimate."
+ },
+ {
+  "name": "DB Keres: Combo Enhancement + Demonic Strength (Non-Radiant)",
+  "weapons": [
+   "Dual Blades"
+  ],
+  "element": "Dragon",
+  "armor": "Radiant Kulu Headpiece IV, Odogaron Mail IV, Radiant Girros Vambraces IV, Kulu Coil IV, Radiant Kulu Greaves IV",
+  "skills": [
+   "Combo Enhancement Lv7",
+   "Demonic Strength Lv4",
+   "Kulu-Ya-Ku's Skill (set)",
+   "Weakspot Exploit Lv3",
+   "Fire Resistance Lv2",
+   "Flinching-Free Lv1"
+  ],
+  "note": "Weapon: Blacksteel Twins IV (dragon). For Keres: maxes Combo Enhancement and Demonic Strength; Weakspot Exploit raises affinity on weak spots."
+ },
+ {
+  "name": "DB Keres: Dragon vs Radiant",
+  "weapons": [
+   "Dual Blades"
+  ],
+  "element": "Dragon",
+  "armor": "Radiant Kulu Headpiece IV, Diablos Mail IV, Hornetaur Vambraces IV, Radiant Odogaron Coil IV, Bone Greaves IV",
+  "skills": [
+   "Dragon Damage Up Lv7",
+   "Demonic Strength Lv4",
+   "Item Master Lv1",
+   "Critical Element Lv1",
+   "Health Cycle Lv1",
+   "Breaker Lv1"
+  ],
+  "note": "Weapon: Blacksteel Twins IV (dragon). For Keres against Radiant monsters weak to Dragon: maxes Dragon Damage Up alongside Demonic Strength."
+ },
+ {
+  "name": "DB Raya: Combo Enhancement + Demonic Strength (Non-Radiant)",
+  "weapons": [
+   "Dual Blades"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Kulu Headpiece IV, Odogaron Mail IV, Radiant Girros Vambraces IV, Kulu Coil IV, Radiant Kulu Greaves IV",
+  "skills": [
+   "Combo Enhancement Lv7",
+   "Demonic Strength Lv4",
+   "Kulu-Ya-Ku's Skill (set)",
+   "Weakspot Exploit Lv3",
+   "Fire Resistance Lv2",
+   "Flinching-Free Lv1"
+  ],
+  "note": "Weapon: Blood-drinker Chainblade IV (fire, 4.8% affinity). For Raya: maxes Combo Enhancement and Demonic Strength; Weakspot Exploit raises affinity on weak spots."
+ },
+ {
+  "name": "DB Raya: Fire vs Radiant",
+  "weapons": [
+   "Dual Blades"
+  ],
+  "element": "Fire",
+  "armor": "Rath Heart Helm IV, Rathalos Mail IV, Radiant Odogaron Vambraces IV, Anja Coil IV, Kulu Greaves IV",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Demonic Strength Lv4",
+   "Health Cycle Lv3",
+   "Item Master Lv1",
+   "Weakspot Exploit Lv1",
+   "Instinct Lv1"
+  ],
+  "note": "Weapon: Blood-drinker Chainblade IV (fire). For Raya against Radiant monsters weak to Fire: maxes Fire Damage Up alongside Demonic Strength."
+ },
+ {
+  "name": "Lance Charge Enhancement + Pierce (Non-Radiant)",
+  "weapons": [
+   "Lance"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Diablos Helm V, Anja Mail V, Radiant Diablos Vambraces V, Radiant Rathalos Coil V, Radiant Anja Greaves V",
+  "skills": [
+   "Charge Enhancement Lv7",
+   "Pierce Lv4",
+   "Fire Resistance Lv2",
+   "Battle Spirit Lv2",
+   "Weakspot Follow-Up Lv1",
+   "Hunting Instinct Lv1"
+  ],
+  "note": "Weapon: Radiant Red Tail V (fire). Maxes Charge Enhancement, which powers the protagonist's main Lance moves, plus the Lance-only skill Pierce. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Might: +12% physical damage for 60s after a crit."
+ },
+ {
+  "name": "Lance Fire vs Radiant",
+  "weapons": [
+   "Lance"
+  ],
+  "element": "Fire",
+  "armor": "Rath Heart Helm V, Rathalos Mail V, Baan Vambraces V, Radiant Rathalos Coil V, Radiant Rathalos Greaves V",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Charge Enhancement Lv6",
+   "Critical Element Lv1",
+   "Health Cycle Lv1",
+   "Deterrence Lv1",
+   "Adversity Lv1"
+  ],
+  "note": "Weapon: Radiant Red Tail V (fire). Maxes Fire Damage Up and stacks Charge Enhancement. Triggers on Charged Counter and Dash Attack, so play around them. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Flames: fire +24% for 20s after a good/decent hitzone hit."
+ },
+ {
+  "name": "Lance Thunder vs Radiant",
+  "weapons": [
+   "Lance"
+  ],
+  "element": "Thunder",
+  "armor": "Kadachi Helm V, Radiant Girros Mail V, Baan Vambraces V, Radiant Rathalos Coil V, Ingot Greaves V",
+  "skills": [
+   "Thunder Damage Up Lv7",
+   "Charge Enhancement Lv6",
+   "Deterrence Lv2",
+   "Fearless Lv1",
+   "Sleep Resistance Lv1",
+   "Defense Up Lv1"
+  ],
+  "note": "Weapon: Radiant Lightning Spire V (thunder). Maxes Thunder Damage Up and stacks Charge Enhancement. Triggers on Charged Counter and Dash Attack. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Thunder: thunder +5% per stack, up to 5."
+ },
+ {
+  "name": "Lance Water vs Radiant",
+  "weapons": [
+   "Lance"
+  ],
+  "element": "Water",
+  "armor": "Radiant Tzitzi Headgear V, Tzitzi Mail V, Baan Vambraces V, Radiant Rathalos Coil V, Radiant Tzitzi Greaves V",
+  "skills": [
+   "Water Damage Up Lv7",
+   "Charge Enhancement Lv6",
+   "Tzitzi-Ya-Ku's Precision (set)",
+   "Sleep Resistance Lv2",
+   "Item Master Lv1",
+   "Blessing Lv1"
+  ],
+  "note": "Weapon: Radiant Water Spike V (water). Maxes Water Damage Up and stacks Charge Enhancement. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Water: water +6% per squadmate ultimate, up to 4 stacks."
+ },
+ {
+  "name": "Lance Ice vs Radiant",
+  "weapons": [
+   "Lance"
+  ],
+  "element": "Ice",
+  "armor": "Radiant Legiana Helm V, High Metal Mail V, Baan Vambraces V, Radiant Rathalos Coil V, High Metal Greaves V",
+  "skills": [
+   "Ice Damage Up Lv7",
+   "Charge Enhancement Lv6",
+   "Silence of the Veins (set)",
+   "Blessing Lv1",
+   "Roar Resistance Lv1",
+   "Deterrence Lv1"
+  ],
+  "note": "Weapon: Radiant Legiana Halberd V (ice). Maxes Ice Damage Up and stacks Charge Enhancement. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Frost: ice +24% for 8s after hitting a monster."
+ },
+ {
+  "name": "Lance Dragon vs Radiant",
+  "weapons": [
+   "Lance"
+  ],
+  "element": "Dragon",
+  "armor": "Radiant Diablos Helm V, Diablos Mail V, Hornetaur Vambraces V, Diablos Coil V, Bone Greaves V",
+  "skills": [
+   "Dragon Damage Up Lv7",
+   "Pierce Lv4",
+   "Diablos's Footing (set)",
+   "Guard Technique Lv1",
+   "Critical Element Lv1",
+   "Weakspot Follow-Up Lv1"
+  ],
+  "note": "Weapon: Blacksteel Lance V (dragon). Maxes Dragon Damage Up and the Lance-only skill Pierce. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Dragon: dragon +24% for 60s after an ultimate."
+ },
+ {
+  "name": "Lance Arkaya: Offensive Defense + Pierce (Non-Radiant)",
+  "weapons": [
+   "Lance"
+  ],
+  "element": "Dragon",
+  "armor": "Alloy Helm IV, Lumu Mail IV, Ingot Vambraces IV, Diablos Coil IV, Radiant Barroth Greaves IV",
+  "skills": [
+   "Offensive Defense Lv6",
+   "Pierce Lv4",
+   "Guard Technique Lv2",
+   "Weakspot Follow-Up Lv2",
+   "Blessing Lv1",
+   "Breaker Lv1"
+  ],
+  "note": "Weapon: Blacksteel Lance IV (dragon). For Arkaya: Offensive Defense powers up Perfect Guards that flow into follow-ups; Pierce boosts elemental attack and damage."
+ },
+ {
+  "name": "Lance Arkaya: Dragon vs Radiant",
+  "weapons": [
+   "Lance"
+  ],
+  "element": "Dragon",
+  "armor": "Radiant Diablos Helm V, Diablos Mail IV, Hornetaur Vambraces IV, Diablos Coil IV, Bone Greaves IV",
+  "skills": [
+   "Dragon Damage Up Lv7",
+   "Pierce Lv4",
+   "Diablos's Footing (set)",
+   "Guard Technique Lv1",
+   "Critical Element Lv1",
+   "Breaker Lv1"
+  ],
+  "note": "Weapon: Blacksteel Lance IV (dragon). For Arkaya vs Radiant monsters weak to Dragon; stacks a skill that triggers on Perfect Guard."
+ },
+ {
+  "name": "Lance Ouyang Varen: Counter Boost + Pierce (Non-Radiant)",
+  "weapons": [
+   "Lance"
+  ],
+  "element": "Water",
+  "armor": "Radiant Kadachi Helm IV, Ruger Aidal Guard IV, Vespoid Vambraces IV, Diablos Coil IV, Radiant Barroth Greaves IV",
+  "skills": [
+   "Counter Boost Lv7",
+   "Pierce Lv4",
+   "Guard Technique Lv2",
+   "Weakspot Follow-Up Lv2",
+   "Rejuvenation Lv1",
+   "Insight Lv1"
+  ],
+  "note": "Weapon: Radiant Water Spike IV (water). For Ouyang Varen: his skill set triggers Counter Boost easily; with Pierce maxed, elemental attack stays boosted."
+ },
+ {
+  "name": "Lance Ouyang Varen: Water vs Radiant",
+  "weapons": [
+   "Lance"
+  ],
+  "element": "Water",
+  "armor": "Radiant Diablos Helm V, Tzitzi Mail IV, Radiant Jyura Vambraces IV, Tzitzi Coil IV, Radiant Barroth Greaves IV",
+  "skills": [
+   "Water Damage Up Lv7",
+   "Pierce Lv4",
+   "Guard Technique Lv1",
+   "Health Recovery Lv1",
+   "Blessing Lv1",
+   "Weakspot Follow-Up Lv1"
+  ],
+  "note": "Weapon: Radiant Water Spike IV (water). For Ouyang Varen vs Radiant monsters weak to Water: maxes Water Damage Up and Pierce."
+ },
+ {
+  "name": "Hammer Charge Enhancement + Unshaken Resolve (Non-Radiant)",
+  "weapons": [
+   "Hammer"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Baan Vambraces VI, Radiant Rathalos Coil VI, Radiant Anja Greaves VI",
+  "skills": [
+   "Charge Enhancement Lv7",
+   "Unshaken Resolve Lv3",
+   "Critical Element Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Grace Under Pressure Lv2",
+   "Deterrence Lv1"
+  ],
+  "note": "Weapon: Anja Striker VI (fire, -3% affinity). Stacks Charge Enhancement and Unshaken Resolve; the Pink Rathian set maxes Critical Element, so prioritize affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Might: +12% physical damage for 60s after a crit."
+ },
+ {
+  "name": "Hammer Fire vs Radiant",
+  "weapons": [
+   "Hammer"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Radiant Rathalos Vambraces VI, Anja Coil VI, Radiant Rathalos Greaves VI",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Critical Element Lv3",
+   "Unshaken Resolve Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Grace Under Pressure Lv2",
+   "Health Cycle Lv1"
+  ],
+  "note": "Weapon: Anja Striker VI (fire). Maxes Fire Damage Up, Unshaken Resolve and Critical Element to boost crit and overall damage. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Flames: fire +24% for 20s after a good/decent hitzone hit."
+ },
+ {
+  "name": "Hammer Thunder vs Radiant",
+  "weapons": [
+   "Hammer"
+  ],
+  "element": "Thunder",
+  "armor": "Kadachi Helm VI, Radiant Girros Mail VI, Baan Vambraces VI, Radiant Rathalos Coil VI, Ingot Greaves VI",
+  "skills": [
+   "Thunder Damage Up Lv7",
+   "Charge Enhancement Lv6",
+   "Deterrence Lv2",
+   "Fearless Lv1",
+   "Sleep Resistance Lv1",
+   "Defense Up Lv1"
+  ],
+  "note": "Weapon: Radiant Lightning Bash VI (thunder). Maxes Thunder Damage Up and stacks Charge Enhancement to Lv6. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Thunder: thunder +5% per stack, up to 5."
+ },
+ {
+  "name": "Hammer Water vs Radiant",
+  "weapons": [
+   "Hammer"
+  ],
+  "element": "Water",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Radiant Jyura Vambraces VI, Tzitzi Coil VI, Radiant Tzitzi Greaves VI",
+  "skills": [
+   "Water Damage Up Lv7",
+   "Critical Element Lv3",
+   "Unshaken Resolve Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Grace Under Pressure Lv2",
+   "Health Recovery Lv1"
+  ],
+  "note": "Weapon: Radiant Water Basher VI (water). Maxes Water Damage Up, Unshaken Resolve and Critical Element. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Water: water +6% per squadmate ultimate, up to 4 stacks."
+ },
+ {
+  "name": "Hammer Ice vs Radiant",
+  "weapons": [
+   "Hammer"
+  ],
+  "element": "Ice",
+  "armor": "Radiant Legiana Helm VI, High Metal Mail VI, Baan Vambraces VI, Radiant Rathalos Coil VI, High Metal Greaves VI",
+  "skills": [
+   "Ice Damage Up Lv7",
+   "Charge Enhancement Lv6",
+   "Silence of the Veins (set)",
+   "Blessing Lv1",
+   "Roar Resistance Lv1",
+   "Deterrence Lv1"
+  ],
+  "note": "Weapon: Diablos Sledge VI (ice, -6% affinity). Maxes Ice Damage Up and stacks Charge Enhancement to Lv6. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Frost: ice +24% for 8s after hitting a monster."
+ },
+ {
+  "name": "Hammer Dragon vs Radiant",
+  "weapons": [
+   "Hammer"
+  ],
+  "element": "Dragon",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Hornetaur Vambraces VI, Diablos Nero Coil VI, Bone Greaves VI",
+  "skills": [
+   "Dragon Damage Up Lv7",
+   "Critical Element Lv3",
+   "Unshaken Resolve Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Stun Resistance Lv2",
+   "Grace Under Pressure Lv2"
+  ],
+  "note": "Weapon: Radiant Baan Strike VI (dragon). Maxes Dragon Damage Up, Unshaken Resolve and Critical Element. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Dragon: dragon +24% for 60s after an ultimate."
+ },
+ {
+  "name": "Hammer Rhodes: Intimidation + Charge Enhancement (Non-Radiant)",
+  "weapons": [
+   "Hammer"
+  ],
+  "element": "Ice",
+  "armor": "Baan Helm IV, Baan Mail IV, Baan Vambraces IV, Radiant Anja Coil IV, Chainmail Trousers IV",
+  "skills": [
+   "Intimidation Lv4",
+   "Charge Enhancement Lv6",
+   "Radobaan's Bulwark (set)",
+   "Fearless Lv2",
+   "Bleeding Resistance Lv2",
+   "Unleashed Lv1"
+  ],
+  "note": "Weapon: Diablos Sledge IV (ice, -7.2% affinity). For Rhodes: Intimidation is the best Hammer armor skill; go for the head and build stun."
+ },
+ {
+  "name": "Hammer Rhodes: Ice vs Radiant",
+  "weapons": [
+   "Hammer"
+  ],
+  "element": "Ice",
+  "armor": "Baan Helm IV, High Metal Mail IV, Baan Vambraces IV, Chainmail Belt IV, High Metal Greaves IV",
+  "skills": [
+   "Ice Damage Up Lv7",
+   "Charge Enhancement Lv5",
+   "Radobaan's Bulwark (set)",
+   "Silence of the Veins (set)",
+   "Unleashed Lv1",
+   "Roar Resistance Lv1"
+  ],
+  "note": "Weapon: Diablos Sledge IV (ice). For Rhodes: maxes Ice Damage Up and raises Charge Enhancement, which boosts his frequent charged attacks."
+ },
+ {
+  "name": "CB Combo Enhancement + Morph Boost (Non-Radiant)",
+  "weapons": [
+   "Charge Blade"
+  ],
+  "element": "Fire",
+  "armor": "Bone Helm VI, Diablos Nero Mail VI, Radiant Girros Vambraces VI, Kulu Coil VI, Radiant Kulu Greaves VI",
+  "skills": [
+   "Combo Enhancement Lv7",
+   "Morph Boost Lv4",
+   "Weakspot Exploit Lv2",
+   "Fire Resistance Lv2",
+   "Flinching-Free Lv1",
+   "Guard Technique Lv1"
+  ],
+  "note": "Weapon: Radiant Axelion Blade V (fire). Combo Enhancement powers up Axe Mode and Morph Boost triggers when you switch modes. Switch modes regularly but deal most damage in Axe Mode. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Flames: fire +24% for 20s after a good/decent hitzone hit."
+ },
+ {
+  "name": "CB Fire vs Radiant",
+  "weapons": [
+   "Charge Blade"
+  ],
+  "element": "Fire",
+  "armor": "Rath Heart Helm V, Rathalos Mail V, High Metal Braces V, High Metal Coil V, Radiant Rathalos Greaves V",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Morph Boost Lv4",
+   "Silence of the Veins (set)",
+   "Relentless Pursuit Lv2",
+   "Critical Element Lv1",
+   "Health Cycle Lv1"
+  ],
+  "note": "Weapon: Radiant Axelion Blade V (fire). Maxes Fire Damage Up and Morph Boost for overwhelming damage on Radiant monsters weak to Fire. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Flames: fire +24% for 20s."
+ },
+ {
+  "name": "CB Thunder vs Radiant",
+  "weapons": [
+   "Charge Blade"
+  ],
+  "element": "Thunder",
+  "armor": "Kadachi Helm VI, Radiant Odogaron Mail V, Radiant Girros Vambraces VI, Radiant Girros Coil VI, Ingot Greaves VI",
+  "skills": [
+   "Thunder Damage Up Lv7",
+   "Combo Enhancement Lv6",
+   "Great Girros's Command (set)",
+   "Fearless Lv2",
+   "Flinching-Free Lv1",
+   "Rejuvenation Lv1"
+  ],
+  "note": "Weapon: Radiant Kadachi Kaina V (thunder). Maxes Thunder Damage Up and stacks Combo Enhancement to Lv6. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Thunder: thunder +5% per stack, up to 5."
+ },
+ {
+  "name": "CB Water vs Radiant",
+  "weapons": [
+   "Charge Blade"
+  ],
+  "element": "Water",
+  "armor": "Jyura Helm VI, Radiant Odogaron Mail V, Radiant Girros Vambraces VI, Tzitzi Coil VI, Radiant Tzitzi Greaves VI",
+  "skills": [
+   "Water Damage Up Lv7",
+   "Combo Enhancement Lv6",
+   "Flinching-Free Lv1",
+   "Rejuvenation Lv1",
+   "Unleashed Lv1",
+   "Health Recovery Lv1"
+  ],
+  "note": "Weapon: Radiant Jyura Depth V (water). Maxes Water Damage Up and stacks Combo Enhancement to Lv6. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Water: water +6% per squadmate ultimate, up to 4 stacks."
+ },
+ {
+  "name": "CB Ice vs Radiant",
+  "weapons": [
+   "Charge Blade"
+  ],
+  "element": "Ice",
+  "armor": "Radiant Legiana Helm V, Radiant Odogaron Mail V, Legiana Vambraces V, Kulu Coil VI, High Metal Greaves V",
+  "skills": [
+   "Ice Damage Up Lv7",
+   "Combo Enhancement Lv5",
+   "Blessing Lv2",
+   "Weakspot Exploit Lv2",
+   "Rejuvenation Lv1",
+   "Roar Resistance Lv1"
+  ],
+  "note": "Weapon: Radiant Gigafrost V (ice). Maxes Ice Damage Up and stacks Combo Enhancement and Weakspot Exploit. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Frost: ice +24% for 8s after hitting a monster."
+ },
+ {
+  "name": "CB Dragon vs Radiant",
+  "weapons": [
+   "Charge Blade"
+  ],
+  "element": "Dragon",
+  "armor": "Diablos Nero Helm VI, Radiant Odogaron Mail V, Radiant Girros Vambraces VI, Diablos Nero Coil VI, Bone Greaves VI",
+  "skills": [
+   "Dragon Damage Up Lv7",
+   "Combo Enhancement Lv6",
+   "Black Diablos's Rampart (set)",
+   "Stun Resistance Lv2",
+   "Flinching-Free Lv1",
+   "Breaker Lv1"
+  ],
+  "note": "Weapon: Blacksteel Charger V (dragon). Maxes Dragon Damage Up and stacks Combo Enhancement to Lv6. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Dragon: dragon +24% for 60s after an ultimate."
+ },
+ {
+  "name": "HBG Capacity Boost + Unshaken Resolve (Non-Radiant)",
+  "weapons": [
+   "Heavy Bowgun"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Rath Heart Braces VI, Rath Heart Coil VI, Radiant Rath Heart Greaves VI",
+  "skills": [
+   "Capacity Boost Lv7",
+   "Unshaken Resolve Lv3",
+   "Critical Element Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Recovery Booster Lv2",
+   "Grace Under Pressure Lv2"
+  ],
+  "note": "Weapon: Power Shooter VI (fire; Normal Ammo x11, Slicing Ammo x5). Capacity Boost is easy to trigger; the Pink Rathian set maxes Critical Element, so prioritize affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Might: +12% physical damage for 60s after a crit."
+ },
+ {
+  "name": "HBG Fire vs Radiant",
+  "weapons": [
+   "Heavy Bowgun"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Radiant Rathalos Vambraces VI, Anja Coil VI, Radiant Rathalos Greaves VI",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Critical Element Lv3",
+   "Unshaken Resolve Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Grace Under Pressure Lv2",
+   "Health Cycle Lv1"
+  ],
+  "note": "Weapon: Power Shooter VI (fire). Maxes Fire Damage Up, Unshaken Resolve and Critical Element. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Flames: fire +24% for 20s after a good/decent hitzone hit."
+ },
+ {
+  "name": "HBG Thunder vs Radiant",
+  "weapons": [
+   "Heavy Bowgun"
+  ],
+  "element": "Thunder",
+  "armor": "Kadachi Helm VI, Hunter's Mail VI, Girros Vambraces VI, Hunter's Coil VI, Ingot Greaves VI",
+  "skills": [
+   "Thunder Damage Up Lv7",
+   "Ammo Enhancement Lv4",
+   "Wilds Mastery (set)",
+   "Deterrence Lv2",
+   "Weakspot Exploit Lv2",
+   "Improviser Lv1"
+  ],
+  "note": "Weapon: Arma Destroyer VI (thunder; Normal Ammo x9, Sticky Ammo x6). Maxes Thunder Damage Up and Ammo Enhancement, which adds elemental attack and powers up regular shots. Recommended Insight: Reinforced Rifling (pairs with Ammo Enhancement). The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Thunder: thunder +5% per stack, up to 5."
+ },
+ {
+  "name": "HBG Water vs Radiant",
+  "weapons": [
+   "Heavy Bowgun"
+  ],
+  "element": "Water",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Radiant Jyura Vambraces VI, Tzitzi Coil VI, Radiant Tzitzi Greaves VI",
+  "skills": [
+   "Water Damage Up Lv7",
+   "Critical Element Lv3",
+   "Unshaken Resolve Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Grace Under Pressure Lv2",
+   "Health Recovery Lv1"
+  ],
+  "note": "Weapon: Radiant Water Cannon VI (water; Normal Ammo x9, Slicing Ammo x4). Maxes Water Damage Up, Unshaken Resolve and Critical Element. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Water: water +6% per squadmate ultimate, up to 4 stacks."
+ },
+ {
+  "name": "HBG Ice vs Radiant",
+  "weapons": [
+   "Heavy Bowgun"
+  ],
+  "element": "Ice",
+  "armor": "Radiant Legiana Helm VI, Hunter's Mail VI, Legiana Vambraces VI, Hunter's Coil VI, High Metal Greaves VI",
+  "skills": [
+   "Ice Damage Up Lv7",
+   "Ammo Enhancement Lv4",
+   "Weakspot Exploit Lv3",
+   "Wilds Mastery (set)",
+   "Blessing Lv2",
+   "Geo Expert Lv1"
+  ],
+  "note": "Weapon: Griffon Blazooka VI (ice, -8% affinity; Pierce Ammo x6, Sticky Ammo x4). Maxes Ice Damage Up and Ammo Enhancement. Recommended Insight: Reinforced Rifling (pairs with Ammo Enhancement). The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Frost: ice +24% for 8s after hitting a monster."
+ },
+ {
+  "name": "HBG Dragon vs Radiant",
+  "weapons": [
+   "Heavy Bowgun"
+  ],
+  "element": "Dragon",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Hornetaur Vambraces VI, Diablos Nero Coil VI, Bone Greaves VI",
+  "skills": [
+   "Dragon Damage Up Lv7",
+   "Critical Element Lv3",
+   "Unshaken Resolve Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Stun Resistance Lv2",
+   "Grace Under Pressure Lv2"
+  ],
+  "note": "Weapon: Blacksteel Cannon VI (dragon; Pierce Ammo x6, Wyvern Ammo x3); Radiant Baan Roar VI has higher attack and is also good. Maxes Dragon Damage Up. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Dragon: dragon +24% for 60s after an ultimate."
+ },
+ {
+  "name": "HBG Pepper: Combo Enhancement + Ammo Enhancement (Non-Radiant)",
+  "weapons": [
+   "Heavy Bowgun"
+  ],
+  "element": "Water",
+  "armor": "Radiant Girros Mask IV, Hunter's Mail IV, Radiant Girros Vambraces IV, Hunter's Coil IV, Radiant Kulu Greaves IV",
+  "skills": [
+   "Combo Enhancement Lv7",
+   "Ammo Enhancement Lv4",
+   "Great Girros's Command (set)",
+   "Wilds Mastery (set)",
+   "Weakspot Exploit Lv3",
+   "Flinching-Free Lv1"
+  ],
+  "note": "Weapon: Radiant Water Cannon IV (water). For Pepper: Combo Enhancement is easier to keep up than Airborne, and Weakspot Exploit raises affinity a lot."
+ },
+ {
+  "name": "HBG Pepper: Water vs Radiant",
+  "weapons": [
+   "Heavy Bowgun"
+  ],
+  "element": "Water",
+  "armor": "Jyura Helm IV, Tzitzi Mail IV, King Beetle Brachia IV, Tzitzi Coil IV, Legiana Greaves IV",
+  "skills": [
+   "Water Damage Up Lv7",
+   "Ammo Enhancement Lv4",
+   "Blessing Lv2",
+   "Unleashed Lv1",
+   "Critical Element Lv1",
+   "Flawless Lv1"
+  ],
+  "note": "Weapon: Radiant Water Cannon IV (water). For Pepper vs Radiant monsters weak to Water: maxes Water Damage Up alongside Ammo Enhancement."
+ },
+ {
+  "name": "Bow Charged Power Shot + Unshaken Resolve (Non-Radiant)",
+  "weapons": [
+   "Bow"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Radiant Lumu Vambraces VI, Pukei Coil VI, Radiant Legiana Greaves VI",
+  "skills": [
+   "Charged Power Shot Lv7",
+   "Unshaken Resolve Lv3",
+   "Critical Element Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Grace Under Pressure Lv2",
+   "Blessing Lv1"
+  ],
+  "note": "Weapon: Radiant Rathslinger V (fire, 2.9% affinity). Maxes Charged Power Shot and stacks Unshaken Resolve. Keep your Bow charge level up to trigger Charged Power Shot. Swap the weapon to suit your party and the monster. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Might: +12% physical damage for 60s after a crit."
+ },
+ {
+  "name": "Bow Fire vs Radiant",
+  "weapons": [
+   "Bow"
+  ],
+  "element": "Fire",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Radiant Rathalos Vambraces VI, Anja Coil VI, Radiant Rathalos Greaves VI",
+  "skills": [
+   "Fire Damage Up Lv7",
+   "Critical Element Lv3",
+   "Unshaken Resolve Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Grace Under Pressure Lv2",
+   "Health Cycle Lv1"
+  ],
+  "note": "Weapon: Radiant Rathslinger V (fire). Maxes Fire Damage Up, Unshaken Resolve and Critical Element. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Flames: fire +24% for 20s after a good/decent hitzone hit."
+ },
+ {
+  "name": "Bow Thunder vs Radiant",
+  "weapons": [
+   "Bow"
+  ],
+  "element": "Thunder",
+  "armor": "Kadachi Helm VI, Radiant Legiana Mail VI, Girros Vambraces VI, Pukei Coil VI, Ingot Greaves VI",
+  "skills": [
+   "Thunder Damage Up Lv7",
+   "Charged Power Shot Lv6",
+   "Deterrence Lv2",
+   "Unleashed Lv1",
+   "Fearless Lv1",
+   "Poison Resistance Lv1"
+  ],
+  "note": "Weapon: Radiant Kadachi Strikebow VI (thunder, 3% affinity). Maxes Thunder Damage Up and stacks Charged Power Shot to Lv6. Keep your Bow charge level up to trigger Charged Power Shot. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Thunder: thunder +5% per stack, up to 5."
+ },
+ {
+  "name": "Bow Water vs Radiant",
+  "weapons": [
+   "Bow"
+  ],
+  "element": "Water",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Radiant Jyura Vambraces VI, Tzitzi Coil VI, Radiant Tzitzi Greaves VI",
+  "skills": [
+   "Water Damage Up Lv7",
+   "Critical Element Lv3",
+   "Unshaken Resolve Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Grace Under Pressure Lv2",
+   "Health Recovery Lv1"
+  ],
+  "note": "Weapon: Radiant Water Shot VI (water). Maxes Water Damage Up, Unshaken Resolve and Critical Element. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Water: water +6% per squadmate ultimate, up to 4 stacks."
+ },
+ {
+  "name": "Bow Ice vs Radiant",
+  "weapons": [
+   "Bow"
+  ],
+  "element": "Ice",
+  "armor": "Radiant Legiana Helm VI, Radiant Legiana Mail VI, Legiana Vambraces VI, Pukei Coil VI, High Metal Greaves VI",
+  "skills": [
+   "Ice Damage Up Lv7",
+   "Charged Power Shot Lv6",
+   "Legiana Blessing (set)",
+   "Blessing Lv2",
+   "Weakspot Exploit Lv1",
+   "Roar Resistance Lv1"
+  ],
+  "note": "Weapon: Radiant Snowfletcher VI (ice). Maxes Ice Damage Up and stacks Charged Power Shot to Lv6. Keep your Bow charge level up to trigger Charged Power Shot. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Frost: ice +24% for 8s after hitting a monster."
+ },
+ {
+  "name": "Bow Dragon vs Radiant",
+  "weapons": [
+   "Bow"
+  ],
+  "element": "Dragon",
+  "armor": "Radiant Rath Heart Helm VI, Radiant Rath Heart Mail VI, Hornetaur Vambraces VI, Diablos Nero Coil VI, Bone Greaves VI",
+  "skills": [
+   "Dragon Damage Up Lv7",
+   "Critical Element Lv3",
+   "Unshaken Resolve Lv3",
+   "Pink Rathian's Rampage (set)",
+   "Stun Resistance Lv2",
+   "Grace Under Pressure Lv2"
+  ],
+  "note": "Weapon: Rosen Arrow VI (dragon, 6% affinity). Maxes Dragon Damage Up, Unshaken Resolve and Critical Element. The protagonist's passive scales with affinity, so prefer visages and a weapon without negative affinity. Visage: Kushala Daora (core: elemental damage +10%, +18% on broken parts; Season 0 only). Ink of Dragon: dragon +24% for 60s after an ultimate."
+ },
+ {
+  "name": "Bow Luka: Charged Power Shot + Bow Skill Boost (Non-Radiant)",
+  "weapons": [
+   "Bow"
+  ],
+  "element": "Thunder",
+  "armor": "Radiant Pukei Hood IV, Radiant Pukei Mail IV, Radiant Lumu Vambraces IV, Pukei Coil IV, Radiant Pukei Greaves IV",
+  "skills": [
+   "Charged Power Shot Lv7",
+   "Bow Skill Boost Lv4",
+   "Pukei-Pukei Territory (set)",
+   "Flawless Lv2",
+   "Improviser Lv2",
+   "Ballistics Lv1"
+  ],
+  "note": "Weapon: Radiant Kadachi Strikebow IV (thunder, 2.4% affinity). For Luka: maxes Charged Power Shot, Bow Skill Boost and Flawless; Ballistics and Suppression Recovery make hunts smoother."
+ },
+ {
+  "name": "Bow Luka: Thunder vs Radiant",
+  "weapons": [
+   "Bow"
+  ],
+  "element": "Thunder",
+  "armor": "Pukei Hood IV, Radiant Girros Mail IV, Girros Vambraces IV, Radiant Girros Coil IV, Radiant Pukei Greaves IV",
+  "skills": [
+   "Thunder Damage Up Lv7",
+   "Bow Skill Boost Lv4",
+   "Great Girros's Command (set)",
+   "Unleashed Lv1",
+   "Ballistics Lv1",
+   "Flawless Lv1"
+  ],
+  "note": "Weapon: Radiant Kadachi Strikebow IV (thunder). For Luka vs Radiant monsters weak to Thunder: maxes Thunder Damage Up with Bow Skill Boost and Ballistics."
+ },
+ {
+  "name": "Bow Madelyn: Charged Power Shot + Bow Skill Boost (Non-Radiant)",
+  "weapons": [
+   "Bow"
+  ],
+  "element": "Water",
+  "armor": "Radiant Pukei Hood IV, Radiant Pukei Mail IV, Radiant Lumu Vambraces IV, Pukei Coil IV, Radiant Pukei Greaves IV",
+  "skills": [
+   "Charged Power Shot Lv7",
+   "Bow Skill Boost Lv4",
+   "Pukei-Pukei Territory (set)",
+   "Flawless Lv2",
+   "Improviser Lv2",
+   "Ballistics Lv1"
+  ],
+  "note": "Weapon: Radiant Water Shot IV (water). For Madelyn: maxes Charged Power Shot and Bow Skill Boost; Ballistics and Suppression Recovery add comfort."
+ },
+ {
+  "name": "Bow Madelyn: Water vs Radiant",
+  "weapons": [
+   "Bow"
+  ],
+  "element": "Water",
+  "armor": "Pukei Hood IV, Tzitzi Mail IV, Radiant Jyura Vambraces IV, Tzitzi Coil IV, Radiant Pukei Greaves IV",
+  "skills": [
+   "Water Damage Up Lv7",
+   "Bow Skill Boost Lv4",
+   "Health Recovery Lv1",
+   "Blessing Lv1",
+   "Ballistics Lv1",
+   "Flawless Lv1"
+  ],
+  "note": "Weapon: Radiant Water Shot IV (water). For Madelyn vs Radiant monsters weak to Water: maxes Water Damage Up with Bow Skill Boost and Ballistics."
+ }
 ]
