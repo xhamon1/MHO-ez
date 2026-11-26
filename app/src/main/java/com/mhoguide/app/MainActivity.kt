@@ -203,20 +203,20 @@ fun BuildCard(b: Build, fav: Boolean, onFav: () -> Unit) {
 }
 
 data class Weapon(val name: String, val type: String, val rarity: String, val attack: Int,
-                  val affinity: String, val element: String, val elementValue: Int, val sharpness: String)
+                  val affinity: String, val element: String, val elementValue: Int, val sharpness: String, val image: String)
 
 fun loadWeapons(ctx: Context): List<Weapon> {
     val arr = JSONArray(ctx.assets.open("weapons.json").bufferedReader().readText())
     return (0 until arr.length()).map {
         val o = arr.getJSONObject(it)
         Weapon(o.getString("name"), o.getString("type"), o.getString("rarity"), o.getInt("attack"),
-            o.getString("affinity"), o.getString("element"), o.getInt("elementValue"), o.getString("sharpness"))
+            o.getString("affinity"), o.getString("element"), o.getInt("elementValue"), o.getString("sharpness"), o.optString("image"))
     }
 }
 
-private val EXTRA_COLOR = mapOf("Poison" to Color(0xFF9BCB3C), "Paralyzed" to Color(0xFFE8C13C),
+private val EXTRA_COLOR = mapOf("Poison" to Color(0xFF9BCB3C), "Paralysis" to Color(0xFFE8C13C),
     "Sleep" to Color(0xFF8EA0E8), "Blast" to Color(0xFFE88A3C), "None" to Color(0xFF8E8E98))
-private val ALL_ELEM = ELEMENTS + listOf("Poison", "Paralyzed", "Sleep", "Blast")
+private val ALL_ELEM = ELEMENTS + listOf("Poison", "Paralysis", "Sleep", "Blast")
 private fun statIcon(e: String): String? {
     val i = ALL_ELEM.indexOf(e); return if (i < 0) null else CDN + "article_tools/mhoutlanders/gacha/attr" + (i + 1) + ".png"
 }
@@ -248,7 +248,7 @@ fun WeaponsScreen(all: List<Weapon>) {
     LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item { Text("Weapons", fontSize = 28.sp, fontWeight = FontWeight.Black, color = Gold) }
-        item { Text("Max-upgrade stats. Top weapons per type; more coming.", color = Color(0xFF8E8E98), fontSize = 12.sp) }
+        item { Text("All 291 weapons · max-upgrade stats", color = Color(0xFF8E8E98), fontSize = 12.sp) }
         item { OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
             placeholder = { Text("Search weapon name…") }, shape = RoundedCornerShape(14.dp)) }
         item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -264,10 +264,13 @@ fun WeaponsScreen(all: List<Weapon>) {
 @Composable
 fun WeaponCard(w: Weapon) {
     val c = ELEMENT_COLOR[w.element] ?: EXTRA_COLOR[w.element] ?: Color(0xFF8E8E98)
+    var failed by remember(w.name) { mutableStateOf(w.image.isBlank()) }
     Row(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(16.dp)).padding(12.dp),
         verticalAlignment = Alignment.CenterVertically) {
-        Box(Modifier.size(52.dp).background(Color(0xFF0D0D10), RoundedCornerShape(12.dp)), Alignment.Center) {
-            AsyncImage(WEAPON_ICONS[w.type], w.type, Modifier.size(42.dp))
+        Box(Modifier.size(56.dp).background(Color(0xFF0D0D10), RoundedCornerShape(12.dp)), Alignment.Center) {
+            if (failed) AsyncImage(WEAPON_ICONS[w.type], w.type, Modifier.size(42.dp))
+            else AsyncImage("https://monsterhunteroutlanders.cc/images/weapons/db/" + w.image + ".webp", w.name,
+                Modifier.size(52.dp), onError = { failed = true })
         }
         Spacer(Modifier.width(12.dp))
         Column(Modifier.weight(1f)) {
