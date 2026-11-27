@@ -8,6 +8,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -72,10 +74,11 @@ class MainActivity : ComponentActivity() {
         val skills = loadSkills(this)
         val visages = loadVisages(this)
         val monsters = loadMonsters(this)
+        val characters = loadCharacters(this)
         val prefs = getSharedPreferences("mho", MODE_PRIVATE)
         setContent {
             MaterialTheme(colorScheme = darkColorScheme(primary = Gold, background = Bg, surface = Card)) {
-                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, visages, monsters, prefs) }
+                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, visages, monsters, characters, prefs) }
             }
         }
     }
@@ -229,17 +232,26 @@ private fun sharpColor(s: String) = when (s) {
 }
 
 @Composable
-fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills: SkillData, visages: VisageData, monsters: List<Monster>, prefs: SharedPreferences) {
+fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills: SkillData, visages: VisageData,
+         monsters: List<Monster>, characters: List<Character>, prefs: SharedPreferences) {
     var tab by remember { mutableStateOf(0) }
+    val tabs = listOf("★" to "Builds", "⚔" to "Weapons", "🛡" to "Armor", "✦" to "Skills", "◈" to "Visage", "☠" to "Monsters", "♞" to "Adventurers")
     Column(Modifier.fillMaxSize()) {
-        Box(Modifier.weight(1f)) { when (tab) { 0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); 2 -> ArmorScreen(armors); 3 -> SkillsScreen(skills); 4 -> VisagesScreen(visages); else -> MonstersScreen(monsters) } }
-        NavigationBar(containerColor = Card) {
-            NavigationBarItem(tab == 0, { tab = 0 }, { Text("★") }, label = { Text("Builds") })
-            NavigationBarItem(tab == 1, { tab = 1 }, { Text("⚔") }, label = { Text("Weapons") })
-            NavigationBarItem(tab == 2, { tab = 2 }, { Text("🛡") }, label = { Text("Armor") })
-            NavigationBarItem(tab == 3, { tab = 3 }, { Text("✦") }, label = { Text("Skills") })
-            NavigationBarItem(tab == 4, { tab = 4 }, { Text("◈") }, label = { Text("Visage") })
-            NavigationBarItem(tab == 5, { tab = 5 }, { Text("☠") }, label = { Text("Monsters") })
+        Box(Modifier.weight(1f)) {
+            when (tab) {
+                0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); 2 -> ArmorScreen(armors)
+                3 -> SkillsScreen(skills); 4 -> VisagesScreen(visages); 5 -> MonstersScreen(monsters)
+                else -> CharactersScreen(characters)
+            }
+        }
+        Row(Modifier.fillMaxWidth().background(Card).navigationBarsPadding().horizontalScroll(rememberScrollState()).padding(vertical = 6.dp)) {
+            tabs.forEachIndexed { i, (icon, label) ->
+                Column(Modifier.width(84.dp).clickable { tab = i }.padding(4.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(icon, fontSize = 20.sp, color = if (tab == i) Gold else Color(0xFF8E8E98))
+                    Text(label, fontSize = 11.sp, color = if (tab == i) Gold else Color(0xFF8E8E98),
+                        fontWeight = if (tab == i) FontWeight.Bold else FontWeight.Normal)
+                }
+            }
         }
     }
 }
@@ -500,6 +512,68 @@ fun MonstersScreen(all: List<Monster>) {
                         Text("${n.take(3)} " + "★".repeat(r), color = if (r >= 3) (EXTRA_COLOR[n] ?: Gold) else Color(0xFF6E6E78),
                             fontSize = 12.sp, fontWeight = if (r >= 3) FontWeight.Bold else FontWeight.Normal)
                     }
+                }
+            }
+        }
+    }
+}
+
+data class Character(val name: String, val rarity: String, val weapon: String, val role: String, val element: String,
+                     val attack: Int, val defense: Int, val elemental: Int, val how: String, val image: String)
+
+fun loadCharacters(ctx: Context): List<Character> {
+    val arr = JSONArray(ctx.assets.open("characters.json").bufferedReader().readText())
+    return (0 until arr.length()).map {
+        val o = arr.getJSONObject(it)
+        Character(o.getString("name"), o.getString("rarity"), o.getString("weapon"), o.getString("role"), o.getString("element"),
+            o.getInt("attack"), o.getInt("defense"), o.getInt("elemental"), o.getString("how"), o.getString("image"))
+    }
+}
+
+@Composable
+fun CharactersScreen(all: List<Character>) {
+    var weapon by remember { mutableStateOf<String?>(null) }
+    var role by remember { mutableStateOf<String?>(null) }
+    var rarity by remember { mutableStateOf<String?>(null) }
+    var query by remember { mutableStateOf("") }
+    val weapons = remember { all.map { it.weapon }.distinct() }
+    val shown = all.filter { c -> (weapon == null || c.weapon == weapon) && (role == null || c.role == role) &&
+        (rarity == null || c.rarity == rarity) && (query.isBlank() || c.name.contains(query, true)) }
+        .sortedBy { if (it.name.startsWith("Fated")) 2 else if (it.rarity == "SSR") 0 else 1 }
+    LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        item { Text("Adventurers", fontSize = 28.sp, fontWeight = FontWeight.Black, color = Gold) }
+        item { OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
+            placeholder = { Text("Search an adventurer…") }, shape = RoundedCornerShape(14.dp)) }
+        item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            items(listOf("SSR", "SR")) { r -> Pill(r, Gold, rarity == r, null) { rarity = if (rarity == r) null else r } }
+            items(listOf("Assault", "Disruptor", "Support")) { r -> Pill(r, Gold, role == r, null) { role = if (role == r) null else r } } } }
+        item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            items(weapons) { w -> Pill(w, Gold, weapon == w, WEAPON_ICONS[w]) { weapon = if (weapon == w) null else w } } } }
+        item { Text("${shown.size} adventurer(s)", color = Color(0xFF8E8E98), fontSize = 13.sp) }
+        items(shown, key = { it.name }) { c ->
+            val col = ELEMENT_COLOR[c.element] ?: Color(0xFF8E8E98)
+            Row(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(16.dp)).padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.size(64.dp).background(Color(0xFF0D0D10), RoundedCornerShape(12.dp)), Alignment.Center) {
+                    AsyncImage(CDN + "img/" + c.image, c.name, Modifier.size(60.dp))
+                }
+                Spacer(Modifier.width(12.dp))
+                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(c.name, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 15.sp, modifier = Modifier.weight(1f, fill = false))
+                        Spacer(Modifier.width(8.dp))
+                        Text(c.rarity, color = if (c.rarity == "SSR") Gold else Color(0xFF9C5CE0), fontWeight = FontWeight.Black, fontSize = 13.sp)
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        AsyncImage(WEAPON_ICONS[c.weapon], c.weapon, Modifier.size(18.dp)); Spacer(Modifier.width(4.dp))
+                        Text("${c.weapon} · ${c.role}", color = Color(0xFFB8B8C0), fontSize = 12.sp)
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        if (c.element in ELEMENTS) { AsyncImage(elementIcon(c.element), null, Modifier.size(16.dp)); Spacer(Modifier.width(4.dp)) }
+                        Text(c.element, color = col, fontSize = 12.sp)
+                        Text("  ATK ${c.attack}  DEF ${c.defense}" + if (c.elemental > 0) "  ELE ${c.elemental}" else "", color = Gold, fontSize = 12.sp)
+                    }
+                    Text(c.how, color = Color(0xFF8E8E98), fontSize = 11.sp)
                 }
             }
         }
