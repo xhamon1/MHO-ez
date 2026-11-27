@@ -71,10 +71,11 @@ class MainActivity : ComponentActivity() {
         val armors = loadArmors(this)
         val skills = loadSkills(this)
         val visages = loadVisages(this)
+        val monsters = loadMonsters(this)
         val prefs = getSharedPreferences("mho", MODE_PRIVATE)
         setContent {
             MaterialTheme(colorScheme = darkColorScheme(primary = Gold, background = Bg, surface = Card)) {
-                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, visages, prefs) }
+                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, visages, monsters, prefs) }
             }
         }
     }
@@ -228,16 +229,17 @@ private fun sharpColor(s: String) = when (s) {
 }
 
 @Composable
-fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills: SkillData, visages: VisageData, prefs: SharedPreferences) {
+fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills: SkillData, visages: VisageData, monsters: List<Monster>, prefs: SharedPreferences) {
     var tab by remember { mutableStateOf(0) }
     Column(Modifier.fillMaxSize()) {
-        Box(Modifier.weight(1f)) { when (tab) { 0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); 2 -> ArmorScreen(armors); 3 -> SkillsScreen(skills); else -> VisagesScreen(visages) } }
+        Box(Modifier.weight(1f)) { when (tab) { 0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); 2 -> ArmorScreen(armors); 3 -> SkillsScreen(skills); 4 -> VisagesScreen(visages); else -> MonstersScreen(monsters) } }
         NavigationBar(containerColor = Card) {
             NavigationBarItem(tab == 0, { tab = 0 }, { Text("★") }, label = { Text("Builds") })
             NavigationBarItem(tab == 1, { tab = 1 }, { Text("⚔") }, label = { Text("Weapons") })
             NavigationBarItem(tab == 2, { tab = 2 }, { Text("🛡") }, label = { Text("Armor") })
             NavigationBarItem(tab == 3, { tab = 3 }, { Text("✦") }, label = { Text("Skills") })
             NavigationBarItem(tab == 4, { tab = 4 }, { Text("◈") }, label = { Text("Visage") })
+            NavigationBarItem(tab == 5, { tab = 5 }, { Text("☠") }, label = { Text("Monsters") })
         }
     }
 }
@@ -438,6 +440,67 @@ fun VisagesScreen(data: VisageData) {
                     Text("${s.count} visages", color = Gold, fontSize = 12.sp, fontWeight = FontWeight.Bold) }
                 Text("2-piece: ${s.two}", color = Color(0xFFD8D8E0), fontSize = 13.sp)
                 if (s.four.isNotBlank()) Text(if (s.four.startsWith("1-piece")) s.four else "4-piece: ${s.four}", color = Color(0xFFB8B8C0), fontSize = 13.sp)
+            }
+        }
+    }
+}
+
+data class Monster(val name: String, val image: String, val elements: List<Int>, val status: List<Int>, val parts: List<String>)
+
+fun loadMonsters(ctx: Context): List<Monster> {
+    val arr = JSONArray(ctx.assets.open("monsters.json").bufferedReader().readText())
+    fun JSONArray.ints() = (0 until length()).map { getInt(it) }
+    return (0 until arr.length()).map {
+        val o = arr.getJSONObject(it)
+        Monster(o.getString("name"), o.getString("image"), o.getJSONArray("elements").ints(), o.getJSONArray("status").ints(), o.getJSONArray("parts").strs())
+    }
+}
+
+private val STATUS_NAMES = listOf("Poison", "Sleep", "Paralysis", "Blast", "Stun")
+
+@Composable
+fun MonstersScreen(all: List<Monster>) {
+    var elem by remember { mutableStateOf<Int?>(null) }
+    var query by remember { mutableStateOf("") }
+    val shown = all.filter { m -> (elem == null || m.elements[elem!!] >= 3) &&
+        (query.isBlank() || m.name.contains(query, true) || m.parts.any { it.contains(query, true) }) }
+        .let { l -> if (elem == null) l else l.sortedByDescending { it.elements[elem!!] } }
+    LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        item { Text("Monsters", fontSize = 28.sp, fontWeight = FontWeight.Black, color = Gold) }
+        item { Text("Large monsters · weakness ★ 1 to 3", color = Color(0xFF8E8E98), fontSize = 12.sp) }
+        item { OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
+            placeholder = { Text("Search monster or weak point…") }, shape = RoundedCornerShape(14.dp)) }
+        item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            items(ELEMENTS.indices.toList()) { i -> val e = ELEMENTS[i]
+                Pill("Weak to $e", ELEMENT_COLOR[e]!!, elem == i, elementIcon(e)) { elem = if (elem == i) null else i } } } }
+        item { Text("${shown.size} monster(s)", color = Color(0xFF8E8E98), fontSize = 13.sp) }
+        items(shown, key = { it.name }) { m ->
+            Column(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(16.dp)).padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(Modifier.size(56.dp).background(Color(0xFF0D0D10), RoundedCornerShape(12.dp)), Alignment.Center) {
+                        AsyncImage(CDN + "img/" + m.image, m.name, Modifier.size(52.dp))
+                    }
+                    Spacer(Modifier.width(12.dp))
+                    Column {
+                        Text(m.name, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 16.sp)
+                        Text("Weak points: " + m.parts.joinToString(", "), color = Color(0xFF8E8E98), fontSize = 12.sp)
+                    }
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    ELEMENTS.forEachIndexed { i, e ->
+                        val r = m.elements[i]
+                        Text("${e.take(1)} " + "★".repeat(r), color = if (r >= 3) ELEMENT_COLOR[e]!! else Color(0xFF6E6E78),
+                            fontSize = 12.sp, fontWeight = if (r >= 3) FontWeight.Bold else FontWeight.Normal)
+                    }
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    STATUS_NAMES.forEachIndexed { i, n ->
+                        val r = m.status[i]
+                        Text("${n.take(3)} " + "★".repeat(r), color = if (r >= 3) (EXTRA_COLOR[n] ?: Gold) else Color(0xFF6E6E78),
+                            fontSize = 12.sp, fontWeight = if (r >= 3) FontWeight.Bold else FontWeight.Normal)
+                    }
+                }
             }
         }
     }

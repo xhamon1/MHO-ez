@@ -1,0 +1,878 @@
+[
+{
+"name": "Great Jagras",
+"image": "933892cb3bd5410e7054225bc26b2e0b.png",
+"elements": [
+3,
+2,
+2,
+1,
+1
+],
+"status": [
+3,
+3,
+3,
+3,
+3
+],
+"parts": [
+"Head",
+"Forelegs",
+"Belly"
+]
+},
+{
+"name": "Tobi-Kadachi",
+"image": "efeced448c247c58ceaaa9d9bfa1d8b2.png",
+"elements": [
+2,
+2,
+1,
+2,
+1
+],
+"status": [
+3,
+2,
+2,
+2,
+2
+],
+"parts": [
+"Head",
+"Tail"
+]
+},
+{
+"name": "Great Girros",
+"image": "5ec726da0ea4078dd5d468f28828ae58.png",
+"elements": [
+2,
+3,
+1,
+2,
+1
+],
+"status": [
+3,
+1,
+2,
+2,
+2
+],
+"parts": [
+"Head",
+"Forelegs",
+"Tail"
+]
+},
+{
+"name": "Odogaron",
+"image": "2cf75d1609cf8770e1c857d5f0401d07.png",
+"elements": [
+1,
+1,
+2,
+3,
+1
+],
+"status": [
+1,
+2,
+3,
+2,
+2
+],
+"parts": [
+"Head",
+"Forelegs",
+"Tail"
+]
+},
+{
+"name": "Kulu-Ya-Ku",
+"image": "0b9ae35920d0019b8fb6857965bf6474.png",
+"elements": [
+2,
+3,
+2,
+2,
+2
+],
+"status": [
+2,
+2,
+2,
+2,
+2
+],
+"parts": [
+"Head"
+]
+},
+{
+"name": "Pukei-Pukei",
+"image": "aedd86f3f3c65d5d98149334db9e3741.png",
+"elements": [
+2,
+1,
+3,
+2,
+1
+],
+"status": [
+1,
+3,
+3,
+2,
+2
+],
+"parts": [
+"Head",
+"Wings",
+"Tail"
+]
+},
+{
+"name": "Tzitzi-Ya-Ku",
+"image": "f582c9cd7bc77ef70a8e9188d90915dc.png",
+"elements": [
+2,
+2,
+3,
+3,
+2
+],
+"status": [
+2,
+2,
+2,
+2,
+2
+],
+"parts": [
+"Photophore"
+]
+},
+{
+"name": "Barroth",
+"image": "ee7031e18ae8a4adbc4b6ac626919dfd.png",
+"elements": [
+3,
+3,
+1,
+2,
+1
+],
+"status": [
+3,
+2,
+3,
+3,
+1
+],
+"parts": [
+"Forelegs (Normal)",
+"Forelegs (Mud)",
+"Tail (Normal)",
+"Tail (Mud)"
+]
+},
+{
+"name": "Anjanath",
+"image": "fb51757171a4e145e385a85ffcfc41fc.png",
+"elements": [
+1,
+3,
+2,
+2,
+1
+],
+"status": [
+2,
+2,
+2,
+1,
+2
+],
+"parts": [
+"Head",
+"Tail"
+]
+},
+{
+"name": "Radobaan",
+"image": "201dfd8be009f621246dcc232d497515.png",
+"elements": [
+2,
+2,
+2,
+2,
+3
+],
+"status": [
+2,
+1,
+2,
+3,
+2
+],
+"parts": [
+"Head",
+"Hind Legs"
+]
+},
+{
+"name": "Rathian",
+"image": "c181cfb4d399611f2392b32b2479ce0f.png",
+"elements": [
+1,
+1,
+2,
+1,
+3
+],
+"status": [
+1,
+2,
+2,
+1,
+3
+],
+"parts": [
+"Head",
+"Left Wing",
+"Right Wing",
+"Tail"
+]
+},
+{
+"name": "Pink Rathian",
+"image": "f52ef283758e7d93345e8f851010b17d.png",
+"elements": [
+1,
+1,
+2,
+1,
+3
+],
+"status": [
+1,
+2,
+2,
+1,
+3
+],
+"parts": [
+"Head",
+"Left Wing",
+"Right Wing",
+"Tail"
+]
+},
+{
+"name": "Rathalos",
+"image": "99d8b7061586cb045b5bff9105442686.png",
+"elements": [
+1,
+1,
+2,
+1,
+3
+],
+"status": [
+1,
+2,
+2,
+1,
+2
+],
+"parts": [
+"Head",
+"Left Wing",
+"Right Wing",
+"Tail"
+]
+},
+{
+"name": "Diablos",
+"image": "fe5dda51045458c91f774ec54ae9e13e.png",
+"elements": [
+1,
+2,
+1,
+3,
+2
+],
+"status": [
+2,
+2,
+3,
+2,
+1
+],
+"parts": [
+"Head",
+"Belly",
+"Left Wing",
+"Right Wing"
+]
+},
+{
+"name": "Black Diablos",
+"image": "75a0aac92f7a67f1c7ac76e598ff549b.png",
+"elements": [
+1,
+2,
+1,
+3,
+1
+],
+"status": [
+2,
+2,
+3,
+2,
+1
+],
+"parts": [
+"Head",
+"Belly",
+"Left Wing",
+"Right Wing"
+]
+},
+{
+"name": "Paolumu",
+"image": "c4084a6f1532e4a0b4d372763efb9b39.png",
+"elements": [
+3,
+1,
+2,
+1,
+1
+],
+"status": [
+2,
+2,
+2,
+3,
+3
+],
+"parts": [
+"Head",
+"Throat Pouch"
+]
+},
+{
+"name": "Legiana",
+"image": "6c6f2cbf11c3f8255b96dcb4b7e3ecf0.png",
+"elements": [
+2,
+1,
+3,
+1,
+1
+],
+"status": [
+3,
+2,
+2,
+2,
+2
+],
+"parts": [
+"Head",
+"Left Wing",
+"Right Wing",
+"Tail"
+]
+},
+{
+"name": "Jyuratodus",
+"image": "4f48ca5f3fe38ee36f725a408597260a.png",
+"elements": [
+1,
+3,
+3,
+1,
+1
+],
+"status": [
+2,
+1,
+2,
+1,
+3
+],
+"parts": [
+"Head (Normal)",
+"Head (Mud)",
+"Tail"
+]
+},
+{
+"name": "Radiant Great Jagras",
+"image": "fadf726797ca9444e24a98205c74092e.png",
+"elements": [
+3,
+1,
+1,
+1,
+1
+],
+"status": [
+3,
+3,
+3,
+3,
+3
+],
+"parts": [
+"Belly"
+]
+},
+{
+"name": "Radiant Kulu-Ya-Ku",
+"image": "d9c161c9e58b87d89928b9baf958272c.png",
+"elements": [
+1,
+3,
+1,
+1,
+1
+],
+"status": [
+2,
+2,
+2,
+2,
+2
+],
+"parts": [
+"Head",
+"Forelegs"
+]
+},
+{
+"name": "Radiant Pukei-Pukei",
+"image": "f01a0dbe86454a03be3b9fd3d9b0e03e.png",
+"elements": [
+1,
+1,
+3,
+1,
+1
+],
+"status": [
+1,
+3,
+3,
+2,
+2
+],
+"parts": [
+"Head"
+]
+},
+{
+"name": "Radiant Jyuratodus",
+"image": "a48e8c74f856265a5fd05b36fd91889a.png",
+"elements": [
+1,
+1,
+1,
+3,
+1
+],
+"status": [
+2,
+1,
+2,
+1,
+3
+],
+"parts": [
+"Head (Normal)",
+"Head (Mud)",
+"Body"
+]
+},
+{
+"name": "Radiant Barroth",
+"image": "cdab4f0ce9d8b64f50ff06c5a4f179e5.png",
+"elements": [
+3,
+1,
+1,
+1,
+1
+],
+"status": [
+3,
+2,
+3,
+3,
+1
+],
+"parts": [
+"Head (Normal)",
+"Head (Mud)",
+"Forelegs (Normal)",
+"Forelegs (Mud)"
+]
+},
+{
+"name": "Radiant Anjanath",
+"image": "f84e839dabbbc51852f3edbfee657384.png",
+"elements": [
+1,
+3,
+1,
+1,
+1
+],
+"status": [
+2,
+2,
+2,
+1,
+2
+],
+"parts": [
+"Head"
+]
+},
+{
+"name": "Radiant Rathian",
+"image": "aaf503af19df42ec602745bb1cb93757.png",
+"elements": [
+1,
+1,
+3,
+1,
+1
+],
+"status": [
+1,
+2,
+2,
+1,
+3
+],
+"parts": [
+"Head",
+"Tail"
+]
+},
+{
+"name": "Radiant Diablos",
+"image": "1ab2f0b1d4f71e3bcea6c9c09ca7e3ac.png",
+"elements": [
+1,
+1,
+1,
+3,
+1
+],
+"status": [
+2,
+2,
+3,
+2,
+1
+],
+"parts": [
+"Head",
+"Belly"
+]
+},
+{
+"name": "Radiant Legiana",
+"image": "ca287a1e378e5921b02385da288e0ded.png",
+"elements": [
+3,
+1,
+1,
+1,
+1
+],
+"status": [
+3,
+2,
+2,
+2,
+2
+],
+"parts": [
+"Head",
+"Left Wing",
+"Right Wing"
+]
+},
+{
+"name": "Radiant Paolumu",
+"image": "18fba630975addd843c9a029212f3995.png",
+"elements": [
+3,
+1,
+1,
+1,
+1
+],
+"status": [
+2,
+2,
+2,
+3,
+3
+],
+"parts": [
+"Head",
+"Throat Pouch"
+]
+},
+{
+"name": "Radiant Rathalos",
+"image": "396f8e4799e9c621ee15519dd71d13c1.png",
+"elements": [
+1,
+1,
+3,
+1,
+1
+],
+"status": [
+1,
+2,
+2,
+1,
+2
+],
+"parts": [
+"Head"
+]
+},
+{
+"name": "Kushala Daora",
+"image": "bfd88409bd51edcea25856f6a12177dd.png",
+"elements": [
+1,
+1,
+3,
+1,
+2
+],
+"status": [
+3,
+1,
+1,
+3,
+2
+],
+"parts": [
+"Head",
+"Forelegs",
+"Tail"
+]
+},
+{
+"name": "Nergigante",
+"image": "97e9e04ce617cc96f5bf81ceab4a8190.png",
+"elements": [
+1,
+1,
+3,
+1,
+2
+],
+"status": [
+2,
+2,
+2,
+3,
+2
+],
+"parts": [
+"Head",
+"Right Foreleg",
+"Left Foreleg"
+]
+},
+{
+"name": "Radiant Pink Rathian",
+"image": "6336a1379d6b39d97045ccb649a782c8.png",
+"elements": [
+1,
+1,
+1,
+1,
+3
+],
+"status": [
+1,
+2,
+2,
+1,
+3
+],
+"parts": [
+"Head",
+"Tail"
+]
+},
+{
+"name": "Radiant Black Diablos",
+"image": "fc22d40597ba7afd11508dc69b1fcd56.png",
+"elements": [
+1,
+1,
+1,
+3,
+1
+],
+"status": [
+2,
+2,
+3,
+2,
+1
+],
+"parts": [
+"Head",
+"Belly"
+]
+},
+{
+"name": "Radiant Radobaan",
+"image": "ace9cab7c4b601d3e7a1f8dacd3b8f21.png",
+"elements": [
+1,
+1,
+1,
+1,
+3
+],
+"status": [
+2,
+1,
+2,
+3,
+2
+],
+"parts": [
+"Head",
+"Body"
+]
+},
+{
+"name": "Radiant Great Girros",
+"image": "d0aaba960df57f0da51313ac4a5d5ae2.png",
+"elements": [
+1,
+1,
+1,
+1,
+3
+],
+"status": [
+2,
+3,
+1,
+2,
+2
+],
+"parts": [
+"Head"
+]
+},
+{
+"name": "Radiant Tobi-Kadachi",
+"image": "97f1689733072f40f21d886ff736aa87.png",
+"elements": [
+1,
+3,
+1,
+1,
+1
+],
+"status": [
+3,
+2,
+2,
+2,
+2
+],
+"parts": [
+"Tail"
+]
+},
+{
+"name": "Radiant Tzitzi-Ya-Ku",
+"image": "f05a1cfc709749794772b3f962c08a78.png",
+"elements": [
+1,
+1,
+1,
+1,
+3
+],
+"status": [
+2,
+2,
+2,
+2,
+2
+],
+"parts": [
+"Photophore"
+]
+},
+{
+"name": "Radiant Odogaron",
+"image": "27f007cb20f6b6e6e77b0b4bc3f369ef.png",
+"elements": [
+1,
+1,
+1,
+3,
+1
+],
+"status": [
+1,
+2,
+3,
+2,
+2
+],
+"parts": [
+"Head",
+"Forelegs"
+]
+},
+{
+"name": "Ruger Aidal",
+"image": "32ec5fea3e2f8a3107735420290e708c.png",
+"elements": [
+3,
+1,
+1,
+3,
+2
+],
+"status": [
+1,
+1,
+1,
+3,
+1
+],
+"parts": [
+"Head",
+"Wings",
+"Forelegs",
+"Tail"
+]
+}
+]
