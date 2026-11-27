@@ -1,0 +1,739 @@
+{
+"skills": [
+{
+"name": "Health Boost",
+"maxLevel": 3,
+"effect": "Raises max health."
+},
+{
+"name": "Recovery Booster",
+"maxLevel": 3,
+"effect": "Boosts healing from items and healing objects."
+},
+{
+"name": "Health Recovery",
+"maxLevel": 3,
+"effect": "Heals the gray (recoverable) health faster."
+},
+{
+"name": "Defense Up",
+"maxLevel": 7,
+"effect": "Raises defense."
+},
+{
+"name": "Insight",
+"maxLevel": 7,
+"effect": "Raises affinity."
+},
+{
+"name": "Guard Technique",
+"maxLevel": 5,
+"effect": "Less stagger and stamina cost when guarding."
+},
+{
+"name": "Flawless",
+"maxLevel": 3,
+"effect": "More damage while at full health."
+},
+{
+"name": "Rejuvenation",
+"maxLevel": 3,
+"effect": "Health slowly regenerates up to a set value."
+},
+{
+"name": "Fearless",
+"maxLevel": 5,
+"effect": "More damage while you have gray (recoverable) health."
+},
+{
+"name": "Unleashed",
+"maxLevel": 5,
+"effect": "Temporary affinity boost once conditions are met."
+},
+{
+"name": "Adversity",
+"maxLevel": 1,
+"effect": "After each faint (max 2), temporary damage and defense boost."
+},
+{
+"name": "Charge Up",
+"maxLevel": 7,
+"effect": "More damage while stamina stays full."
+},
+{
+"name": "Battle Spirit",
+"maxLevel": 5,
+"effect": "Affinity boost when large monsters are enraged or in Radiant Rage."
+},
+{
+"name": "Weakspot Exploit",
+"maxLevel": 3,
+"effect": "Affinity boost on weak-point hits."
+},
+{
+"name": "Breaker",
+"maxLevel": 3,
+"effect": "Easier part breaks and severs."
+},
+{
+"name": "Offensive Defense",
+"maxLevel": 7,
+"effect": "Damage boost after a Perfect Guard."
+},
+{
+"name": "Flinching-Free",
+"maxLevel": 3,
+"effect": "Less flinching from minor hits."
+},
+{
+"name": "Blessing",
+"maxLevel": 5,
+"effect": "Chance to reduce damage taken."
+},
+{
+"name": "Roar Resistance",
+"maxLevel": 3,
+"effect": "Protects against large-monster roars."
+},
+{
+"name": "Windproof",
+"maxLevel": 3,
+"effect": "Protects against wind pressure."
+},
+{
+"name": "Tremor Resistance",
+"maxLevel": 3,
+"effect": "Protects against ground tremors."
+},
+{
+"name": "Poison Resistance",
+"maxLevel": 3,
+"effect": "Less damage while poisoned."
+},
+{
+"name": "Paralysis Resistance",
+"maxLevel": 3,
+"effect": "Shorter paralysis."
+},
+{
+"name": "Sleep Resistance",
+"maxLevel": 3,
+"effect": "Shorter sleep."
+},
+{
+"name": "Blast Resistance",
+"maxLevel": 3,
+"effect": "Protects against blastblight."
+},
+{
+"name": "Stun Resistance",
+"maxLevel": 3,
+"effect": "Shorter stun."
+},
+{
+"name": "Bleeding Resistance",
+"maxLevel": 3,
+"effect": "Protects against bleeding."
+},
+{
+"name": "Iron Skin",
+"maxLevel": 3,
+"effect": "Protects against Defense Down."
+},
+{
+"name": "Fire Damage Up",
+"maxLevel": 7,
+"effect": "More fire damage, stronger against Radiant monsters."
+},
+{
+"name": "Water Damage Up",
+"maxLevel": 7,
+"effect": "More water damage, stronger against Radiant monsters."
+},
+{
+"name": "Ice Damage Up",
+"maxLevel": 7,
+"effect": "More ice damage, stronger against Radiant monsters."
+},
+{
+"name": "Thunder Damage Up",
+"maxLevel": 7,
+"effect": "More thunder damage, stronger against Radiant monsters."
+},
+{
+"name": "Dragon Damage Up",
+"maxLevel": 7,
+"effect": "More dragon damage, stronger against Radiant monsters."
+},
+{
+"name": "Critical Element",
+"maxLevel": 3,
+"effect": "More elemental damage on critical hits."
+},
+{
+"name": "Fire Resistance",
+"maxLevel": 3,
+"effect": "Raises fire resistance."
+},
+{
+"name": "Water Resistance",
+"maxLevel": 3,
+"effect": "Raises water resistance."
+},
+{
+"name": "Ice Resistance",
+"maxLevel": 3,
+"effect": "Raises ice resistance."
+},
+{
+"name": "Thunder Resistance",
+"maxLevel": 3,
+"effect": "Raises thunder resistance."
+},
+{
+"name": "Dragon Resistance",
+"maxLevel": 3,
+"effect": "Raises dragon resistance."
+},
+{
+"name": "Instinct",
+"maxLevel": 1,
+"effect": "Attacks no longer bounce off."
+},
+{
+"name": "Ballistics",
+"maxLevel": 1,
+"effect": "Ammo and arrows reach max power at a shorter range."
+},
+{
+"name": "Bow Skill Boost",
+"maxLevel": 4,
+"effect": "More damage from Bow Skills 1 to 3."
+},
+{
+"name": "Quick-Bite",
+"maxLevel": 3,
+"effect": "Faster eating and potion/antidote use."
+},
+{
+"name": "Thrifty Meal",
+"maxLevel": 3,
+"effect": "Chance to use food or drink without consuming it."
+},
+{
+"name": "Improviser",
+"maxLevel": 3,
+"effect": "Extra healing from environmental objects like Sporepuffs."
+},
+{
+"name": "Deterrence",
+"maxLevel": 3,
+"effect": "Spotted small monsters attack less often (not Neopterons)."
+},
+{
+"name": "Gathering Master",
+"maxLevel": 1,
+"effect": "Gather faster without being staggered."
+},
+{
+"name": "Botanical Expert",
+"maxLevel": 3,
+"effect": "More herbs and similar items gathered."
+},
+{
+"name": "Geo Expert",
+"maxLevel": 3,
+"effect": "More uses per gathering point."
+},
+{
+"name": "Honey Harvester",
+"maxLevel": 1,
+"effect": "More honey from field gathering."
+},
+{
+"name": "Carve Master",
+"maxLevel": 1,
+"effect": "One extra carve (no effect when joining mid-quest)."
+},
+{
+"name": "Carving Pro",
+"maxLevel": 1,
+"effect": "No description listed."
+},
+{
+"name": "Capturing Expert",
+"maxLevel": 1,
+"effect": "Better capture rewards (not for mid-quest joins)."
+},
+{
+"name": "Specimen Expert",
+"maxLevel": 3,
+"effect": "Small insect monsters can be carved more often."
+},
+{
+"name": "Weakspot Follow-Up",
+"maxLevel": 5,
+"effect": "Hitting a broken part can trigger an extra hit."
+},
+{
+"name": "Relentless Pursuit",
+"maxLevel": 3,
+"effect": "Damage boost after a stagger or suppression."
+},
+{
+"name": "Counter Boost",
+"maxLevel": 7,
+"effect": "Damage boost after a Perfect Evade or Parry."
+},
+{
+"name": "Radiant Sense",
+"maxLevel": 5,
+"effect": "More damage against monsters in Radiant Rage."
+},
+{
+"name": "Health Cycle",
+"maxLevel": 3,
+"effect": "Heal when hitting a broken part of a large monster."
+},
+{
+"name": "Radiant Frenzy",
+"maxLevel": 1,
+"effect": "Damage boost under radiant particles, then a damage and stamina penalty."
+},
+{
+"name": "Unshaken Resolve",
+"maxLevel": 3,
+"effect": "Damage boost during status ailments or Radiant Frenzy; shortens the Frenzy penalty."
+},
+{
+"name": "Combo Enhancement",
+"maxLevel": 7,
+"effect": "Damage boost for chained hits (Pierce and rupture damage can't trigger it)."
+},
+{
+"name": "Buddy Boost",
+"maxLevel": 1,
+"effect": "Raises buddy damage."
+},
+{
+"name": "Bento Lover",
+"maxLevel": 7,
+"effect": "Damage boost after eating BBQ or portable meals in combat."
+},
+{
+"name": "Master Climber",
+"maxLevel": 1,
+"effect": "Less stamina used evading on walls and vines."
+},
+{
+"name": "Airborne",
+"maxLevel": 7,
+"effect": "More airborne attack damage."
+},
+{
+"name": "Item Master",
+"maxLevel": 3,
+"effect": "Longer item effects."
+},
+{
+"name": "Charge Enhancement",
+"maxLevel": 7,
+"effect": "Damage boost after charged slash or blunt hits."
+},
+{
+"name": "Hunting Instinct",
+"maxLevel": 3,
+"effect": "Damage boost when using devices or endemic life."
+},
+{
+"name": "Flash Draw",
+"maxLevel": 7,
+"effect": "Damage boost after Draw attacks."
+},
+{
+"name": "Spirit Bind Blade",
+"maxLevel": 4,
+"effect": "Damage boost when the Spirit Gauge level rises."
+},
+{
+"name": "Demonic Strength",
+"maxLevel": 4,
+"effect": "More damage in Demon Mode."
+},
+{
+"name": "Piercing Strike",
+"maxLevel": 7,
+"effect": "Damage boost when one Pierce attack lands 3 or more hits."
+},
+{
+"name": "Charged Power Shot",
+"maxLevel": 7,
+"effect": "More damage while holding a ranged charge level."
+},
+{
+"name": "Immovable Stance",
+"maxLevel": 7,
+"effect": "Damage boost when ferocity triggers."
+},
+{
+"name": "Stamina Conversion",
+"maxLevel": 7,
+"effect": "Stamina-cost attack skills deal more damage."
+},
+{
+"name": "Capacity Boost",
+"maxLevel": 7,
+"effect": "Damage boost after reloading."
+},
+{
+"name": "Wrecker",
+"maxLevel": 4,
+"effect": "Great Sword: damage boost after a stagger or part break."
+},
+{
+"name": "Pierce",
+"maxLevel": 4,
+"effect": "Lance: damage boost for repeated hits on the same part."
+},
+{
+"name": "Intimidation",
+"maxLevel": 4,
+"effect": "Blunt weapons: damage boost when building stun."
+},
+{
+"name": "Ammo Enhancement",
+"maxLevel": 4,
+"effect": "Stronger normal, spread and pierce bowgun ammo."
+},
+{
+"name": "Grace Under Pressure",
+"maxLevel": 3,
+"effect": "Defense boost while Radiant monsters are in Radiant Rage."
+},
+{
+"name": "Suppression Recovery",
+"maxLevel": 3,
+"effect": "Heal when damaging a suppressed monster."
+},
+{
+"name": "Morph Boost",
+"maxLevel": 4,
+"effect": "Damage boost when your weapon transforms."
+},
+{
+"name": "Guild Might - Helm",
+"maxLevel": 8,
+"effect": "Adventurers' Guild piece skill."
+},
+{
+"name": "Guild Might - Mail",
+"maxLevel": 8,
+"effect": "Adventurers' Guild piece skill."
+},
+{
+"name": "Guild Might - Gauntlets",
+"maxLevel": 8,
+"effect": "Adventurers' Guild piece skill."
+},
+{
+"name": "Guild Might - Coil",
+"maxLevel": 8,
+"effect": "Adventurers' Guild piece skill."
+},
+{
+"name": "Guild Might - Greaves",
+"maxLevel": 8,
+"effect": "Adventurers' Guild piece skill."
+}
+],
+"sets": [
+{
+"name": "Guild's Comeback",
+"pieces": 2,
+"bonus": "Adversity +1",
+"effect": "Each time health runs out, damage and defense x1.1 and +10 defense for the rest of the hunt (max 2 times)."
+},
+{
+"name": "Great Jagras Resistance",
+"pieces": 2,
+"bonus": "Stun Resistance +1",
+"effect": "Stun lasts 60% shorter."
+},
+{
+"name": "Kulu-Ya-Ku Flash Attack",
+"pieces": 2,
+"bonus": "Instinct +1",
+"effect": "Attacks aren't deflected."
+},
+{
+"name": "Pukei-Pukei Tailwhip",
+"pieces": 2,
+"bonus": "Poison Resistance +1",
+"effect": "Poison lasts 30% shorter."
+},
+{
+"name": "Compound Fiber",
+"pieces": 2,
+"bonus": "Fire Resistance +1",
+"effect": "Fire resistance +6."
+},
+{
+"name": "Coldsteel Craft",
+"pieces": 3,
+"bonus": "Ice Damage Up +1",
+"effect": "Ice damage +3% (+8% against Radiant monsters)."
+},
+{
+"name": "Great Girros Ambush",
+"pieces": 3,
+"bonus": "Thunder Damage Up +1",
+"effect": "Thunder damage +3% (+8% against Radiant monsters)."
+},
+{
+"name": "Jyuratodus Aquaguard",
+"pieces": 3,
+"bonus": "Water Damage Up +1",
+"effect": "Water damage +3% (+8% against Radiant monsters)."
+},
+{
+"name": "Barroth Mudguard",
+"pieces": 2,
+"bonus": "Muck Resistance +1",
+"effect": "Smaller movement and evasion penalty from muck."
+},
+{
+"name": "Sepulcros Divinity",
+"pieces": 3,
+"bonus": "Dragon Damage Up +1",
+"effect": "Dragon damage +3% (+8% against Radiant monsters)."
+},
+{
+"name": "Wilds Mastery",
+"pieces": 2,
+"bonus": "Specimen Expert +1",
+"effect": "Better chance to keep carves from small insect monsters."
+},
+{
+"name": "Insulation of the Summit",
+"pieces": 2,
+"bonus": "Paralysis Resistance +1",
+"effect": "Paralysis lasts 30% shorter."
+},
+{
+"name": "Anjanath Ember",
+"pieces": 3,
+"bonus": "Fire Damage Up +1",
+"effect": "Fire damage +3% (+8% against Radiant monsters)."
+},
+{
+"name": "Rathian's Instinct",
+"pieces": 3,
+"bonus": "Radiant Sense +1",
+"effect": "+4% damage against monsters in Radiant Rage."
+},
+{
+"name": "Alloy Barrier",
+"pieces": 2,
+"bonus": "Windproof +1",
+"effect": "Resists minor wind pressure."
+},
+{
+"name": "Great Jagras's Roll",
+"pieces": 2,
+"bonus": "Insight +1",
+"effect": "Affinity +2%."
+},
+{
+"name": "Pukei-Pukei Territory",
+"pieces": 2,
+"bonus": "Flawless +1",
+"effect": "+3% damage at full health."
+},
+{
+"name": "Hornetaur Might",
+"pieces": 2,
+"bonus": "Dragon Resistance +1",
+"effect": "Dragon resistance +6."
+},
+{
+"name": "Silence of the Veins",
+"pieces": 2,
+"bonus": "Roar Resistance +1",
+"effect": "Resists weak monster roars."
+},
+{
+"name": "Monocerus Divinity",
+"pieces": 2,
+"bonus": "Geo Expert +1",
+"effect": "One extra gather from bonepiles."
+},
+{
+"name": "Butterfly Bond",
+"pieces": 2,
+"bonus": "Sleep Resistance +1",
+"effect": "Sleep lasts 30% shorter."
+},
+{
+"name": "Tobi-Kadachi Thunderplate",
+"pieces": 2,
+"bonus": "Thunder Resistance +1",
+"effect": "Thunder resistance +6."
+},
+{
+"name": "Anjanath's Wrath",
+"pieces": 2,
+"bonus": "Breaker +1",
+"effect": "Part-break buildup damage x1.1."
+},
+{
+"name": "Kulu-Ya-Ku's Skill",
+"pieces": 2,
+"bonus": "Insight +1",
+"effect": "Affinity +2%."
+},
+{
+"name": "Barroth's Resolve",
+"pieces": 2,
+"bonus": "Guard Technique +1",
+"effect": "Less stagger while guarding, and blocked hits are slightly weaker."
+},
+{
+"name": "Ingot Blast Shield",
+"pieces": 2,
+"bonus": "Blast Resistance +1",
+"effect": "Delays blastblight and reduces blast damage."
+},
+{
+"name": "Jyuratodus Flowmend",
+"pieces": 2,
+"bonus": "Water Resistance +1",
+"effect": "Water resistance +6."
+},
+{
+"name": "Rathian Vigor",
+"pieces": 2,
+"bonus": "Health Boost +1",
+"effect": "Health +10."
+},
+{
+"name": "Rathalos's Weakness",
+"pieces": 3,
+"bonus": "Weakspot Exploit +1",
+"effect": "+4% affinity on weak-point hits."
+},
+{
+"name": "Diablos's Footing",
+"pieces": 2,
+"bonus": "Tremor Resistance +1",
+"effect": "Ignores minor ground tremors."
+},
+{
+"name": "Great Girros's Command",
+"pieces": 2,
+"bonus": "Buddy Boost +1",
+"effect": "Buddy damage x1.1."
+},
+{
+"name": "Tobi-Kadachi Surge",
+"pieces": 3,
+"bonus": "Unleashed +1",
+"effect": "After 90s of hunting or 100 total damage taken, +3% affinity for 180s."
+},
+{
+"name": "Radobaan's Bulwark",
+"pieces": 2,
+"bonus": "Iron Skin +1",
+"effect": "Defense Down lasts 50% shorter."
+},
+{
+"name": "Odogaron's Tenacity",
+"pieces": 2,
+"bonus": "Bleeding Resistance +1",
+"effect": "Less damage while bleeding."
+},
+{
+"name": "Legiana Dance",
+"pieces": 2,
+"bonus": "Ice Resistance +1",
+"effect": "Ice resistance +6."
+},
+{
+"name": "Pink Rathian's Acuity",
+"pieces": 3,
+"bonus": "Hunting Instinct +1",
+"effect": "Using environmental objects on a monster gives +4% damage for 120s."
+},
+{
+"name": "Ruger Aidal's Intimidation",
+"pieces": 3,
+"bonus": "Weakspot Follow-Up +1",
+"effect": "Hits on a broken part have a 75% chance to deal +4% extra damage."
+},
+{
+"name": "Paolumu's Airflow",
+"pieces": 2,
+"bonus": "Grace Under Pressure +1",
+"effect": "+20 defense while Radiant monsters are in Radiant Rage."
+},
+{
+"name": "Tzitzi-Ya-Ku's Pursuit",
+"pieces": 3,
+"bonus": "Relentless Pursuit +1",
+"effect": "+4% damage for 15s after a stagger or suppression."
+},
+{
+"name": "Paolumu's Presence",
+"pieces": 2,
+"bonus": "Health Recovery +1",
+"effect": "Gray health recovers 2x faster after taking damage."
+},
+{
+"name": "Tzitzi-Ya-Ku's Precision",
+"pieces": 2,
+"bonus": "Ballistics +1",
+"effect": "Ammo and arrows reach max power sooner."
+},
+{
+"name": "Odogaron's Surge",
+"pieces": 2,
+"bonus": "Rejuvenation +1",
+"effect": "Health auto-recovers up to 75."
+},
+{
+"name": "Diablos's Barrier",
+"pieces": 3,
+"bonus": "Battle Spirit +1",
+"effect": "No description listed."
+},
+{
+"name": "Rathalos's Fervor",
+"pieces": 3,
+"bonus": "Critical Element +1",
+"effect": "+5% elemental damage on critical hits."
+},
+{
+"name": "Legiana Blessing",
+"pieces": 2,
+"bonus": "Blessing +1",
+"effect": "25% chance to cut incoming damage by 15%."
+},
+{
+"name": "Radobaan's Fearlessness",
+"pieces": 3,
+"bonus": "Fearless +1",
+"effect": "+3% damage while gray health remains."
+},
+{
+"name": "Black Diablos's Rampart",
+"pieces": 2,
+"bonus": "Sturdy Guard +1",
+"effect": "Lets you guard normally unblockable attacks."
+},
+{
+"name": "Pink Rathian's Rampage",
+"pieces": 2,
+"bonus": "Radiant Frenzy +1",
+"effect": "+10% damage for 30s under radiant particles, then -10% damage and -50 max stamina for 30s."
+}
+]
+}

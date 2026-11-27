@@ -69,10 +69,11 @@ class MainActivity : ComponentActivity() {
         val builds = loadBuilds(this)
         val weapons = loadWeapons(this)
         val armors = loadArmors(this)
+        val skills = loadSkills(this)
         val prefs = getSharedPreferences("mho", MODE_PRIVATE)
         setContent {
             MaterialTheme(colorScheme = darkColorScheme(primary = Gold, background = Bg, surface = Card)) {
-                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, prefs) }
+                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, prefs) }
             }
         }
     }
@@ -226,14 +227,15 @@ private fun sharpColor(s: String) = when (s) {
 }
 
 @Composable
-fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, prefs: SharedPreferences) {
+fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills: SkillData, prefs: SharedPreferences) {
     var tab by remember { mutableStateOf(0) }
     Column(Modifier.fillMaxSize()) {
-        Box(Modifier.weight(1f)) { when (tab) { 0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); else -> ArmorScreen(armors) } }
+        Box(Modifier.weight(1f)) { when (tab) { 0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); 2 -> ArmorScreen(armors); else -> SkillsScreen(skills) } }
         NavigationBar(containerColor = Card) {
             NavigationBarItem(tab == 0, { tab = 0 }, { Text("★") }, label = { Text("Builds") })
             NavigationBarItem(tab == 1, { tab = 1 }, { Text("⚔") }, label = { Text("Weapons") })
             NavigationBarItem(tab == 2, { tab = 2 }, { Text("🛡") }, label = { Text("Armor") })
+            NavigationBarItem(tab == 3, { tab = 3 }, { Text("✦") }, label = { Text("Skills") })
         }
     }
 }
@@ -336,6 +338,49 @@ fun ArmorCard(a: Armor) {
             Text("${a.part} · ${a.set} · Rarity ${a.rarity} · DEF ${a.defense}", color = Color(0xFF8E8E98), fontSize = 12.sp)
             a.skills.forEach { Text("• $it", color = Color(0xFFD8D8E0), fontSize = 13.sp) }
             Text("Set: ${a.setSkill}", color = Gold, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+        }
+    }
+}
+
+data class Skill(val name: String, val maxLevel: Int, val effect: String)
+data class SetSkill(val name: String, val pieces: Int, val bonus: String, val effect: String)
+data class SkillData(val skills: List<Skill>, val sets: List<SetSkill>)
+
+fun loadSkills(ctx: Context): SkillData {
+    val root = org.json.JSONObject(ctx.assets.open("skills.json").bufferedReader().readText())
+    val a = root.getJSONArray("skills"); val b = root.getJSONArray("sets")
+    return SkillData(
+        (0 until a.length()).map { val o = a.getJSONObject(it); Skill(o.getString("name"), o.getInt("maxLevel"), o.getString("effect")) },
+        (0 until b.length()).map { val o = b.getJSONObject(it); SetSkill(o.getString("name"), o.getInt("pieces"), o.getString("bonus"), o.getString("effect")) })
+}
+
+@Composable
+fun SkillsScreen(data: SkillData) {
+    var showSets by remember { mutableStateOf(false) }
+    var query by remember { mutableStateOf("") }
+    val skills = data.skills.filter { query.isBlank() || it.name.contains(query, true) || it.effect.contains(query, true) }
+    val sets = data.sets.filter { query.isBlank() || it.name.contains(query, true) || it.bonus.contains(query, true) || it.effect.contains(query, true) }
+    LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        item { Text("Skills", fontSize = 28.sp, fontWeight = FontWeight.Black, color = Gold) }
+        item { OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
+            placeholder = { Text("Search a skill or effect…") }, shape = RoundedCornerShape(14.dp)) }
+        item { Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Pill("Armor skills (${data.skills.size})", Gold, !showSets, null) { showSets = false }
+            Pill("Set skills (${data.sets.size})", Gold, showSets, null) { showSets = true } } }
+        if (!showSets) items(skills, key = { it.name }) { s ->
+            Column(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(14.dp)).padding(14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Row { Text(s.name, Modifier.weight(1f), fontWeight = FontWeight.Bold, color = Color.White)
+                    Text("Max Lv ${s.maxLevel}", color = Gold, fontSize = 12.sp, fontWeight = FontWeight.Bold) }
+                Text(s.effect, color = Color(0xFFB8B8C0), fontSize = 13.sp)
+            }
+        } else items(sets, key = { it.name }) { s ->
+            Column(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(14.dp)).padding(14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Row { Text(s.name, Modifier.weight(1f), fontWeight = FontWeight.Bold, color = Color.White)
+                    Text("${s.pieces} pcs", color = Gold, fontSize = 12.sp, fontWeight = FontWeight.Bold) }
+                Text(s.bonus, color = Color(0xFFD8D8E0), fontSize = 13.sp, fontWeight = FontWeight.Medium)
+                Text(s.effect, color = Color(0xFFB8B8C0), fontSize = 13.sp)
+            }
         }
     }
 }
