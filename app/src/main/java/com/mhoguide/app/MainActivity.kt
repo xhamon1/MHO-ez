@@ -70,10 +70,11 @@ class MainActivity : ComponentActivity() {
         val weapons = loadWeapons(this)
         val armors = loadArmors(this)
         val skills = loadSkills(this)
+        val visages = loadVisages(this)
         val prefs = getSharedPreferences("mho", MODE_PRIVATE)
         setContent {
             MaterialTheme(colorScheme = darkColorScheme(primary = Gold, background = Bg, surface = Card)) {
-                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, prefs) }
+                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, visages, prefs) }
             }
         }
     }
@@ -227,15 +228,16 @@ private fun sharpColor(s: String) = when (s) {
 }
 
 @Composable
-fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills: SkillData, prefs: SharedPreferences) {
+fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills: SkillData, visages: VisageData, prefs: SharedPreferences) {
     var tab by remember { mutableStateOf(0) }
     Column(Modifier.fillMaxSize()) {
-        Box(Modifier.weight(1f)) { when (tab) { 0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); 2 -> ArmorScreen(armors); else -> SkillsScreen(skills) } }
+        Box(Modifier.weight(1f)) { when (tab) { 0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); 2 -> ArmorScreen(armors); 3 -> SkillsScreen(skills); else -> VisagesScreen(visages) } }
         NavigationBar(containerColor = Card) {
             NavigationBarItem(tab == 0, { tab = 0 }, { Text("★") }, label = { Text("Builds") })
             NavigationBarItem(tab == 1, { tab = 1 }, { Text("⚔") }, label = { Text("Weapons") })
             NavigationBarItem(tab == 2, { tab = 2 }, { Text("🛡") }, label = { Text("Armor") })
             NavigationBarItem(tab == 3, { tab = 3 }, { Text("✦") }, label = { Text("Skills") })
+            NavigationBarItem(tab == 4, { tab = 4 }, { Text("◈") }, label = { Text("Visage") })
         }
     }
 }
@@ -380,6 +382,62 @@ fun SkillsScreen(data: SkillData) {
                     Text("${s.pieces} pcs", color = Gold, fontSize = 12.sp, fontWeight = FontWeight.Bold) }
                 Text(s.bonus, color = Color(0xFFD8D8E0), fontSize = 13.sp, fontWeight = FontWeight.Medium)
                 Text(s.effect, color = Color(0xFFB8B8C0), fontSize = 13.sp)
+            }
+        }
+    }
+}
+
+data class Visage(val name: String, val cost: Int, val sets: List<String>, val image: String)
+data class VisageSet(val name: String, val count: Int, val two: String, val four: String)
+data class VisageData(val visages: List<Visage>, val sets: List<VisageSet>)
+
+fun loadVisages(ctx: Context): VisageData {
+    val root = org.json.JSONObject(ctx.assets.open("visages.json").bufferedReader().readText())
+    val a = root.getJSONArray("visages"); val b = root.getJSONArray("sets")
+    return VisageData(
+        (0 until a.length()).map { val o = a.getJSONObject(it); Visage(o.getString("name"), o.getInt("cost"), o.getJSONArray("sets").strs(), o.getString("image")) },
+        (0 until b.length()).map { val o = b.getJSONObject(it); VisageSet(o.getString("name"), o.getInt("count"), o.getString("two"), o.getString("four")) })
+}
+
+@Composable
+fun VisagesScreen(data: VisageData) {
+    var showSets by remember { mutableStateOf(false) }
+    var cost by remember { mutableStateOf<Int?>(null) }
+    var query by remember { mutableStateOf("") }
+    val list = data.visages.filter { v -> (cost == null || v.cost == cost) &&
+        (query.isBlank() || v.name.contains(query, true) || v.sets.any { it.contains(query, true) }) }
+        .sortedWith(compareByDescending<Visage> { it.cost }.thenBy { it.name })
+    val sets = data.sets.filter { query.isBlank() || it.name.contains(query, true) || it.two.contains(query, true) || it.four.contains(query, true) }
+    LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        item { Text("Visages", fontSize = 28.sp, fontWeight = FontWeight.Black, color = Gold) }
+        item { OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
+            placeholder = { Text("Search a monster, set or effect…") }, shape = RoundedCornerShape(14.dp)) }
+        item { Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Pill("Visages (${data.visages.size})", Gold, !showSets, null) { showSets = false }
+            Pill("Sets (${data.sets.size})", Gold, showSets, null) { showSets = true } } }
+        if (!showSets) {
+            item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                items(listOf(4, 3, 1)) { c -> Pill("Cost $c", Gold, cost == c, null) { cost = if (cost == c) null else c } } } }
+            items(list, key = { it.name }) { v ->
+                Row(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(14.dp)).padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Box(Modifier.size(56.dp).background(Color(0xFF0D0D10), RoundedCornerShape(12.dp)), Alignment.Center) {
+                        AsyncImage(CDN + "img/" + v.image, v.name, Modifier.size(52.dp))
+                    }
+                    Spacer(Modifier.width(12.dp))
+                    Column(Modifier.weight(1f)) {
+                        Text("Visage: ${v.name}", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 15.sp)
+                        Text(v.sets.joinToString("  ·  "), color = Color(0xFFB8B8C0), fontSize = 12.sp)
+                    }
+                    Text("Cost ${v.cost}", color = Gold, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                }
+            }
+        } else items(sets, key = { it.name }) { s ->
+            Column(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(14.dp)).padding(14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Row { Text(s.name, Modifier.weight(1f), fontWeight = FontWeight.Bold, color = Color.White)
+                    Text("${s.count} visages", color = Gold, fontSize = 12.sp, fontWeight = FontWeight.Bold) }
+                Text("2-piece: ${s.two}", color = Color(0xFFD8D8E0), fontSize = 13.sp)
+                if (s.four.isNotBlank()) Text(if (s.four.startsWith("1-piece")) s.four else "4-piece: ${s.four}", color = Color(0xFFB8B8C0), fontSize = 13.sp)
             }
         }
     }

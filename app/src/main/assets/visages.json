@@ -1,0 +1,561 @@
+{
+"visages": [
+{
+"name": "Rathian",
+"cost": 3,
+"sets": [
+"Ink of Flames"
+],
+"image": "f36f12e45c4279cf2935275576acd622.png"
+},
+{
+"name": "Pink Rathian",
+"cost": 4,
+"sets": [
+"Ink of Combat"
+],
+"image": "79a9471db9d317b84accd893a64a57c3.png"
+},
+{
+"name": "Rathalos",
+"cost": 3,
+"sets": [
+"Ink of Guidance",
+"Ink of Combat"
+],
+"image": "e649449a958552684ab6d95ef6a1f7a0.png"
+},
+{
+"name": "Radiant Rathalos",
+"cost": 3,
+"sets": [
+"Ink of Flames",
+"Ink of Guidance"
+],
+"image": "5498322ec258915262c49cbafd48e4bc.png"
+},
+{
+"name": "Diablos",
+"cost": 4,
+"sets": [
+"Ink of Protection"
+],
+"image": "8f029c59f8b50b737d38bc147ccac1ab.png"
+},
+{
+"name": "Black Diablos",
+"cost": 4,
+"sets": [
+"Ink of Dragon"
+],
+"image": "f199921e78ee824e3f613cd10d4af6fe.jpg"
+},
+{
+"name": "Radiant Diablos",
+"cost": 3,
+"sets": [
+"Ink of Protection",
+"Ink of Dragon"
+],
+"image": "f815af3c7312a1dd433a63d0051d8a65.png"
+},
+{
+"name": "Barroth",
+"cost": 4,
+"sets": [
+"Ink of Water",
+"Ink of Protection"
+],
+"image": "3c757f37db8ca026455401bd9c1faeda.png"
+},
+{
+"name": "Radiant Barroth",
+"cost": 3,
+"sets": [
+"Ink of Water"
+],
+"image": "3324e82a4b42a04335937af407f11a73.png"
+},
+{
+"name": "Anjanath",
+"cost": 3,
+"sets": [
+"Ink of Combat"
+],
+"image": "ecb6fbfa4f30603291c20dea42a094cd.png"
+},
+{
+"name": "Radiant Anjanath",
+"cost": 3,
+"sets": [
+"Ink of Might"
+],
+"image": "d8ccbd81672af6b935b4de43abee6b47.png"
+},
+{
+"name": "Radiant Great Jagras",
+"cost": 4,
+"sets": [
+"Ink of Guidance"
+],
+"image": "2d56e4f2a84343f1738ad0eab7dee365.png"
+},
+{
+"name": "Pukei-Pukei",
+"cost": 3,
+"sets": [
+"Ink of Grace",
+"Ink of Protection"
+],
+"image": "b9441e2dc0fd8b8b355fd0e46ebffd19.png"
+},
+{
+"name": "Radiant Pukei-Pukei",
+"cost": 3,
+"sets": [
+"Ink of Grace",
+"Ink of Might"
+],
+"image": "675b7af3c0e67567f18568baff5a8f34.png"
+},
+{
+"name": "Kulu-Ya-Ku",
+"cost": 3,
+"sets": [
+"Ink of Might",
+"Ink of Flames"
+],
+"image": "02389b6f84966778870fb76b25728568.png"
+},
+{
+"name": "Radiant Kulu-Ya-Ku",
+"cost": 4,
+"sets": [
+"Ink of Flames",
+"Ink of Guidance"
+],
+"image": "738ffa5e58a6de6b1f11c990ccefd36d.png"
+},
+{
+"name": "Jyuratodus",
+"cost": 4,
+"sets": [
+"Ink of Water",
+"Ink of Frost"
+],
+"image": "3434d59033a60b013e626ecf1a2ce616.png"
+},
+{
+"name": "Radiant Jyuratodus",
+"cost": 3,
+"sets": [
+"Ink of Water",
+"Ink of Protection"
+],
+"image": "16bb066fc6a41fdd4fbd8a24f6702a28.png"
+},
+{
+"name": "Tobi-Kadachi",
+"cost": 4,
+"sets": [
+"Ink of Thunder",
+"Ink of Grace"
+],
+"image": "ad9256c944f83f74d68109c71cfd3f41.png"
+},
+{
+"name": "Paolumu",
+"cost": 4,
+"sets": [
+"Ink of Resonance",
+"Ink of Might"
+],
+"image": "96fe6c9f9730dc1d327912efe296747c.png"
+},
+{
+"name": "Radiant Paolumu",
+"cost": 3,
+"sets": [
+"Ink of Guidance"
+],
+"image": "13ee12b7eea93cb4623622f984b72492.png"
+},
+{
+"name": "Legiana",
+"cost": 4,
+"sets": [
+"Ink of Frost"
+],
+"image": "f59609fa5e31e3c7e0cb0d06bf3066d8.png"
+},
+{
+"name": "Great Girros",
+"cost": 4,
+"sets": [
+"Ink of Thunder",
+"Ink of Grace"
+],
+"image": "ae25ca060cbba447c7401de644412502.png"
+},
+{
+"name": "Odogaron",
+"cost": 3,
+"sets": [
+"Ink of Combat",
+"Ink of Dragon"
+],
+"image": "accaea630d81a1e031eb981965945a4a.png"
+},
+{
+"name": "Radobaan",
+"cost": 3,
+"sets": [
+"Ink of Resonance",
+"Ink of Frost"
+],
+"image": "5745a63638b0aebc658bf096b0539de6.png"
+},
+{
+"name": "Tzitzi-Ya-Ku",
+"cost": 3,
+"sets": [
+"Ink of Water"
+],
+"image": "ad2a89de29f8bf691f6b397aab7dd07e.png"
+},
+{
+"name": "Radiant Rathian",
+"cost": 4,
+"sets": [
+"Ink of Flames"
+],
+"image": "f216115fd4cf9e89163eb40a4cae0f06.png"
+},
+{
+"name": "Aptonoth",
+"cost": 1,
+"sets": [
+"Ink of Protection"
+],
+"image": "62c4514ad1c9aed50e7f97d938bc9a4f.png"
+},
+{
+"name": "Apceros",
+"cost": 1,
+"sets": [
+"Ink of Protection",
+"Ink of Water"
+],
+"image": "95fd4dc62699b9a90129c4a40246acbb.png"
+},
+{
+"name": "Kelbi",
+"cost": 1,
+"sets": [
+"Ink of Frost",
+"Ink of Grace"
+],
+"image": "1f8280040f26fbb0827586949c466295.png"
+},
+{
+"name": "Hornetaur",
+"cost": 1,
+"sets": [
+"Ink of Protection",
+"Ink of Dragon"
+],
+"image": "616e3cd331d0c7988c4fcd4a120384bc.png"
+},
+{
+"name": "Vespoid",
+"cost": 1,
+"sets": [
+"Ink of Thunder",
+"Ink of Guidance"
+],
+"image": "0ba6e7a1e894a196c26d036adddf13fd.png"
+},
+{
+"name": "Gajau",
+"cost": 1,
+"sets": [
+"Ink of Water",
+"Ink of Frost"
+],
+"image": "79c6733d0514d9f6144c3629017ea132.png"
+},
+{
+"name": "Jagras",
+"cost": 1,
+"sets": [
+"Ink of Resonance",
+"Ink of Combat"
+],
+"image": "a74b29ccd633f906dc5e5fde7a71814b.png"
+},
+{
+"name": "Mernos",
+"cost": 1,
+"sets": [
+"Ink of Water",
+"Ink of Thunder"
+],
+"image": "ec4ee8092975061be19eb3a8a3940c3d.png"
+},
+{
+"name": "Kestodon",
+"cost": 1,
+"sets": [
+"Ink of Might",
+"Ink of Flames"
+],
+"image": "3eb158f9986bd7ebbd15b13c78b6fab4.png"
+},
+{
+"name": "Raphinos",
+"cost": 1,
+"sets": [
+"Ink of Grace",
+"Ink of Frost"
+],
+"image": "86b57d55a277e7170f68a4b80d2faa39.png"
+},
+{
+"name": "Shamos",
+"cost": 1,
+"sets": [
+"Ink of Grace",
+"Ink of Resonance"
+],
+"image": "20044a2e1cee10e3efac7356a12d316b.png"
+},
+{
+"name": "Barnos",
+"cost": 1,
+"sets": [
+"Ink of Flames",
+"Ink of Dragon"
+],
+"image": "2c283a482529e3f81d8f735f10b049b0.png"
+},
+{
+"name": "Girros",
+"cost": 1,
+"sets": [
+"Ink of Thunder",
+"Ink of Combat"
+],
+"image": "5bfd33ab00e8941773ddddca2d29841b.png"
+},
+{
+"name": "Gastodon",
+"cost": 1,
+"sets": [
+"Ink of Might",
+"Ink of Dragon"
+],
+"image": "3ef0be190d6ec9171f192eb5c02ebb06.png"
+},
+{
+"name": "Noios",
+"cost": 1,
+"sets": [
+"Ink of Guidance",
+"Ink of Flames"
+],
+"image": "f55789fae24f64d84734d7b1e4838532.png"
+},
+{
+"name": "Warrior Atecoli",
+"cost": 1,
+"sets": [
+"Ink of Might",
+"Ink of Combat"
+],
+"image": "e8a56c1b306268d635aea300b302fe24.png"
+},
+{
+"name": "Pitcher Atecoli",
+"cost": 1,
+"sets": [
+"Ink of Resonance",
+"Ink of Guidance"
+],
+"image": "4eaac79bbfbeffe4d24b117d8ea9f410.png"
+},
+{
+"name": "Great Jagras",
+"cost": 3,
+"sets": [
+"Ink of Dragon",
+"Ink of Resonance"
+],
+"image": "2fd5e01a8c958eb094402ae577c1adfd.png"
+},
+{
+"name": "Radiant Legiana",
+"cost": 3,
+"sets": [
+"Ink of Frost"
+],
+"image": "4c8ad1d68cf2269bd34bd45be3e372e6.jpg"
+},
+{
+"name": "Radiant Tobi-Kadachi",
+"cost": 3,
+"sets": [
+"Ink of Thunder"
+],
+"image": "3e8db9f5a88aed85224990628920b679.png"
+},
+{
+"name": "Radiant Radobaan",
+"cost": 3,
+"sets": [
+"Ink of Frost"
+],
+"image": "8b06f57a0ebb39cfea46337ffdc10eaf.png"
+},
+{
+"name": "Radiant Tzitzi-Ya-Ku",
+"cost": 3,
+"sets": [
+"Ink of Thunder"
+],
+"image": "e04ea5d19110b0665456f9de177ca660.png"
+},
+{
+"name": "Radiant Odogaron",
+"cost": 4,
+"sets": [
+"Ink of Might",
+"Ink of Combat"
+],
+"image": "0e7c2a24a05de0b060c2381faf1bab69.png"
+},
+{
+"name": "Radiant Great Girros",
+"cost": 3,
+"sets": [
+"Ink of Thunder",
+"Ink of Grace"
+],
+"image": "08cf4befdc22f9db967ac9d1ad839431.png"
+},
+{
+"name": "Radiant Pink Rathian",
+"cost": 4,
+"sets": [
+"Ink of Dragon",
+"Ink of Resonance"
+],
+"image": "530067e9687a5c2b1b90ec5e3af50214.jpg"
+},
+{
+"name": "Radiant Black Diablos",
+"cost": 3,
+"sets": [
+"Ink of Resonance"
+],
+"image": "cf2b7e10df32e0cb2c3df5f96464f0dd.png"
+},
+{
+"name": "Nergigante",
+"cost": 3,
+"sets": [
+"Ink of Frost"
+],
+"image": "97e9e04ce617cc96f5bf81ceab4a8190.png"
+},
+{
+"name": "Kushala Daora",
+"cost": 3,
+"sets": [
+"Kushala Daora's Tempest"
+],
+"image": "3882398c72dd349671db569a8df0837a.png"
+},
+{
+"name": "Ruger Aidal",
+"cost": 3,
+"sets": [
+"Ink of Flames"
+],
+"image": "11ea9df94d36909aec88415e50c3e305.png"
+}
+],
+"sets": [
+{
+"name": "Ink of Flames",
+"count": 9,
+"two": "Fire damage +5%.",
+"four": "After hitting a part with good or decent hitzone values, fire damage +24% for 20s."
+},
+{
+"name": "Ink of Combat",
+"count": 8,
+"two": "Affinity +5%.",
+"four": "When an ultimate inflicts a debuff on a monster, squad damage +6.5% for 60s."
+},
+{
+"name": "Ink of Guidance",
+"count": 8,
+"two": "Ultimate charge rate +5%.",
+"four": "Within 8s after an ultimate suppresses a monster, each squad ultimate gives squad damage +2.2% for 60s (up to 3 stacks)."
+},
+{
+"name": "Ink of Protection",
+"count": 8,
+"two": "Ultimate charge rate +5%.",
+"four": "When the adventurer and Buddy give a squadmate healing or a shield, that effect is +20% and squad damage is +6% for 45s."
+},
+{
+"name": "Ink of Dragon",
+"count": 8,
+"two": "Dragon damage +5%.",
+"four": "After using an ultimate, dragon damage +24% for 60s."
+},
+{
+"name": "Ink of Water",
+"count": 8,
+"two": "Water damage +5%.",
+"four": "Each time a squadmate uses an ultimate, water damage +6% for 60s (up to 4 stacks)."
+},
+{
+"name": "Ink of Might",
+"count": 8,
+"two": "Physical damage +5%.",
+"four": "After landing a critical hit, physical damage +12% for 60s."
+},
+{
+"name": "Ink of Grace",
+"count": 8,
+"two": "Ultimate charge rate +5%.",
+"four": "When the adventurer buffs a squadmate, squad damage +6.5% for 60s."
+},
+{
+"name": "Ink of Frost",
+"count": 9,
+"two": "Ice damage +5%.",
+"four": "After hitting a monster, ice damage +24% for 8s."
+},
+{
+"name": "Ink of Thunder",
+"count": 8,
+"two": "Thunder damage +5%.",
+"four": "After damaging monsters, thunder damage +5% for 12s (up to 5 stacks)."
+},
+{
+"name": "Ink of Resonance",
+"count": 8,
+"two": "Affinity +5%.",
+"four": "When not playing as the Main Adventurer, ultimate damage +32%."
+},
+{
+"name": "Kushala Daora's Tempest",
+"count": 1,
+"two": "Elemental damage +3%, rising to 10% while the monster is suppressed (Season 0 only).",
+"four": "1-piece: elemental damage +2% (Season 0 only)."
+}
+]
+}
