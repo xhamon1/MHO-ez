@@ -1349,5 +1349,72 @@
 "Poison Resistance Lv1"
 ],
 "image": "armor_65"
+},
+{
+"name": "Leather Headgear",
+"part": "Head",
+"set": "Leather Set",
+"setSkill": "Compound Fiber",
+"rarity": "1–14",
+"defense": 188,
+"skills": [
+"Item Master Lv1",
+"Recovery Booster Lv1"
+],
+"image": ""
+},
+{
+"name": "Leather Vest",
+"part": "Chest",
+"set": "Leather Set",
+"setSkill": "Compound Fiber",
+"rarity": "1–14",
+"defense": 188,
+"skills": [
+"Critical Element Lv2",
+"Item Master Lv1"
+],
+"image": ""
+},
+{
+"name": "Leather Gloves",
+"part": "Arms",
+"set": "Leather Set",
+"setSkill": "Compound Fiber",
+"rarity": "1–14",
+"defense": 188,
+"skills": [
+"Piercing Strike Lv1",
+"Fire Resistance Lv1",
+"Iron Skin Lv1"
+],
+"image": ""
+},
+{
+"name": "Leather Belt",
+"part": "Waist",
+"set": "Leather Set",
+"setSkill": "Compound Fiber",
+"rarity": "1–14",
+"defense": 188,
+"skills": [
+"Fire Resistance Lv1",
+"Master Climber Lv1"
+],
+"image": ""
+},
+{
+"name": "Leather Pants",
+"part": "Legs",
+"set": "Leather Set",
+"setSkill": "Compound Fiber",
+"rarity": "1–14",
+"defense": 188,
+"skills": [
+"Iron Skin Lv1",
+"Piercing Strike Lv2",
+"Ballistics Lv1"
+],
+"image": ""
 }
 ]

@@ -250,5 +250,29 @@
 "elemental": 0,
 "how": "Your own adventurer",
 "image": "cd96695f67ffdcfebc7b72769dc6e810.png"
+},
+{
+"name": "Freya",
+"rarity": "SSR",
+"weapon": "Great Sword",
+"role": "Disruptor",
+"element": "Fire",
+"attack": 200,
+"defense": 490,
+"elemental": 100,
+"how": "Festival Recruitment",
+"image": "1f90476b408f5c2c78cbc1cc41180515.png"
+},
+{
+"name": "Stylia",
+"rarity": "SSR",
+"weapon": "Bow",
+"role": "Support",
+"element": "Ice",
+"attack": 200,
+"defense": 490,
+"elemental": 100,
+"how": "Limited Recruitment",
+"image": "95c6e406fde04c5704cc1c82ef3e08bc.png"
 }
 ]

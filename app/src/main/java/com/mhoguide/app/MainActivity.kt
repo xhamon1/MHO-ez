@@ -75,10 +75,11 @@ class MainActivity : ComponentActivity() {
         val visages = loadVisages(this)
         val monsters = loadMonsters(this)
         val characters = loadCharacters(this)
+        val buddies = loadBuddies(this)
         val prefs = getSharedPreferences("mho", MODE_PRIVATE)
         setContent {
             MaterialTheme(colorScheme = darkColorScheme(primary = Gold, background = Bg, surface = Card)) {
-                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, visages, monsters, characters, prefs) }
+                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, visages, monsters, characters, buddies, prefs) }
             }
         }
     }
@@ -233,15 +234,16 @@ private fun sharpColor(s: String) = when (s) {
 
 @Composable
 fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills: SkillData, visages: VisageData,
-         monsters: List<Monster>, characters: List<Character>, prefs: SharedPreferences) {
+         monsters: List<Monster>, characters: List<Character>, buddies: List<Buddy>, prefs: SharedPreferences) {
     var tab by remember { mutableStateOf(0) }
-    val tabs = listOf("★" to "Builds", "⚔" to "Weapons", "🛡" to "Armor", "✦" to "Skills", "◈" to "Visage", "☠" to "Monsters", "♞" to "Adventurers")
+    val tabs = listOf("★" to "Builds", "⚔" to "Weapons", "🛡" to "Armor", "✦" to "Skills", "◈" to "Visage", "☠" to "Monsters", "♞" to "Adventurers", "🐾" to "Buddies")
     Column(Modifier.fillMaxSize()) {
         Box(Modifier.weight(1f)) {
             when (tab) {
                 0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); 2 -> ArmorScreen(armors)
                 3 -> SkillsScreen(skills); 4 -> VisagesScreen(visages); 5 -> MonstersScreen(monsters)
-                else -> CharactersScreen(characters)
+                6 -> CharactersScreen(characters)
+                else -> BuddiesScreen(buddies)
             }
         }
         Row(Modifier.fillMaxWidth().background(Card).navigationBarsPadding().horizontalScroll(rememberScrollState()).padding(vertical = 6.dp)) {
@@ -332,7 +334,7 @@ fun ArmorScreen(all: List<Armor>) {
     LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item { Text("Armor", fontSize = 28.sp, fontWeight = FontWeight.Black, color = Gold) }
-        item { Text("Top-defense sets · max-upgrade stats", color = Color(0xFF8E8E98), fontSize = 12.sp) }
+        item { Text("105 pieces · max-upgrade stats · more sets coming", color = Color(0xFF8E8E98), fontSize = 12.sp) }
         item { OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
             placeholder = { Text("Search a skill, set or piece…") }, shape = RoundedCornerShape(14.dp)) }
         item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -346,7 +348,7 @@ fun ArmorScreen(all: List<Armor>) {
 fun ArmorCard(a: Armor) {
     Row(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(16.dp)).padding(12.dp)) {
         Box(Modifier.size(56.dp).background(Color(0xFF0D0D10), RoundedCornerShape(12.dp)), Alignment.Center) {
-            AsyncImage(CDN + "article_tools/mhoutlanders/gacha/" + a.image + ".png", a.name, Modifier.size(52.dp))
+            if (a.image.isNotBlank()) AsyncImage(CDN + "article_tools/mhoutlanders/gacha/" + a.image + ".png", a.name, Modifier.size(52.dp))
         }
         Spacer(Modifier.width(12.dp))
         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -574,6 +576,58 @@ fun CharactersScreen(all: List<Character>) {
                         Text("  ATK ${c.attack}  DEF ${c.defense}" + if (c.elemental > 0) "  ELE ${c.elemental}" else "", color = Gold, fontSize = 12.sp)
                     }
                     Text(c.how, color = Color(0xFF8E8E98), fontSize = 11.sp)
+                }
+            }
+        }
+    }
+}
+
+data class Buddy(val name: String, val tier: String, val type: String, val image: String, val note: String, val best: String, val how: String)
+
+fun loadBuddies(ctx: Context): List<Buddy> {
+    val arr = JSONArray(ctx.assets.open("buddies.json").bufferedReader().readText())
+    return (0 until arr.length()).map {
+        val o = arr.getJSONObject(it)
+        Buddy(o.getString("name"), o.getString("tier"), o.getString("type"), o.getString("image"), o.getString("note"), o.getString("best"), o.getString("how"))
+    }
+}
+
+@Composable
+fun BuddiesScreen(all: List<Buddy>) {
+    var tier by remember { mutableStateOf<String?>(null) }
+    var type by remember { mutableStateOf<String?>(null) }
+    var query by remember { mutableStateOf("") }
+    val order = listOf("SS", "S", "A", "B", "C")
+    val shown = all.filter { b -> (tier == null || b.tier == tier) && (type == null || b.type == type) &&
+        (query.isBlank() || b.name.contains(query, true) || b.note.contains(query, true) || b.best.contains(query, true)) }
+        .sortedBy { order.indexOf(it.tier) }
+    LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        item { Text("Buddies", fontSize = 28.sp, fontWeight = FontWeight.Black, color = Gold) }
+        item { Text("Tier list · Assault = Palico, Disruptor = Rutaco, Support = Trillan", color = Color(0xFF8E8E98), fontSize = 12.sp) }
+        item { OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
+            placeholder = { Text("Search a buddy or adventurer…") }, shape = RoundedCornerShape(14.dp)) }
+        item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            items(order) { t -> Pill(t, Gold, tier == t, null) { tier = if (tier == t) null else t } }
+            items(listOf("Assault", "Disruptor", "Support")) { t -> Pill(t, Gold, type == t, null) { type = if (type == t) null else t } } } }
+        item { Text("${shown.size} buddy(ies)", color = Color(0xFF8E8E98), fontSize = 13.sp) }
+        items(shown, key = { it.name }) { b ->
+            Row(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(16.dp)).padding(12.dp)) {
+                Box(Modifier.size(60.dp).background(Color(0xFF0D0D10), RoundedCornerShape(12.dp)), Alignment.Center) {
+                    AsyncImage(CDN + "img/" + b.image, b.name, Modifier.size(56.dp))
+                }
+                Spacer(Modifier.width(12.dp))
+                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(b.name, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 16.sp)
+                        Spacer(Modifier.width(8.dp))
+                        Text(b.tier, color = if (b.tier == "SS") Gold else Color(0xFF9C5CE0), fontWeight = FontWeight.Black, fontSize = 14.sp)
+                        Spacer(Modifier.width(8.dp))
+                        Text(b.type, color = Color(0xFF8E8E98), fontSize = 12.sp)
+                    }
+                    Text(b.note, color = Color(0xFFD8D8E0), fontSize = 13.sp)
+                    if (b.best.isNotBlank()) Text("Best with: ${b.best}", color = Gold, fontSize = 12.sp)
+                    if (b.how.isNotBlank()) Text("Get: ${b.how}", color = Color(0xFF8E8E98), fontSize = 11.sp)
                 }
             }
         }

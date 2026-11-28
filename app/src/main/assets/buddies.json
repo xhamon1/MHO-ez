@@ -1,0 +1,362 @@
+[
+{
+"name": "Kojiro",
+"tier": "SS",
+"type": "Assault",
+"image": "552d83423c43ff822c0244bce9852805.png",
+"note": "Best for Midori. +30% fire damage for 10s after rupture damage (Long Sword Spirit Helm Breaker - Sever, Heavy Bowgun Sticky and Slicing Ammo). Also raises Elemental Attack and Affinity.",
+"best": "Midori, Fated (Heavy Bowgun), Fated (Long Sword)",
+"how": "Rumbling Furnace exchange"
+},
+{
+"name": "Devu",
+"tier": "SS",
+"type": "Disruptor",
+"image": "136db10131b3465d7846285b472a0480.png",
+"note": "Best for Keres. Suits rapid Dual Blades hits; its Ultimate makes the monster take 15% more damage.",
+"best": "Keres, Fated (Heavy Bowgun), Fated (Dual Blades), Fated (Charge Blade)",
+"how": "Recruitment / Rumbling Furnace exchange"
+},
+{
+"name": "Nailu",
+"tier": "SS",
+"type": "Support",
+"image": "f0e7a7a4fe59deee770dea2d4d802df5.png",
+"note": "Best for Arkaya. Its Ultimate raises the whole party's Affinity; the support effect currently triggers only for Arkaya.",
+"best": "Arkaya",
+"how": "Recruitment / Rumbling Furnace exchange"
+},
+{
+"name": "Pheasant",
+"tier": "SS",
+"type": "Support",
+"image": "6ead107c95a50cb5d6058c20adad1d33.png",
+"note": "Haze's motif Buddy. Heals and buffs; its Ultimate makes the whole party's attacks build up paralysis.",
+"best": "Haze",
+"how": ""
+},
+{
+"name": "Elwin",
+"tier": "SS",
+"type": "Support",
+"image": "e89c5b9642a1468f15ff46e4cea00477.png",
+"note": "Stylia's motif Buddy. Heals and buffs; its Ultimate gives a wide-area airborne boost.",
+"best": "Stylia, Fated (Bow)",
+"how": "Rutaco's Rumbling Furnace"
+},
+{
+"name": "Daisho",
+"tier": "S",
+"type": "Assault",
+"image": "288e2a5a55b451c05de89539cce02d41.png",
+"note": "Best for Pyro. +21% dragon damage for 10s after a parry or ferocity trigger; good with Great Sword and Long Sword.",
+"best": "Pyro, Fated (Great Sword), Fated (Long Sword)",
+"how": "Recruitment / Rumbling Furnace exchange"
+},
+{
+"name": "Pipa",
+"tier": "S",
+"type": "Assault",
+"image": "7ca48d4ceee3807b4b14856362097da6.png",
+"note": "Best for Luka. +25% thunder damage whenever you deal piercing damage; hard to use outside the Bow and piercing Heavy Bowgun.",
+"best": "Luka, Fated (Bow), Fated (Heavy Bowgun)",
+"how": "Recruitment / Rumbling Furnace exchange"
+},
+{
+"name": "Hoppy",
+"tier": "S",
+"type": "Disruptor",
+"image": "fa274c306c98109aa0f9b0d0add82f44.png",
+"note": "Best for Pepper. Its Ultimate sets a decoy balloon that taunts the monster and staggers it when it pops; support effect triggers while airborne.",
+"best": "Pepper, Fated (Hammer)",
+"how": "Recruitment / Rumbling Furnace exchange"
+},
+{
+"name": "Nako",
+"tier": "S",
+"type": "Disruptor",
+"image": "f6ed9419426e89be60a880c25926fc32.png",
+"note": "Best SR Buddy. Its Ultimate turret paralyzes the monster, and the support effect raises party damage against suppressed monsters.",
+"best": "Fated (Heavy Bowgun), Fated (Hammer)",
+"how": ""
+},
+{
+"name": "Aryo",
+"tier": "S",
+"type": "Disruptor",
+"image": "1d552c0343fe5eb65afb4c339d33b25c.png",
+"note": "Best for Freya. Works with fire Long Swords and Great Swords; whether its sleep Ultimate helps depends on your weapon.",
+"best": "Freya, Fated (Long Sword), Fated (Great Sword)",
+"how": "Limited-time event"
+},
+{
+"name": "Ro",
+"tier": "S",
+"type": "Assault",
+"image": "8e8ef0efb5eb27edcebb48c827d25ad5.png",
+"note": "Best for Rhodes. +15% ice damage for 10s after Charge damage; easy to trigger with Great Sword and Hammer.",
+"best": "Rhodes",
+"how": ""
+},
+{
+"name": "Barim",
+"tier": "A",
+"type": "Disruptor",
+"image": "b222a6290cfe318aa2c5f7b26fb5b111.png",
+"note": "Disrupts the monster's actions to buy time; pairs well with paralysis or traps.",
+"best": "Pepper, Raya",
+"how": ""
+},
+{
+"name": "Ravinge",
+"tier": "A",
+"type": "Unknown",
+"image": "49e9b995f5dd7c886cc9dcf0cb063e1e.png",
+"note": "Strong damage buffs from its Ultimate and support effect; can also support other adventurers.",
+"best": "",
+"how": ""
+},
+{
+"name": "Ario",
+"tier": "A",
+"type": "Support",
+"image": "0f35a744f2e74798047c7d4ec44ae6b8.png",
+"note": "Highly versatile healer that supports the whole party.",
+"best": "",
+"how": ""
+},
+{
+"name": "Tidal Sound",
+"tier": "A",
+"type": "Support",
+"image": "da3b671ed4f96d667057d0bfaad53cf3.png",
+"note": "Grants damage reduction and removes status ailments; valuable in hard content.",
+"best": "",
+"how": ""
+},
+{
+"name": "Sand Echo",
+"tier": "A",
+"type": "Disruptor",
+"image": "974cb36600f1a25f1dc5b9704f7b08a7.png",
+"note": "Disrupts the monster and inflicts poison; suits stamina-hungry weapons like Dual Blades and Bow.",
+"best": "",
+"how": ""
+},
+{
+"name": "Icarus",
+"tier": "B",
+"type": "Assault",
+"image": "4d8609c13a393b357dab0e786b553c36.png",
+"note": "Early-game pure attacker; its support effect gives an Affinity buff.",
+"best": "",
+"how": ""
+},
+{
+"name": "Banako",
+"tier": "B",
+"type": "Assault",
+"image": "c0e5a90b3cd6a2cd414ed81c78d2c732.png",
+"note": "Pure attacker that hands out an Affinity buff.",
+"best": "",
+"how": ""
+},
+{
+"name": "Viper",
+"tier": "B",
+"type": "Support",
+"image": "b29e1611f06a61750bbfb7195aa851b3.png",
+"note": "Hands out Ultimate Charge Rate and damage buffs; can also heal others.",
+"best": "",
+"how": ""
+},
+{
+"name": "Tidal Claw",
+"tier": "B",
+"type": "Assault",
+"image": "1c253b40230e8191fa3e486bacbe7ca0.png",
+"note": "Pure attacker with a rare effect that boosts part-break efficiency.",
+"best": "",
+"how": ""
+},
+{
+"name": "Golden Bell",
+"tier": "B",
+"type": "Unknown",
+"image": "e5d707259348ecf25b20f6ddf7df0844.png",
+"note": "Boosts stamina recovery and damage; can buff other adventurers.",
+"best": "",
+"how": ""
+},
+{
+"name": "Bladey",
+"tier": "B",
+"type": "Support",
+"image": "016624225ba4a71183a56b67cd7fc9f4.png",
+"note": "Plenty of healing and damage-buff skills for the whole party.",
+"best": "",
+"how": ""
+},
+{
+"name": "Horn",
+"tier": "B",
+"type": "Support",
+"image": "ea466966174492b10d4562f0a3283791.png",
+"note": "Dragon-buff support that heals the party and boosts attack.",
+"best": "",
+"how": ""
+},
+{
+"name": "Lido",
+"tier": "B",
+"type": "Support",
+"image": "c7468f8a74ccc490d82c98b0fda48750.png",
+"note": "Raises Ultimate Charge Rate; heals and buffs the party.",
+"best": "",
+"how": ""
+},
+{
+"name": "Falee Hendsom",
+"tier": "B",
+"type": "Disruptor",
+"image": "eac09ded8cb660339f572e9fac64de1b.png",
+"note": "Disrupting raises part-break efficiency; suits Hammer and Great Sword.",
+"best": "",
+"how": ""
+},
+{
+"name": "Blademaster",
+"tier": "B",
+"type": "Support",
+"image": "ef81d523418269e2c19bd099d0e3f298.png",
+"note": "Versatile healer with Ultimate Charge Rate; heals the whole party.",
+"best": "",
+"how": ""
+},
+{
+"name": "Mith",
+"tier": "B",
+"type": "Support",
+"image": "4397eb8f4dbd32f3e6d1fabdb3935275.png",
+"note": "Thunder-buff support that gives the party several damage buffs.",
+"best": "",
+"how": ""
+},
+{
+"name": "Fortie",
+"tier": "C",
+"type": "Assault",
+"image": "d903b914986fa47c64a9064bf7db023f.png",
+"note": "Pure attacker that powers up water; damage buff through its support effect.",
+"best": "Ouyang Varen",
+"how": ""
+},
+{
+"name": "Boomie",
+"tier": "C",
+"type": "Disruptor",
+"image": "5fb39efce005fad2cc46ea81dd66f414.png",
+"note": "Disrupts monster actions; suits water Great Swords and Hammers.",
+"best": "",
+"how": ""
+},
+{
+"name": "Sand Velvet",
+"tier": "C",
+"type": "Assault",
+"image": "b8cff4d3311037bc142ca25ecd4290a8.png",
+"note": "Pure attacker that buffs Affinity and elemental critical damage.",
+"best": "",
+"how": ""
+},
+{
+"name": "Zira",
+"tier": "C",
+"type": "Assault",
+"image": "450277ddfc7f9f8f2d979734e1ff8930.png",
+"note": "Pure attacker that powers up thunder.",
+"best": "",
+"how": ""
+},
+{
+"name": "Aloo",
+"tier": "C",
+"type": "Assault",
+"image": "0ef1a9e83a27725923fb5e97652ba1bb.png",
+"note": "Pure attacker that powers up water.",
+"best": "",
+"how": ""
+},
+{
+"name": "Shadow",
+"tier": "C",
+"type": "Assault",
+"image": "f58b9302bcf9ad18193eb5f773010604.png",
+"note": "Pure attacker that can stack Affinity.",
+"best": "",
+"how": ""
+},
+{
+"name": "Reefcore",
+"tier": "C",
+"type": "Disruptor",
+"image": "dd76b480e1f08fb5d3c7c0e5b971d6af.png",
+"note": "Disrupts and inflicts poison; suits Hammer and Great Sword.",
+"best": "",
+"how": ""
+},
+{
+"name": "Pupo",
+"tier": "C",
+"type": "Disruptor",
+"image": "945003bc95f35ecd12883b83201c332e.png",
+"note": "Disrupts monster actions; suits adventurers who rely on their Ultimate.",
+"best": "",
+"how": ""
+},
+{
+"name": "Mac",
+"tier": "C",
+"type": "Disruptor",
+"image": "40b43f07aee4f91aa05aad1e87ac512c.png",
+"note": "Disrupts monster actions; suits thunder Hammer and Great Sword.",
+"best": "",
+"how": ""
+},
+{
+"name": "Wolfe",
+"tier": "C",
+"type": "Disruptor",
+"image": "046eadfe1a40542caa1cb77a84513951.png",
+"note": "Disrupts monster actions; suits adventurers whose Core Passive relies on Affinity.",
+"best": "",
+"how": ""
+},
+{
+"name": "Aku",
+"tier": "C",
+"type": "Disruptor",
+"image": "8fb80fdb946438aeafec9eeb5c53ffd1.png",
+"note": "Disrupts monster actions; suits adventurers who rely on their Ultimate.",
+"best": "",
+"how": ""
+},
+{
+"name": "Ron",
+"tier": "C",
+"type": "Assault",
+"image": "9210fc6d23c6ee1f1a38ab53413d9649.png",
+"note": "Pure attacker that can power up ice.",
+"best": "",
+"how": ""
+},
+{
+"name": "Alon",
+"tier": "C",
+"type": "Assault",
+"image": "3612bd431daa8d2fd455ebed73a93c4c.png",
+"note": "Pure attacker with a dragon power-up.",
+"best": "",
+"how": ""
+}
+]
