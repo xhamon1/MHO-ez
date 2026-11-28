@@ -239,7 +239,7 @@ private fun sharpColor(s: String) = when (s) {
 fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills: SkillData, visages: VisageData,
          monsters: List<Monster>, characters: List<Character>, buddies: List<Buddy>, armorSets: List<ArmorSet>, prefs: SharedPreferences) {
     var tab by remember { mutableStateOf(0) }
-    val tabs = listOf("★" to "Builds", "⚔" to "Weapons", "🛡" to "Armor", "✦" to "Skills", "◈" to "Visage", "☠" to "Monsters", "♞" to "Adventurers", "🐾" to "Buddies")
+    val tabs = listOf("★" to "Builds", "⚔" to "Weapons", "▣" to "Armor", "✦" to "Skills", "◈" to "Visage", "☠" to "Monsters", "♞" to "Heroes", "✚" to "Buddies")
     Column(Modifier.fillMaxSize()) {
         Box(Modifier.weight(1f)) {
             when (tab) {
@@ -251,9 +251,9 @@ fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills
         }
         Row(Modifier.fillMaxWidth().background(Card).navigationBarsPadding().horizontalScroll(rememberScrollState()).padding(vertical = 6.dp)) {
             tabs.forEachIndexed { i, (icon, label) ->
-                Column(Modifier.width(84.dp).clickable { tab = i }.padding(4.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                Column(Modifier.width(66.dp).clickable { tab = i }.padding(4.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(icon, fontSize = 20.sp, color = if (tab == i) Gold else Color(0xFF8E8E98))
-                    Text(label, fontSize = 11.sp, color = if (tab == i) Gold else Color(0xFF8E8E98),
+                    Text(label, fontSize = 10.sp, maxLines = 1, color = if (tab == i) Gold else Color(0xFF8E8E98),
                         fontWeight = if (tab == i) FontWeight.Bold else FontWeight.Normal)
                 }
             }
@@ -267,7 +267,7 @@ fun WeaponsScreen(all: List<Weapon>) {
     var elem by remember { mutableStateOf<String?>(null) }
     var query by remember { mutableStateOf("") }
     val types = remember { all.map { it.type }.distinct() }
-    val elems = remember { all.map { it.element }.filter { it != "None" }.distinct() }
+    val elems = remember { val present = all.map { it.element }.toSet(); ALL_ELEM.filter { it in present } }
     val shown = all.filter { (type == null || it.type == type) && (elem == null || it.element == elem) &&
         (query.isBlank() || it.name.contains(query, true)) }.sortedByDescending { it.attack }
     LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
