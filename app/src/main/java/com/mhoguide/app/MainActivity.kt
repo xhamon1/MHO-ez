@@ -1,3 +1,5 @@
+@file:OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
+
 package com.mhoguide.app
 
 import android.content.Context
@@ -76,10 +78,11 @@ class MainActivity : ComponentActivity() {
         val monsters = loadMonsters(this)
         val characters = loadCharacters(this)
         val buddies = loadBuddies(this)
+        val armorSets = loadArmorSets(this)
         val prefs = getSharedPreferences("mho", MODE_PRIVATE)
         setContent {
             MaterialTheme(colorScheme = darkColorScheme(primary = Gold, background = Bg, surface = Card)) {
-                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, visages, monsters, characters, buddies, prefs) }
+                Surface(color = Bg, modifier = Modifier.fillMaxSize()) { Root(builds, weapons, armors, skills, visages, monsters, characters, buddies, armorSets, prefs) }
             }
         }
     }
@@ -234,13 +237,13 @@ private fun sharpColor(s: String) = when (s) {
 
 @Composable
 fun Root(builds: List<Build>, weapons: List<Weapon>, armors: List<Armor>, skills: SkillData, visages: VisageData,
-         monsters: List<Monster>, characters: List<Character>, buddies: List<Buddy>, prefs: SharedPreferences) {
+         monsters: List<Monster>, characters: List<Character>, buddies: List<Buddy>, armorSets: List<ArmorSet>, prefs: SharedPreferences) {
     var tab by remember { mutableStateOf(0) }
     val tabs = listOf("★" to "Builds", "⚔" to "Weapons", "🛡" to "Armor", "✦" to "Skills", "◈" to "Visage", "☠" to "Monsters", "♞" to "Adventurers", "🐾" to "Buddies")
     Column(Modifier.fillMaxSize()) {
         Box(Modifier.weight(1f)) {
             when (tab) {
-                0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); 2 -> ArmorScreen(armors)
+                0 -> BuildsScreen(builds, prefs); 1 -> WeaponsScreen(weapons); 2 -> ArmorScreen(armors, armorSets)
                 3 -> SkillsScreen(skills); 4 -> VisagesScreen(visages); 5 -> MonstersScreen(monsters)
                 6 -> CharactersScreen(characters)
                 else -> BuddiesScreen(buddies)
@@ -324,23 +327,52 @@ fun loadArmors(ctx: Context): List<Armor> {
 }
 
 @Composable
-fun ArmorScreen(all: List<Armor>) {
+fun ArmorScreen(all: List<Armor>, sets: List<ArmorSet>) {
+    var showSets by remember { mutableStateOf(false) }
     var part by remember { mutableStateOf<String?>(null) }
     var query by remember { mutableStateOf("") }
     val parts = listOf("Head", "Chest", "Arms", "Waist", "Legs")
     val shown = all.filter { a -> (part == null || a.part == part) &&
         (query.isBlank() || listOf(a.name, a.set, a.setSkill, a.skills.joinToString()).any { it.contains(query, true) }) }
         .sortedByDescending { it.defense }
+    val setShown = sets.filter { q -> query.isBlank() || q.name.contains(query, true) || q.setSkill.contains(query, true) ||
+        q.skills.any { it.contains(query, true) } }.sortedByDescending { it.defense }
     LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 8.dp, 16.dp, 24.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item { Text("Armor", fontSize = 28.sp, fontWeight = FontWeight.Black, color = Gold) }
-        item { Text("105 pieces · max-upgrade stats · more sets coming", color = Color(0xFF8E8E98), fontSize = 12.sp) }
+        item { Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Pill("Pieces (${all.size})", Gold, !showSets, null) { showSets = false }
+            Pill("Sets (${sets.size})", Gold, showSets, null) { showSets = true } } }
         item { OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(), singleLine = true,
             placeholder = { Text("Search a skill, set or piece…") }, shape = RoundedCornerShape(14.dp)) }
-        item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            items(parts) { p -> Pill(p, Gold, part == p, null) { part = if (part == p) null else p } } } }
-        item { Text("${shown.size} piece(s)", color = Color(0xFF8E8E98), fontSize = 13.sp) }
-        items(shown, key = { it.name }) { a -> ArmorCard(a) }
+        if (!showSets) {
+            item { Text("Piece stats for 21 sets · max-upgrade", color = Color(0xFF8E8E98), fontSize = 12.sp) }
+            item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                items(parts) { p -> Pill(p, Gold, part == p, null) { part = if (part == p) null else p } } } }
+            item { Text("${shown.size} piece(s)", color = Color(0xFF8E8E98), fontSize = 13.sp) }
+            items(shown, key = { it.name }) { a -> ArmorCard(a) }
+        } else {
+            item { Text("Set overview · headline skills and base defense per tier", color = Color(0xFF8E8E98), fontSize = 12.sp) }
+            item { Text("${setShown.size} set(s)", color = Color(0xFF8E8E98), fontSize = 13.sp) }
+            items(setShown, key = { it.name }) { q ->
+                Column(Modifier.fillMaxWidth().background(Card, RoundedCornerShape(14.dp)).padding(14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Row { Text(q.name, Modifier.weight(1f), fontWeight = FontWeight.Bold, color = Color.White)
+                        Text("DEF ${q.defense}", color = Gold, fontSize = 12.sp, fontWeight = FontWeight.Bold) }
+                    Text("Set skill: ${q.setSkill} (${q.pieces} pcs)", color = Gold, fontSize = 13.sp)
+                    Text(q.skills.joinToString("  ·  "), color = Color(0xFFD8D8E0), fontSize = 13.sp)
+                }
+            }
+        }
+    }
+}
+
+data class ArmorSet(val name: String, val setSkill: String, val pieces: Int, val skills: List<String>, val defense: Int)
+
+fun loadArmorSets(ctx: Context): List<ArmorSet> {
+    val arr = JSONArray(ctx.assets.open("armor_sets.json").bufferedReader().readText())
+    return (0 until arr.length()).map {
+        val o = arr.getJSONObject(it)
+        ArmorSet(o.getString("name"), o.getString("setSkill"), o.getInt("pieces"), o.getJSONArray("skills").strs(), o.getInt("defense"))
     }
 }
 

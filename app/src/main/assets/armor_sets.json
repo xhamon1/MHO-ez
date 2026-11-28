@@ -1,0 +1,541 @@
+[
+{
+"name": "Great Jagras Set I",
+"setSkill": "Great Jagras Resistance",
+"pieces": 2,
+"skills": [
+"Stun Resistance",
+"Bento Lover",
+"Fearless"
+],
+"defense": 60
+},
+{
+"name": "Radiant Great Jagras Set I",
+"setSkill": "Great Jagras's Roll",
+"pieces": 2,
+"skills": [
+"Charge Up",
+"Breaker",
+"Insight"
+],
+"defense": 245
+},
+{
+"name": "Kulu-Ya-Ku Set I",
+"setSkill": "Kulu-Ya-Ku Flash Attack",
+"pieces": 2,
+"skills": [
+"Insight",
+"Carve Master",
+"Weakspot Exploit"
+],
+"defense": 60
+},
+{
+"name": "Radiant Kulu-Ya-Ku Set II",
+"setSkill": "Kulu-Ya-Ku's Skill",
+"pieces": 2,
+"skills": [
+"Demonic Strength",
+"Item Master",
+"Weakspot Exploit"
+],
+"defense": 340
+},
+{
+"name": "Pukei-Pukei Set I",
+"setSkill": "Pukei-Pukei Tailwhip",
+"pieces": 2,
+"skills": [
+"Ballistics",
+"Bow Skill Boost",
+"Botanical Expert"
+],
+"defense": 60
+},
+{
+"name": "Radiant Pukei-Pukei Set I",
+"setSkill": "Pukei-Pukei Territory",
+"pieces": 2,
+"skills": [
+"Charged Power Shot",
+"Improviser",
+"Flawless"
+],
+"defense": 245
+},
+{
+"name": "Alloy Set I",
+"setSkill": "Alloy Barrier",
+"pieces": 2,
+"skills": [
+"Water Resistance",
+"Offensive Defense",
+"Breaker"
+],
+"defense": 205
+},
+{
+"name": "Hornetaur Set I",
+"setSkill": "Hornetaur Might",
+"pieces": 2,
+"skills": [
+"Dragon Resistance",
+"Unflinching Carver",
+"Bento Lover"
+],
+"defense": 245
+},
+{
+"name": "Adventurers' Guild Set I",
+"setSkill": "Guild's Comeback",
+"pieces": 2,
+"skills": [
+"Recovery Booster",
+"Quick-Bite",
+"Blessing"
+],
+"defense": 55
+},
+{
+"name": "Barroth Set I",
+"setSkill": "Barroth Mudguard",
+"pieces": 2,
+"skills": [
+"Battle Spirit",
+"Immovable Stance",
+"Stun Resistance"
+],
+"defense": 135
+},
+{
+"name": "Radiant Barroth Set II",
+"setSkill": "Barroth's Resolve",
+"pieces": 2,
+"skills": [
+"Capacity Boost",
+"Guard Technique",
+"Radiant Sense"
+],
+"defense": 340
+},
+{
+"name": "Jyuratodus Set I",
+"setSkill": "Jyuratodus Aquaguard",
+"pieces": 3,
+"skills": [
+"Unleashed",
+"Water Damage Up",
+"Health Recovery"
+],
+"defense": 135
+},
+{
+"name": "Radiant Jyuratodus Set II",
+"setSkill": "Jyuratodus Flowmend",
+"pieces": 2,
+"skills": [
+"Flinching-Free",
+"Water Resistance",
+"Piercing Strike"
+],
+"defense": 375
+},
+{
+"name": "Great Girros Set I",
+"setSkill": "Great Girros Ambush",
+"pieces": 3,
+"skills": [
+"Critical Element",
+"Paralysis Resistance",
+"Thunder Damage Up"
+],
+"defense": 135
+},
+{
+"name": "Radiant Great Girros Set III",
+"setSkill": "Great Girros's Command",
+"pieces": 2,
+"skills": [
+"Combo Enhancement",
+"Radiant Sense",
+"Paralysis Resistance"
+],
+"defense": 480
+},
+{
+"name": "Bone Set I",
+"setSkill": "Sepulcros Divinity",
+"pieces": 3,
+"skills": [
+"Morph Boost",
+"Health Boost",
+"Breaker"
+],
+"defense": 135
+},
+{
+"name": "Vespoid Set I",
+"setSkill": "Insulation of the Summit",
+"pieces": 2,
+"skills": [
+"Paralysis Resistance",
+"Windproof",
+"Critical Element"
+],
+"defense": 135
+},
+{
+"name": "Chainmail Set I",
+"setSkill": "Coldsteel Craft",
+"pieces": 3,
+"skills": [
+"Ice Damage Up",
+"Water Resistance",
+"Health Recovery"
+],
+"defense": 60
+},
+{
+"name": "Anjanath Set I",
+"setSkill": "Anjanath Ember",
+"pieces": 3,
+"skills": [
+"Weakspot Follow-Up",
+"Wrecker",
+"Quick-Bite"
+],
+"defense": 205
+},
+{
+"name": "Radiant Anjanath Set II",
+"setSkill": "Anjanath's Wrath",
+"pieces": 2,
+"skills": [
+"Flash Draw",
+"Quick-Bite",
+"Adversity"
+],
+"defense": 340
+},
+{
+"name": "Leather Set I",
+"setSkill": "Compound Fiber",
+"pieces": 2,
+"skills": [
+"Item Master",
+"Recovery Booster",
+"Critical Element"
+],
+"defense": 60
+},
+{
+"name": "Butterfly Set I",
+"setSkill": "Butterfly Bond",
+"pieces": 2,
+"skills": [
+"Airborne",
+"Insight",
+"Improviser"
+],
+"defense": 245
+},
+{
+"name": "Kadachi Set II",
+"setSkill": "Tobi-Kadachi Thunderplate",
+"pieces": 2,
+"skills": [
+"Deterrence",
+"Thunder Damage Up",
+"Thunder Resistance"
+],
+"defense": 340
+},
+{
+"name": "Radiant Kadachi Set III",
+"setSkill": "Tobi-Kadachi Surge",
+"pieces": 3,
+"skills": [
+"Counter Boost",
+"Battle Spirit",
+"Thunder Resistance"
+],
+"defense": 480
+},
+{
+"name": "King Beetle Set I",
+"setSkill": "Monocerus Divinity",
+"pieces": 2,
+"skills": [
+"Stamina Conversion",
+"Honey Harvester",
+"Sleep Resistance"
+],
+"defense": 245
+},
+{
+"name": "Ingot Set II",
+"setSkill": "Ingot Blast Shield",
+"pieces": 2,
+"skills": [
+"Intimidation",
+"Windproof",
+"Fearless"
+],
+"defense": 340
+},
+{
+"name": "Rathian Set II",
+"setSkill": "Rathian Vigor",
+"pieces": 2,
+"skills": [
+"Spirit Bind Blade",
+"Hunting Instinct",
+"Botanical Expert"
+],
+"defense": 375
+},
+{
+"name": "Radiant Rathian Set I",
+"setSkill": "Rathian's Instinct",
+"pieces": 3,
+"skills": [
+"Recovery Booster",
+"Flash Draw",
+"Radiant Sense"
+],
+"defense": 205
+},
+{
+"name": "Rathalos Set II",
+"setSkill": "Rathalos's Weakness",
+"pieces": 3,
+"skills": [
+"Fire Damage Up",
+"Breaker",
+"Deterrence"
+],
+"defense": 375
+},
+{
+"name": "Radiant Rathalos Set V",
+"setSkill": "Rathalos's Fervor",
+"pieces": 3,
+"skills": [
+"Deterrence",
+"Suppression Recovery",
+"Wrecker"
+],
+"defense": 760
+},
+{
+"name": "Diablos Set III",
+"setSkill": "Diablos's Footing",
+"pieces": 2,
+"skills": [
+"Tremor Resistance",
+"Defense Up",
+"Dragon Damage Up"
+],
+"defense": 480
+},
+{
+"name": "Radiant Diablos Set V",
+"setSkill": "Diablos's Barrier",
+"pieces": 3,
+"skills": [
+"Tremor Resistance",
+"Pierce",
+"Battle Spirit"
+],
+"defense": 760
+},
+{
+"name": "Tzitzi-Ya-Ku Set III",
+"setSkill": "Tzitzi-Ya-Ku's Pursuit",
+"pieces": 3,
+"skills": [
+"Piercing Strike",
+"Relentless Pursuit",
+"Blessing"
+],
+"defense": 550
+},
+{
+"name": "Radiant Tzitzi-Ya-Ku Set IV",
+"setSkill": "Tzitzi-Ya-Ku's Precision",
+"pieces": 2,
+"skills": [
+"Water Damage Up",
+"Health Recovery",
+"Item Master"
+],
+"defense": 685
+},
+{
+"name": "Paolumu Set III",
+"setSkill": "Paolumu's Presence",
+"pieces": 2,
+"skills": [
+"Ammo Enhancement",
+"Windproof",
+"Flawless"
+],
+"defense": 550
+},
+{
+"name": "Radiant Paolumu Set IV",
+"setSkill": "Paolumu's Airflow",
+"pieces": 2,
+"skills": [
+"Charged Power Shot",
+"Item Master",
+"Blessing"
+],
+"defense": 615
+},
+{
+"name": "High Metal Set I",
+"setSkill": "Silence of the Veins",
+"pieces": 2,
+"skills": [
+"Roar Resistance",
+"Gathering Master",
+"Ice Damage Up"
+],
+"defense": 245
+},
+{
+"name": "Baan Set III",
+"setSkill": "Radobaan's Bulwark",
+"pieces": 2,
+"skills": [
+"Charge Enhancement",
+"Fearless",
+"Bleeding Resistance"
+],
+"defense": 480
+},
+{
+"name": "Radiant Baan Set V",
+"setSkill": "Radobaan's Fearlessness",
+"pieces": 3,
+"skills": [
+"Tremor Resistance",
+"Grace Under Pressure",
+"Immovable Stance"
+],
+"defense": 830
+},
+{
+"name": "Legiana Set IV",
+"setSkill": "Legiana Dance",
+"pieces": 2,
+"skills": [
+"Ice Resistance",
+"Blessing",
+"Flash Draw"
+],
+"defense": 550
+},
+{
+"name": "Radiant Legiana Set V",
+"setSkill": "Legiana Blessing",
+"pieces": 2,
+"skills": [
+"Ice Damage Up",
+"Blessing",
+"Charged Power Shot"
+],
+"defense": 760
+},
+{
+"name": "Odogaron Set III",
+"setSkill": "Odogaron's Tenacity",
+"pieces": 2,
+"skills": [
+"Stamina Conversion",
+"Hunting Instinct",
+"Recovery Booster"
+],
+"defense": 480
+},
+{
+"name": "Radiant Odogaron Set IV",
+"setSkill": "Odogaron's Surge",
+"pieces": 2,
+"skills": [
+"Charge Up",
+"Rejuvenation",
+"Combo Enhancement"
+],
+"defense": 695
+},
+{
+"name": "Pink Rathian Set IV",
+"setSkill": "Pink Rathian's Acuity",
+"pieces": 3,
+"skills": [
+"Fire Damage Up",
+"Hunting Instinct",
+"Health Boost"
+],
+"defense": 615
+},
+{
+"name": "Radiant Pink Rathian Set V",
+"setSkill": "Pink Rathian's Rampage",
+"pieces": 2,
+"skills": [
+"Unshaken Resolve",
+"Critical Element",
+"Grace Under Pressure"
+],
+"defense": 840
+},
+{
+"name": "Hunter Set I",
+"setSkill": "Wilds Mastery",
+"pieces": 2,
+"skills": [
+"Insight",
+"Geo Expert",
+"Health Recovery"
+],
+"defense": 135
+},
+{
+"name": "Black Diablos Set VI",
+"setSkill": "Black Diablos's Rampart",
+"pieces": 2,
+"skills": [
+"Dragon Damage Up",
+"Fearless",
+"Guard Technique"
+],
+"defense": 910
+},
+{
+"name": "Radiant Black Diablos Set VI",
+"setSkill": "Black Diablos's Desperation",
+"pieces": 2,
+"skills": [
+"Sturdy Guard",
+"Tremor Resistance",
+"Radiant Power Surge"
+],
+"defense": 980
+},
+{
+"name": "Ruger Aidal Set IV",
+"setSkill": "Ruger Aidal's Intimidation",
+"pieces": 3,
+"skills": [
+"Grace Under Pressure",
+"Suppression Recovery",
+"Counter Boost"
+],
+"defense": 630
+}
+]
